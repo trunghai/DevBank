@@ -1,0 +1,192 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="payment_bill">
+    <div class="">
+        <div class="panelContent">
+            <table id="dynamic-billing-table" width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">MENU_PAY_BILL</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tab" style="margin-top: 0px;">
+                            <div class="item selected">
+                                <div class="left"></div>
+                                <div class="text"><span>TRANS_PERIODIC_TRADE_TITLE</span></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="item">
+                                <div class="left"></div>
+                                <div class="text"><span ng-click="changeTab()">TRANS_PERIODIC_MNG_TITLE</span></div>
+                                <div class="right"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table class="sequence-form-301" width="357" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:auto" xmlns="http://www.w3.org/1999/xhtml">
+                                <tbody>
+                                <tr>
+                                    <td class="selected" width="33%">
+                                        <span>SEQ_INPUT_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_AUTHEN_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tbody>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>PAYMENT_TRANSFER_INFO</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">COM_TYPE_TRANSACTION</span>
+                            <input id="billing.input.service" class="form-control form-control-righttext" type="button" value="" placeholder="Chọn" ng-click="showServiceSeletion();">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                            <input id="id.billing.srvId" type="hidden" value="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">PAYMENT_ACCOUNT</span>
+                            <input id="id.accountno" class="form-control form-control-righttext" type="button" value="" placeholder="Chọn" ng-click="showAccountSelection();">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                        <input id="id.balance" type="hidden" value="">
+                        <input id="id.balanceText" type="hidden" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="billing.sourceaccoutbalance">
+                            <span class="availblstyle">CRE_DEBT_SURPLUS_AVAILABEL</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>PAYMENT_BILL_INFO</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group" ng-click="showProviderSelecction();">
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">PAYMENT_ISSUEDBY</span>
+                            <input id="billing.input.provider" class="form-control form-control-righttext" type="button" value="">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                        <input id="id.billing.srvCode" type="hidden" value="" >
+                        <input id="id.billing.prId" type="hidden" value="">
+                    </td>
+                </tr>
+                <tr ng-repeat ="field in infoFields">
+                    <td ng-if="field.INPUT_TYPE === 'TEXT' && field.FORMAT === 'PHONE'" class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group">
+                            <span id="msg.field.name" class="input-group-addon" style="width: 40%; white-space:pre-wrap">{{lang === 'VN' ? field.MSG_FIELD_DESC : field.MSG_FIELD_DESC_EN}}</span>
+                            
+                            <input id="billing.input.text" type="tel"  placeholder="COM_TXT_INPUT_PLACEHOLDER" class="form-control form-control-righttext-datepicker" onkeyup="removeChar(event, this, 11);" />
+                            <span id="span.trans.target" class="tooltip icon-book input-group-addon-datepicker input-group-symbol-datepicker" style="cursor:pointer;" ng-click="showPayeePage();" ng-style="{'display': service_ID === '306' || service_ID === '305' ? 'none' : 'block'}">
+                                <span style="text-align:center; font-size:14px;">
+                                    <em id="ds_id">{{dsThuHuong}}</em>
+                                    <br />
+                                    <em id="mau_id">{{mauThuHuong}}</em>
+                                </span>
+
+                            </span>
+                        </div>
+                        <input id="billing.input.text.id.key" type="hidden" value="{{field.MSG_FIELD_ID}}">
+                        
+                    </td>
+                    <td ng-if="field.INPUT_TYPE === 'TEXT' && field.FORMAT === 'TEXT'" class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group">
+                            <span id="msg.field.name" class="input-group-addon" style="width: 40%; white-space:pre-wrap">{{lang === 'VN' ? field.MSG_FIELD_DESC : field.MSG_FIELD_DESC_EN}}</span>
+
+                            <input id="billing.input.text" type="text" placeholder="COM_TXT_INPUT_PLACEHOLDER" class="form-control form-control-righttext-datepicker" onkeyup="controlInputText(this, 50);" />
+                            <span id="span.trans.target" class="tooltip icon-book input-group-addon-datepicker input-group-symbol-datepicker" style="cursor:pointer;" ng-click="showPayeePage();" ng-style="{'display': service_ID === '306' || service_ID === '305' ? 'none' : 'block'}">
+                                <span style="text-align:center; font-size:14px;">
+                                    <em id="ds_id">{{dsThuHuong}}</em>
+                                    <br />
+                                    <em id="mau_id">{{mauThuHuong}}</em>
+                                </span>
+
+                            </span>
+                        </div>
+                        <input id="billing.input.text.id.key" type="hidden" value="{{field.MSG_FIELD_ID}}">
+
+                    </td>
+                    <td ng-if="field.INPUT_TYPE === 'COMBO'" class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">{{lang === 'VN' ? field.MSG_FIELD_DESC : field.MSG_FIELD_DESC_EN}}</span>
+                            <input id="billing.input.comboValue" class="form-control form-control-righttext" type="button" value="{{lang === 'VN' ? cbxValue.FIELD_DESC : cbxValue.FIELD_DESC_EN}}" placeholder="Nhập" ng-click="showComboValues()">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                        <input id="billing.input.comboValue.id" type="hidden" value="{{cbxValue.ID}}" >
+                        <input id="billing.input.comboValue.id.key" type="hidden" value="{{field.MSG_FIELD_ID}}">
+                    </td>
+                </tr>
+                <tr id="dynaRow.2" >
+                    <td class="td-text" valign="middle" align="center" colspan="2" ng-style="{'display': service_ID === '306' || service_ID === '305' ? 'none' : 'block'}">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">PAYMENT_BENEFICIARY_NAME_WITH_NOTE</span>
+                            <input id="billing.payeeName" class="form-control form-control-righttext-datepicker" type="text" maxlength="50" placeholder="Nhập" onkeyup="controlInputText(this, 50);" >
+                            
+                        </div>
+                    </td>
+                </tr>
+                <tr id="dynaRow.mgnPayee" >
+                    <td class="td-text" valign="middle" align="center" colspan="2" ng-style="{'display': service_ID === '306' || service_ID === '305' ? 'none' : 'block'}">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">PAYMENT_BENEFICIARY_OPTION</span>
+                            <input id="mng.payee" class="form-control form-control-righttext" type="button" value="" placeholder="Nhập" ng-click="showInputMNG()">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                        <input id="mng.payee.val" type="hidden" value="TH">
+                    </td>
+                </tr>
+				<tr>
+                	<td>
+                    	<span class="notestyle" style="width: 40%; white-space:pre-wrap">PAYMENT_BENEFICIARY_NOTE</span>
+                    </td>
+                </tr>
+
+                <tr class="trow-space"></tr>
+                <tr>
+                  <td>
+                    <span type="button" class="btnshadow btn-second" ng-click="sendJSONRequest()">TRANS_LOCAL_BTN_SENDREQUEST</span>
+                  </td>
+                </tr>
+                </tbody>
+                
+            </table>         
+        </div>
+    </div>
+</div>
+<div id="selection-dialog" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" onClick="closeDialog(this)"></div>
+    <div id="divListGroup" class="list-group dialog-list"></div>
+</div>
+<div id="selection-dialog-input" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" align="center" onClick="closeDialogInput(this)">
+    </div>
+    <div id="divListGroupInput" class="list-group dialog-list"> </div>
+</div>

@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="./assets/uploadjs/jquery.fileupload.css" type="text/css"/>
+
+<div id="mainViewContent" class="main-layout-subview" ng-controller="AppController" >
+   <div class="">
+       <div class="panelContent" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
+           <table width="100%" align="center">
+               <tr>
+                   <td colspan="2">
+                       <div>
+                           <h5 class="screen-title">
+                               <span>MENU_UPLOAD_FILES</span>
+                           </h5>
+                       </div>
+                       <div class="line-separate" />
+                   </td>
+               </tr>
+               <tr>
+                   <td class="td-text" valign="middle" align="center">
+
+                       <div class="input-group">
+                           <span class="input-group-addon" style="width:40%"></span>
+                           <span class="fileinput-button form-control form-control-righttext">
+                               <span>Gửi chứng từ giao dịch cho TPBank</span>
+                               <input type="file" nv-file-select="" uploader="uploader" multiple  />
+                           </span>
+                           <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                       </div>
+                   </td>
+               </tr>
+               <tr class="trow-space"></tr>
+               <tr>
+                   <td>
+                       <!-- BEGIN MAIN CONTENT -->
+                       <div>
+                           <table class="table-account " width="100%" align="center">
+                               <tbody>
+                               <tr class="trow-title">
+                                   <th width="6%"><span>COM_NO</span></th>
+                                   <th width="50%">Name</th>
+                                   <th ng-show="uploader.isHTML5">Size</th>
+                                   <th>Actions</th>
+                               </tr>
+                               </tbody>
+                               <tbody>
+                               <tr ng-repeat="item in uploader.queue">
+                                   <td width="6%">
+                                       <div class="mobile-mode"><span>COM_NO</span></div>
+                                       <div class="content-detail" style="word-break: break-all;">{{$index + 1}}</div>
+                                       <strong></strong>
+                                   </td>
+                                   <td>
+                                       <div class="mobile-mode"><span>Name</span></div>
+                                       <div class="content-detail" style="word-break: break-all;">{{ item.file.name }}</div>
+                                   </td>
+                                   <td ng-show="uploader.isHTML5" nowrap>
+                                       <div class="mobile-mode"><span>Size</span></div>
+                                       <div class="content-detail" style="word-break: break-all;">{{ item.file.size/1024/1024|number:2 }} MB</div>
+                                   </td>
+                                   <td nowrap>
+                                       <div class="mobile-mode"><span>Action</span></div>
+                                       <div class="content-detail" style="word-break: break-all;">
+                                           <span type="button" ng-click="item.remove()" style="color: red; cursor: pointer">
+                                               <strong>Xóa</strong>
+                                           </span>
+                                       </div>
+
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td colspan="2">
+                                       <table class="button-group button-group-3">
+                                           <tbody>
+                                           <tr>
+                                               <td>
+                                                   <button class="btnshadow btn-primary" type="button" value="COM_BACK" ng-click="onCancelClick()" ><span>COM_BACK</span></button>
+                                               </td>
+                                               <td>
+                                                   <button class="btnshadow btn-primary" type="button" style="display: none" value="Quay lại" ng-click="onBackClick()" ><span>COM_BACK</span></button>
+                                               </td>
+                                               <td>
+                                                   <button id="sendData" class="btnshadow btn-primary" type="button" value="CM_BTN_SEND_REQ tục" ng-click="uploader.uploadAll()" ><span>COM_CONTINUE</span></button>
+                                               </td>
+                                           </tr>
+                                           </tbody>
+                                       </table>
+                                   </td>
+                               </tr>
+                               </tbody>
+                           </table>
+
+                       </div>
+                       <!-- END MAIN CONTENT -->
+                   </td>
+               </tr>
+           </table>
+       </div>
+   </div>
+</div>

@@ -1,0 +1,199 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="auth_international_additional_review">
+    <div class="">
+        <div class="panelContent">
+            <table id="dynamic-billing-table" width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">INTERNATIONAL_AUTHORIZE</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table class="sequence-form-301" width="357" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:auto">
+                                <tbody>
+                                <tr>
+                                    <td  class="selected" width="33%">
+                                        <span>SEQ_CONFIRM_TITLE</span>
+                                    </td>
+                                    <td    width="33%">
+                                        <span>SEQ_AUTHEN_TITLE</span>
+                                    </td>
+                                    <td  width="33%">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tbody>
+                <tr>
+                    <td colspan="2">
+                        <table width='100%' align='center' class='background-blacktrans'>
+                            <tr class="trow-default">
+                                <td class="td-left"><span>COM_TRANS_CODE</span></td>
+                                <td class="td-right"><span ng-bind="infoTrans.IDFCATREF"></span></td>
+                            </tr>
+                            <tr class="trow-default">
+                                <td class="td-left"><span>COM_EXECUTION_TIME</span></td>
+                                <td class="td-right"><span ng-bind="infoTrans.CREATE_TIME"></span></td>
+                            </tr>
+                            <!--<tr class="trow-default">
+                                <td class="td-left"><span>COM_CHECK_DATE</span></td>
+                                <td class="td-right"><span ></span></td>
+                            </tr>-->
+                            <tr class="trow-default">
+                                <td class="td-left"><span>COM_STATUS</span></td>
+                                <td class="td-right"><span ng-bind="statusVN[infoTrans.CODSTATUS]"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>INTERNATIONAL_PROFILES</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="table-account " width="100%" align="center">
+                            <tbody>
+                            <tr class="trow-title">
+                                <th width="6%"><span>COM_NO</span></th>
+                                <th width="50%"><span>INTERNATIONAL_PROFILE_NAME</span></th>
+                                <th width="20%"><span>INTERNATIONAL_DATE_UPLOAD</span></th>
+                                <th><span>INTERNATIONAL_PROFILE_SIZE</span></th>
+                                <th ng-show="inMoblie"></th>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr ng-repeat="item in detailCheckList track by $index">
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="$index + 1"></div>
+                                    <strong></strong>
+                                </td>
+                                <td width="50%">
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="item.FILE_NAME"></div>
+                                </td>
+                                <td width="20%">
+                                    <div class="mobile-mode"><span>INTERNATIONAL_DATE_UPLOAD</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="item.DATMAKE"></div>
+                                </td>
+                                <td>
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_SIZE</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="(item.CAPACITY/1024/1024|number:2) + ' MB'"></div>
+                                </td>
+                                <td ng-show="inMoblie">
+                                    <div class="mobile-mode"><span></span></div>
+                                    <div class="content-detail" style="word-break: break-all;">
+                                           <span type="button" style="color: red; cursor: pointer" ng-click="onViewPDF(item.IDUSERREFERENCE)">
+                                               <strong><span>INTERNATIONAL_VIEW_PROFILE</span></strong>
+                                           </span>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table width="100%">
+                            <tr class="trow-space"></tr>
+                            <tr>
+                                <td align="center" colspan="2">
+                                    <input id="id.reason-rej" class="form-control" placeholder="COM_AUTH_DENIAL_REASON" onkeyup="controlInputText(this, 240)">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="trow-space"></tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="button-group button-group-3">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="Hủy" ng-click="onBackClick()" ><span>COM_BACK</span></button>
+                                </td>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="Quay lại" ng-click="onDenyClick()" ><span>COM_DENY</span></button>
+                                </td>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="Tiếp tục" ng-click="onContinuteClick()" ><span>COM_AUTH</span></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<div id="selection-dialog" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" onClick="closeDialog(this)"></div>
+    <div id="divListGroup" class="list-group dialog-list"></div>
+</div>
+<div id="selection-dialog-input" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" align="center" onClick="closeDialogInput(this)">
+    </div>
+    <div id="divListGroupInput" class="list-group dialog-list"> </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="contentView" class="modal-content"></div>
+
+</div>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+
+        margin: auto;
+        padding: 0px;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>

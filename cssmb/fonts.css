@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'TPB-DaxlinePro-Bold';
+    /*src: url('../assets/fonts/TPB-DaxlinePro-Bold.ttf') format('truetype');*/
+	src: url('../assets/fonts/tpb-daxlinepro-bold-webfont.eot') format('embedded-opentype');
+	src: url('../assets/fonts/TPB-DaxlinePro-Bold.ttf')  format('truetype'),
+         url('../assets/fonts/tpb-daxlinepro-bold-webfont.svg#svgFontName') format('svg'),
+		 url('../assets/fonts/tpb-daxlinepro-bold-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TPB-DaxlinePro-Light';
+    /*src: url('../assets/fonts/TPB-DaxlinePro-Light.ttf') format('truetype');*/
+	src: url('../assets/fonts/tpb-daxlinepro-light-webfont.eot') format('embedded-opentype');
+	src: url('../assets/fonts/TPB-DaxlinePro-Light.ttf')  format('truetype'),
+         url('../assets/fonts/tpb-daxlinepro-light-webfont.svg#svgFontName') format('svg'),
+		 url('../assets/fonts/tpb-daxlinepro-light-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TPB-DaxlinePro-Medium';
+    /*src: url('../assets/fonts/TPB-DaxlinePro-Medium.ttf') format('truetype');*/
+	src: url('../assets/fonts/tpb-daxlinepro-medium-webfont.eot') format('embedded-opentype');
+	src: url('../assets/fonts/TPB-DaxlinePro-Medium.ttf') format('truetype'),
+         url('../assets/fonts/tpb-daxlinepro-medium-webfont.svg#svgFontName') format('svg'),
+		 url('../assets/fonts/tpb-daxlinepro-medium-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TPB-DaxlinePro-Regular';
+    /*src: url('../assets/fonts/TPB-DaxlinePro-Medium.ttf') format('truetype');*/
+	src: url('../assets/fonts/tpb-daxlinepro-regular-webfont.eot') format('embedded-opentype');
+	src: url('../assets/fonts/TPB-DaxlinePro-Regular.ttf')  format('truetype'),
+         url('../assets/fonts/tpb-daxlinepro-regular-webfont.svg#svgFontName') format('svg'),
+		 url('../assets/fonts/tpb-daxlinepro-regular-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TPB-DaxlinePro-Thin';
+    /*src: url('../assets/fonts/TPB-DaxlinePro-Thin.ttf') format('truetype');*/
+	src: url('../assets/fonts/tpb-daxlinepro-thin-webfont.eot') format('embedded-opentype');
+	src: url('../assets/fonts/TPB-DaxlinePro-Thin.ttf')  format('truetype'),
+         url('../assets/fonts/tpb-daxlinepro-thin-webfont.svg#svgFontName') format('svg'),
+		 url('../assets/fonts/tpb-daxlinepro-thin-webfont.eot?#iefix') format('embedded-opentype');
+    font-weight: lighter;
+    font-style: normal;
+}

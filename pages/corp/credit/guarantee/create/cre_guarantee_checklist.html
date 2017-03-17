@@ -1,0 +1,230 @@
+<link rel="stylesheet" href="./assets/uploadjs/jquery.fileupload.css" type="text/css"/>
+
+<div id="mainViewContent" class="main-layout-subview" ng-controller="cre_guarantee_checklist">
+    <div class="">
+        <div class="panelContent" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter, pdfFilter">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">MENU_CREDIT_SEARCHNTEE</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table class="sequence-form-301" width="357" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:auto">
+                                <tbody>
+                                <tr>
+                                    <td class="selected" width="33%">
+                                        <span>SEQ_INPUT_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_AUTHEN_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>GUA_CHECKLIST_PROFILE_GUARANTEE</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="table-account " width="100%" align="center">
+                            <tbody>
+                            <tr class="trow-title">
+                                <th width="6%"><span>COM_NO</span></th>
+                                <th width="50%"><span>INTERNATIONAL_PROFILE_NAME</span></th>
+                                <th><span>INTERNATIONAL_REQUEST</span></th>
+
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr ng-repeat="item in documentInfo">
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail" >{{$index + 1}}</div>
+                                    <strong></strong>
+                                </td>
+                                <td>
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail" >{{ item.DESCREPTION }}</div>
+                                </td>
+                                <td >
+                                    <div class="mobile-mode"><span>INTERNATIONAL_REQUEST</span></div>
+                                    <div class="content-detail" >{{ item.EXPECT }}</div>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>GUA_SEND_TRANSFER_FILE</span>
+                        </h5>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+
+                        <div class="input-group">
+                            <span class="input-group-addon" style="width:40%"></span>
+                           <span class="fileinput-button form-control form-control-righttext">
+                               <span>GUA_CHOOSE_FILE</span>
+                               <input type="file" name="file" nv-file-select="" uploader="uploader" multiple  />
+                           </span>
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+                        <div class="input-group">
+                            <div style="text-align: right;">
+                                <span style="cursor:pointer;">COMMON_NOTE_FILE_FORMAT</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>GUA_FILE_SENDED</span>
+                        </h5>
+                    </td>
+                </tr>
+
+              <!--  <tr class="trow-space"></tr>-->
+                <tr>
+                    <td>
+                        <!-- BEGIN MAIN CONTENT -->
+                        <div>
+                            <table class="table-account " width="100%" align="center">
+                                <tbody>
+                                <tr class="trow-title">
+                                    <th width="6%"><span>COM_NO</span></th>
+                                    <th width="50%"><span>GUA_FILE_NAME_SENDED</span></th>
+                                    <th ng-show="uploader.isHTML5"><span>GUA_FILE_SIZE_SENDED</span></th>
+                                    <th></th>
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                <tr ng-repeat="item in uploader.queue">
+                                    <td width="6%">
+                                        <div class="mobile-mode"><span>COM_NO</span></div>
+                                        <div class="content-detail" >{{$index + 1}}</div>
+                                        <strong></strong>
+                                    </td>
+                                    <td>
+                                        <div class="mobile-mode"><span>GUA_FILE_NAME_SENDED</span></div>
+                                        <div class="content-detail" >{{ item.file.name }}</div>
+                                    </td>
+                                    <td ng-show="uploader.isHTML5" nowrap>
+                                        <div class="mobile-mode"><span>GUA_FILE_SIZE_SENDED</span></div>
+                                        <div class="content-detail">{{ item.file.size/1024/1024|number:2 }} MB</div>
+                                    </td>
+                                    <td nowrap>
+                                        <div class="mobile-mode"><span>Action</span></div>
+                                        <div class="content-detail" >
+                                           <span type="button" ng-click="removeFile(item,$index)" style="color: red; cursor: pointer">
+                                               <strong><span>GUA_FILE_DELETE</span></strong>
+                                           </span>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- END MAIN CONTENT -->
+                    </td>
+                </tr>
+                  <tr class="trow-space"></tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">GUA_INSTRUCTION_TPB_FILE</span>
+                            <input id="id.instruction.file" class="form-control form-control-righttext" type="text" value="" placeholder="COM_TXT_INPUT_PLACEHOLDER" onkeyup="controlInputText(this, 250)">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td >
+                        <table class="button-group button-group-3"><tbody><tr>
+                            <td><input type="button" class="btnshadow btn-primary" ng-click="onBackClick()" value="COM_BACK"></td>
+                            <td><input id="sendData" type="button" class="btnshadow btn-second" ng-click="uploadFile()" value="CM_BTN_SEND_REQ" ></td>
+                        </tr></tbody></table>
+                    </td>
+                   <!-- <td colspan="2">
+                        <input type="button" class="btnshadow btn-second" ng-click="uploader.uploadAll()" value="CM_BTN_SEND_REQ" />
+                    </td>-->
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="contentView" class="modal-content">
+
+    </div>
+
+</div>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+
+        margin: auto;
+        padding: 0px;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>

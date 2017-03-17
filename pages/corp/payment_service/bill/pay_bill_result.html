@@ -1,0 +1,113 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="pay_bill_result">
+    <div class="">
+        <div class="panelContent">
+            <table id="dynamic-billing-table" width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">MENU_PAY_BILL</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table width="357" cellspacing="0" cellpadding="0" border="0" align="center" class="sequence-form-303" style="margin:auto">
+                                <tbody>
+                                <tr>
+                                    <td width="33%">
+                                        <span>SEQ_INPUT_TITLE</span>
+                                    </td>
+                                    <td width="33%" >
+                                        <span>SEQ_AUTHEN_TITLE</span>
+                                    </td>
+                                    <td width="33%" class="selected">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tbody>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <div ng-class="result.messageIconClass" style="display: inline; color: #FAA60D; font-size: 24px; vertical-align: middle; padding: 5px 0px 5px 0px;"></div>
+                        <span style="font-size:16px; vertical-align:middle" ng-bind="result.message"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width='100%' align='center' class='background-blacktrans'>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>RESULT_TRANSACTION_ID</span></td>
+                                <td class='td-right' ng-bind="result.respJsonObj.transId"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>COM_EXECUTION_TIME</span></td>
+                                <td class='td-right' ng-bind="result.respJsonObj.time"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>COM_ACCOUNT_INFO</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width='100%' align='center' class='background-blacktrans'>
+                            <tr ng-repeat="info in review.accInfo" class='trow-default'>
+                                <td class='td-left' ng-bind="info.key"></td>
+                                <td class='td-right' ng-bind="info.value"></td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>COM_TRASACTION_INFO</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width='100%' align='center' class='background-blacktrans'>
+                            <tr ng-repeat="info in review.transInfo" class='trow-default'>
+                                <td class='td-left' ng-bind="info.key"></td>
+                                <td class='td-right' ng-bind="info.value"></td>
+                            </tr>
+                            <tr class='trow-default' id="thuhuongtmp">
+                                <td class='td-left'><span>PAYMENT_BENEFICIARY_OPTION</span></td>
+                                <td class='td-right' ng-bind="thuhuong"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="trow-space"></tr>
+                <tr>
+                    <td>
+                        <span type="button" class="btnshadow btn-second" ng-click="makeOtherTrans()">COM_MAKE_OTHER_TRANS</span>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<div id="selection-dialog" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" onClick="closeDialog(this)"></div>
+    <div id="divListGroup" class="list-group dialog-list"></div>
+</div>
+<div id="selection-dialog-input" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" align="center" onClick="closeDialogInput(this)">
+    </div>
+    <div id="divListGroupInput" class="list-group dialog-list"> </div>
+</div>

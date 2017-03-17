@@ -1,0 +1,148 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="payment_bill_mng">
+    <div class="">
+        <div class="panelContent">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">MENU_PAY_BILL</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tab" style="margin-top: 0px;">
+                            <div class="item" ng-click="changeTab()">
+                                <div class="left"></div>
+                                <div class="text"><span>TRANS_PERIODIC_TRADE_TITLE</span></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="item selected">
+                                <div class="left"></div>
+                                <div class="text"><span>TRANS_BATCH_CHECKER</span></div>
+                                <div class="right"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="trow-space"></tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+                        <div class="input-group" ng-click="showTransTypeSelection()">
+                            <span class="input-group-addon" style="width:40%;white-space:pre-wrap">AUTHORIZE_TRANS_MENU</span>
+                            <input id="id.trans-type" class="form-control form-control-righttext" type="button" value="Tất cả" style="white-space:pre-wrap">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+                        <div class="input-group" ng-click="showMakers()">
+                            <span class="input-group-addon" style="width:40%">COM_MAKER</span>
+                            <input id="id.maker" class="form-control form-control-righttext" type="button" value="Tất cả">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+                        <div class="input-group" ng-click="showTransStatusSelection()">
+                            <span class="input-group-addon" style="width:40%; white-space:pre-wrap">COM_STATUS</span>
+                            <input id="id.status" class="form-control form-control-righttext" type="button" value="Tất cả" >
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="right">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="width:40%; white-space:pre-wrap">COM_START_DATE</span>
+                            <input id="id.begindate" class="form-control form-control-righttext-datepicker" type="tel" onpaste="return false;" onclick="handleCalendarNav(this, event);" onkeydown="return handleCalendarNav(this, event);" value="" placeholder="dd/mm/yyyy" >
+                            <span id="span.begindate" class="icon-calendar input-group-addon-datepicker input-group-symbol-datepicker"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="right">
+                        <div class="input-group">
+                            <span class="input-group-addon" style="width:40%; white-space:pre-wrap">COM_TO_DATE</span>
+                            <input id="id.enddate" class="form-control form-control-righttext-datepicker" type="tel" onpaste="return false;" onclick="handleCalendarNav(this, event);" value="" placeholder="dd/mm/yyyy" onkeydown="return handleCalendarNav(this, event);">
+                            <span id="span.enddate" class="icon-calendar input-group-addon-datepicker input-group-symbol-datepicker"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="trow-space"></tr>
+                <tr>
+                    <td>
+                        <span id="btn_search" class="btnshadow btn-second" type="button" ng-click="searchTransaction()">COM_SEARCH</span>
+                    </td>
+                </tr>
+                <tr class="trow-space"></tr>
+            </table>
+            <div id="id.searchResult">
+                <table class="table-account " align="center" width="100%">
+                    <thead>
+                    <tr class="trow-title">
+                        <th width="8%"><span>COM_NO</span></th>
+                        <th width="17%"><span>COM_CREATED_DATE</span></th>
+                        <th width="15%"><span>COM_TOTAL_NUM_AMOUNT</span></th>
+                        <th width="15%"><span>COM_APPROVE_STATUS</span></th>
+                        <th width="15%"><span>COM_CHEKER</span></th>
+                        <th width="15%"><span>COM_TRANS_CODE</span></th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="trans in currentListTrans track by $index">
+                        <td class="tdselct td-head-color" width="8%">
+                            <div class="mobile-mode"><span>COM_NO</span></div>
+                            <div class="content-detail" style="word-break: break-all;">{{$index + 1}}</div>
+                        </td>
+                        <td width="17%">
+                            <div class="mobile-mode"><span>COM_CREATED_DATE</span></div>
+                            <div class="content-detail" style="white-space: pre-wrap;" ng-bind="trans.NGAY_LAP"></div>
+                        </td>
+                        <td width="15%">
+                            <div class="mobile-mode"><span>COM_TOTAL_NUM_AMOUNT</span></div>
+                            <div class="content-detail" style="word-break: break-all;" >{{trans.SO_LUONG | currency : "" : 0}}</div>
+                        </td>
+                        <td width="15%">
+                            <div class="mobile-mode"><span>COM_APPROVE_STATUS</span></div>
+                            <div class="content-detail" style="word-break: break-all">{{statusVN[trans.TRANG_THAI]}}</div>
+                        </td>
+                        <td width="15%">
+                            <div class="mobile-mode"><span>COM_CHEKER</span></div>
+                            <div class="content-detail" style="word-break: break-all" ng-bind="trans.NGUOI_DUYET"></div>
+                        </td>
+                        <td width="15%" >
+                            <div class="mobile-mode"><span>COM_TRANS_CODE</span></div>
+                            <div class="content-detail">
+                                <a ng-click="showDetailTransaction(trans.MA_GD, trans.TRANG_THAI,trans.TXTREASON);" style="cursor:pointer;">
+                                    <span class="no-check" ng-bind="trans.MA_GD"></span>
+                                </a>
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="tblContent" name="tblContent" style="overflow:auto"></div>
+            <div id="acc-pagination" style="text-align: right">
+                <ul class="pagination">
+                    <li ng-repeat="i in arrPage" ng-click="changePage(i)" id="{{$index + 1}}" ><span>{{i}}</span></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div id="selection-dialog" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" onClick="closeDialog(this)"></div>
+    <div id="divListGroup" class="list-group dialog-list"></div>
+</div>
+<div id="selection-dialog-input" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" align="center" onClick="closeDialogInput(this)">
+    </div>
+    <div id="divListGroupInput" class="list-group dialog-list"> </div>
+</div>

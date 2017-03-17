@@ -1,0 +1,240 @@
+.b-datepicker
+{
+    /*font-family: Verdana, sans-serif;*/
+    font-size:   13px;
+
+    line-height: 16px;
+
+    display:  none;
+    position: absolute;
+
+    padding: 10px 6px;
+
+    /* background: #424242; */
+	background: #471C51;
+    color:      #FFF;
+    /* border:     #5B5F62 solid 1px; */
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    border-radius:         3px;
+
+    -webkit-user-select: none;
+    -moz-user-select:    none;
+    user-select:         none;
+	z-index:1000;
+}
+
+.b-datepicker_is_visible
+{
+    display: inline-block;
+}
+
+.b-datepicker__hat,
+.b-datepicker__hide,
+.b-datepicker__week,
+.b-datepicker__month
+{
+    width: 240px;
+}
+
+.b-datepicker__week:after,
+.b-datepicker__month:after
+{
+    content: "";
+    display:  block;
+    clear:    both;
+}
+
+.b-datepicker__hide,
+.b-datepicker__week
+{
+    border: #5F314A solid 0;
+	font-weight: bold;
+}
+
+.b-datepicker__bwd_is_enabled,
+.b-datepicker__fwd_is_enabled,
+.b-datepicker__hide
+{
+    color: #BABABA;
+}
+
+.b-datepicker__bwd,
+.b-datepicker__fwd
+{
+    font-size: 0;
+
+    line-height: 0;
+
+    position: absolute;
+    top:      12px;
+
+    width:  0;
+    height: 0;
+
+    border-width:        8px;
+    border-style:        solid;
+    border-top-color:    transparent;
+    border-bottom-color: transparent;
+}
+
+.b-datepicker__bwd
+{
+    left: 10px;
+
+    border-left-width: 0;
+}
+
+.b-datepicker__fwd
+{
+    right: 10px;
+
+    border-right-width: 0;
+}
+
+.b-datepicker__hat
+{
+    text-align: center;
+
+    padding: 1px 0 7px 0;
+	font-weight: bold;
+}
+
+.b-datepicker__hide
+{
+    text-align: center;
+
+    cursor: pointer;
+
+    padding-top: 12px;
+    margin-top:  3px;
+
+    border-top-width: 1px;
+}
+
+.b-datepicker__week
+{
+    padding-bottom: 3px;
+    margin-bottom:  2px;
+
+    border-bottom-width: 1px;
+}
+
+.b-datepicker__week .b-datepicker__day
+{
+    font-size: 13px;
+
+    line-height: 10px;
+
+    color: #A8A779;
+	font-weight: bold;
+}
+
+.b-datepicker__day
+{
+    text-align: right;
+
+    display: inline-block;
+
+    width:   34px;
+    /*padding: 3px 18px 2px 6px;*/
+	padding: 4px 18px 3px 7px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    /* border-color: #424242; */
+	border-color: #471C51;
+	
+}
+
+.b-datepicker .b-datepicker__day_in_range.b-datepicker__day_is_enabled,
+.b-datepicker .b-datepicker__day_in_range.b-datepicker__day_is_enabled:hover,
+.b-datepicker .b-datepicker__day_in_range.b-datepicker__day_is_holiday,
+.b-datepicker .b-datepicker__day_in_range.b-datepicker__day_is_holiday:hover,
+.b-datepicker .b-datepicker__day_in_range.b-datepicker__day_in_past.b-datepicker__day_is_enabled:hover,
+.b-datepicker .b-datepicker__day_in_range.b-datepicker__day_in_future.b-datepicker__day_is_enabled:hover
+{
+    background:   #9DB8D9;
+    color:        #666;
+    border-color: #9DB8D9;
+	font-weight: bold;
+}
+
+.b-datepicker .b-datepicker__day_is_selected.b-datepicker__day_is_enabled,
+.b-datepicker .b-datepicker__day_is_selected.b-datepicker__day_is_enabled:hover
+.b-datepicker .b-datepicker__day_is_selected.b-datepicker__day_is_holiday,
+.b-datepicker .b-datepicker__day_is_selected.b-datepicker__day_is_holiday:hover,
+.b-datepicker .b-datepicker__day_is_selected.b-datepicker__day_in_past.b-datepicker__day_is_enabled:hover,
+.b-datepicker .b-datepicker__day_is_selected.b-datepicker__day_in_future.b-datepicker__day_is_enabled:hover
+{
+    background:   #B4D5FF;
+    color:        #666;
+    border-color: #B4D5FF;
+}
+
+.b-datepicker__day_is_enabled:hover,
+.b-datepicker__day_in_past.b-datepicker__day_is_enabled:hover,
+.b-datepicker__day_in_future.b-datepicker__day_is_enabled:hover
+{
+    border-color: #B4D5FF;
+}
+
+.b-datepicker__day_is_enabled,
+.b-datepicker__bwd_is_enabled,
+.b-datepicker__fwd_is_enabled
+{
+    cursor: pointer;
+}
+
+.b-datepicker__day_is_enabled:hover,
+.b-datepicker__bwd_is_enabled:hover,
+.b-datepicker__fwd_is_enabled:hover,
+.b-datepicker__hide:hover
+{
+    color: #FFF;
+}
+
+.b-datepicker__day_is_today,
+.b-datepicker__day_is_today:hover,
+.b-datepicker__day_is_today.b-datepicker__day_in_past:hover,
+.b-datepicker__day_is_today.b-datepicker__day_in_future:hover,
+.b-datepicker__day_is_today.b-datepicker__day_is_holiday,
+.b-datepicker__day_is_today.b-datepicker__day_is_holiday:hover
+{
+    color: #FBF9B6;
+}
+
+.b-datepicker__day_is_holiday,
+.b-datepicker__day_is_holiday:hover,
+.b-datepicker__day_is_holiday.b-datepicker__day_in_past:hover,
+.b-datepicker__day_is_holiday.b-datepicker__day_in_future:hover
+{
+    color: #FBA89A;
+}
+
+.b-datepicker__day_in_past,
+.b-datepicker__day_in_future,
+.b-datepicker__day_is_disabled,
+.b-datepicker__bwd_is_disabled,
+.b-datepicker__bwd_is_disabled:hover,
+.b-datepicker__fwd_is_disabled,
+.b-datepicker__fwd_is_disabled:hover
+{
+    color: #666;
+}
+
+.b-datepicker__day_in_past.b-datepicker__day_is_holiday,
+.b-datepicker__day_in_future.b-datepicker__day_is_holiday,
+.b-datepicker__day_is_disabled.b-datepicker__day_is_holiday
+{
+    color: #A27770;
+}
+
+.b-datepicker__day_in_past.b-datepicker__day_is_today,
+.b-datepicker__day_in_future.b-datepicker__day_is_today,
+.b-datepicker__day_is_disabled.b-datepicker__day_is_today
+{
+    color: #A8A779;
+}
