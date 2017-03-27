@@ -145,7 +145,7 @@ function loadInitData() {
 	args.push(jsonData);
 	var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_IIT_FUNDS_LOCAL_TRANSFER"), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
 	var data = getDataFromGprsCmd(gprsCmd);
-	requestMBServiceCorp(data, false, 0, 
+	requestMBServiceCorp(data, true, 0,
 		function(data) {
 			var resp = JSON.parse(data);
 			if (resp.respCode == 0) {
@@ -162,8 +162,8 @@ function loadInitData() {
 			}
 		}, 
 		function(){
-			showAlertText(CONST_STR.get('CORP_MSG_INTERNAL_TRANS_ERROR_GET_DATA'));
-			gotoHomePage();
+			// showAlertText(CONST_STR.get('CORP_MSG_INTERNAL_TRANS_ERROR_GET_DATA'));
+			// gotoHomePage();
 		}
 	);
 }
