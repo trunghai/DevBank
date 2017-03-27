@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'TPBNeoSans';
+    /*src: url('../assets/fonts/TPBNeoSans.ttf') format('truetype');*/
+    /*src: url('../fonts/TPBNeoSans.ttf') format('embedded-opentype');
+    src: url('../fonts/TPBNeoSans.ttf') format('truetype'),
+         url('../fonts/TPBNeoSans.ttf') format('svg'),
+         url('../fonts/TPBNeoSans.ttf') format('embedded-opentype');*/
+		 
+	src: url('/assets/fonts/TPBNeoSans.ttf') format('embedded-opentype');
+	src: url('/assets/fonts/TPBNeoSans.ttf') format('truetype'),
+         url('/assets/fonts/TPBNeoSans.ttf') format('svg'),
+         url('/assets/fonts/TPBNeoSans.ttf') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+a
+{
+	text-decoration:none;
+}
+body {
+  font-family: 'TPBNeoSans', sans-serif;
+}
+td
+{
+	padding:5px;
+}
+.header
+{
+ background-color: #5a2d7e;
+}
+.container
+{
+	max-width:800px; padding:5px;border:#000 thick;
+}
+.contentTop
+{
+	background:url(https://demo.tpb.vn/Biz/assets/images//email_kim_cuong_top.png) no-repeat; 
+	background-size: 150px; 
+	background-position:right top;
+	margin-top: 10px;
+}
+.box
+{
+	width:90%;margin:0 auto;
+}
+.box .boxTop
+{
+	width:40%; float:right;padding-top:15px;padding-bottom: 25px;text-align:center;
+}
+.footer
+{
+	font-size:13px;
+}
+.contentBottom
+{
+	background:url(https://demo.tpb.vn/Biz/assets/images//email_kim_cuong_bottom.png) no-repeat; 
+	background-size: 115px; 
+	background-position:left top; 
+	height: 200px;
+	margin-top: 20px;
+}
+.font-boid
+{
+	font-weight:bold
+}
+.boxTitle
+{
+	padding-top:75px;
+}
+.banner
+{
+	height:100px;
+}
+.td-column-left
+{
+	width:250px;	
+	
+}
+
+.td-column-right
+{
+	width:400px;	
+	
+}
+

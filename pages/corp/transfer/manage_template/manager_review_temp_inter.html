@@ -1,0 +1,239 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="manager_review_temp_inter">
+    <div class="">
+        <div class="panelContent">
+            <table id="dynamic-billing-table" width="100%" >
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">CONST_MANAGE_TRANS_TEMPLATE</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="Header"><span style="white-space:pre-wrap">TRANSFER_REMITTANCE_DETAIL</span></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default">
+                                    <td class="td-left"><span>TRANSFER_REMITTANCE_NAME</span></td>
+                                    <td class="td-right"><span>{{info.BENE_DESC}}</span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="Header"><span style="white-space:pre-wrap">INTERNATIONAL_PURPOSE_TRANS</span></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <!--Loại giao dịch-->
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_TRANS_TYPE</span></td>
+                                    <td class="td-right"><span id="id.international.transtype"></span></td>
+                                </tr>
+                            </table>
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <!--Mục đích-->
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_PURPOSE</span></td>
+                                    <td class="td-right"><span id="id.international.purpose"></span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="Header"><span style="white-space:pre-wrap">INTERNATIONAL_OFFEROR</span></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <!--Bên đề nghị-->
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_NAME_OFFEROR</span></td>
+                                    <td class="td-right"><span id="id.international.name.offeror"></span></td>
+                                </tr>
+                            </table>
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <!--Địa chỉ Bên đề nghị-->
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_ADDRESS_OFFEROR</span></td>
+                                    <td class="td-right"><span id="id.international.address.offeror"></span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="Header"><span style="white-space:pre-wrap">INTERNATIONAL_BEN</span></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <!--Tên bên thụ hưởng-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_NAME_BEN</span></td>
+                                    <td class="td-right"><span id="id.international.name.ben"></span></td>
+                                </tr>
+                            </table>
+                            <!--Địa chỉ bên thụ hưởng-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_ADDRESS_BEN</span></td>
+                                    <td class="td-right"><span id="id.international.address.ben"></span></td>
+                                </tr>
+                            </table>
+                            <!--Quốc gia bên hụ hưởng-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_NATION_BEN</span></td>
+                                    <td class="td-right"><span id="id.international.nation.ben"></span></td>
+                                </tr>
+                            </table>
+                            <!--Số tài khoản thụ hưởng-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_ACCOUNT_BEN</span></td>
+                                    <td class="td-right"><span id="id.international.account.ben"></span></td>
+                                </tr>
+                            </table>
+                            <!--Nội dung-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_CONTENT</span></td>
+                                    <td class="td-right"><span id="id.international.content"></span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="Header"><span style="white-space:pre-wrap">INTERNATIONAL_THE_BEN_BANK</span></h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <!--Phương thức chuyển-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_TRANS_METHOD</span></td>
+                                    <td class="td-right"><span id="id.international.trans.method"></span></td>
+                                </tr>
+                            </table>
+                            <!--Nhập swift code-->
+                            <table ng-show="transSwiftCode" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_SWIFT_CODE</span></td>
+                                    <td class="td-right"><span id="id.international.swift.code"></span></td>
+                                </tr>
+                            </table>
+                            <!--Tên ngân hàng thụ hưởng-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_THE_BEN_BANK_NAME</span></td>
+                                    <td class="td-right"><span id="id.international.ben.bank.name"></span></td>
+                                </tr>
+                            </table>
+                            <!--Địa chỉ ngân hàng thụ hưởng-->
+                            <table ng-show="transAdderss" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_ADRESS_BANK_BEN</span></td>
+                                    <td class="td-right"><span id="id.international.ben.bank.address"></span></td>
+                                </tr>
+                            </table>
+                            <!--Quốc gia ngân hàng thụ hưởng-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_NAIION_BANK_BEN</span></td>
+                                    <td class="td-right"><span id="id.international.nation.bank.ben"></span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h5 class="Header">
+                                <span>INTERNATIONAL_INTERMEDIARY_BANK</span>
+                            </h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <!--Ngân hàng  trung gian-->
+                            <table width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_INTERMEDIARY_BANK</span></td>
+                                    <td class="td-right"><span id="id.international.intermediary.bank"></span></td>
+                                </tr>
+                            </table>
+                            <!--Phương thức chuyển NHTG-->
+                            <table ng-show="transNHTG" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_TRANS_METHOD_NHTG</span></td>
+                                    <td class="td-right"><span id="id.international.trans.method.NHTG"></span></td>
+                                </tr>
+                            </table>
+                            <!--Nhập swift code NHTG-->
+                            <table ng-show="transSwiftCodeNHTG && transNHTG" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_SWIFT_CODE_NHTG</span></td>
+                                    <td class="td-right"><span id="id.international.swift.code.NHTG"></span></td>
+                                </tr>
+                            </table>
+                            <!--Nhập tên NHTG-->
+                            <table ng-show="transNHTG" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_INTERMEDIARY_BANK_NAME1</span></td>
+                                    <td class="td-right"><span id="id.international.name.NHTG"></span></td>
+                                </tr>
+                            </table>
+                            <!--Nhập địa chỉ NHTG-->
+                            <table ng-show="transAdderssNHTG && transNHTG" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_INTERMEDIARY_BANK_ADDRESS</span></td>
+                                    <td class="td-right"><span id="id.international.address.NHTG"></span></td>
+                                </tr>
+                            </table>
+                            <!--quốc gia NHTG-->
+                            <table ng-show="transNHTG" width="100%" align="center" class="background-blacktrans">
+                                <tr class="trow-default" >
+                                    <td class="td-left"><span >INTERNATIONAL_NAIION_BANK_NHTG</span></td>
+                                    <td class="td-right"><span id="id.international.nation.NHTG"></span></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="trow-space"></tr>
+                    <tr>
+                        <td colspan="2">
+                            <table class="button-group button-group-3">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <button class="btnshadow btn-primary" type="button" value="Quay lại" ng-click="onBackClick()"><span>COM_BACK</span></button>
+                                        </td>
+                                        <td>
+                                            <button class="btnshadow btn-primary" type="button" value="Quay lại" ng-click="onReInputClick()" style="display: none"><span>COM_REINPUT</span></button>
+                                        </td>
+                                        <td>
+                                            <button class="btnshadow btn-primary" type="button" value="Tiếp tục" ng-click="onCancelClick()" style="display: none"><span>BTN_CANCEL_TRANSACTION</span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

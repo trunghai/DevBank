@@ -1,0 +1,368 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="auth_international_trans_authen">
+    <div class="">
+        <div class="panelContent">
+            <table id="dynamic-billing-table" width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">INTERNATIONAL_AUTHORIZE</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table class="sequence-form-302" width="357" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:auto">
+                                <tbody>
+                                <tr>
+                                    <td  width="33%">
+                                        <span>SEQ_CONFIRM_TITLE</span>
+                                    </td>
+                                    <td  class="selected"  width="33%">
+                                        <span>SEQ_AUTHORIZE_TITLE</span>
+                                    </td>
+                                    <td  width="33%">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tbody>
+                <tr>
+                    <td colspan="2">
+                        <table width='100%' align='center' class='background-blacktrans'>
+                            <tr class="trow-default">
+                                <td class="td-left"><span>COM_TRANS_CODE</span></td>
+                                <td class="td-right"><span ng-bind="infoTrans.IDFCATREF"></span></td>
+                            </tr>
+                            <tr class="trow-default">
+                                <td class="td-left"><span>COM_EXECUTION_TIME</span></td>
+                                <td class="td-right"><span ng-bind="infoTrans.CREATE_TIME"></span></td>
+                            </tr>
+                            <tr ng-show="authen" class="trow-default">
+                                <td class="td-left"><span>AUTHORIZE_TXT_REASON</span></td>
+                                <td class="td-right" style="word-break: break-all;"><span ng-bind="reason"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>COM_ACCOUNT_INFO</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width='100%' align='center' class='background-blacktrans'>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_TRANS_TYPE</span></td>
+                                <td class='td-right' ng-bind="infoTrans.NAMTRANSACTIONTYPE"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_PURPOSE</span></td>
+                                <td class='td-right' ng-bind="infoTrans.NAMEPURPOSE"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_CONTENT</span></td>
+                                <td class='td-right' ng-bind="infoTrans.CONTENT"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_NAME_OFFEROR</span></td>
+                                <td class='td-right' ng-bind="infoTrans.OFFERORNAME"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ADDRESS_OFFEROR</span></td>
+                                <td class='td-right' ng-bind="infoTrans.OFFERORADDRESS"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_NAME_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYNAME"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ADDRESS_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYADDRESS"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_NATION_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYCOUNTRIESNAMES"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ACCOUNT_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYACCOUNT"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_TRANS_METHOD</span></td>
+                                <td class='td-right' ng-bind="infoTrans.TRANSFERMETHOD"></td>
+                            </tr>
+                            <tr ng-show="swifCode" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_SWIFT_CODE_BANK_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYSWIFTCODE"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_THE_BEN_BANK_NAME</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYBANK"></td>
+                            </tr>
+                            <tr ng-show="addressBen" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ADRESS_BANK_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYBANKADDRESS"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_NAIION_BANK_BEN</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BENEFICIARYBANKCOUNTRIESNAMES"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_INTERMEDIARY_BANK</span></td>
+                                <td class='td-right' ng-bind="infoTrans.INTERMEDIARYBANK"></td>
+                            </tr>
+                            <tr ng-show="swiftCodeNHTG" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_SWIFT_CODE_NHTG1</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BANKSWIFTCODE"></td>
+                            </tr>
+                            <tr ng-show="NHTG" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_INTERMEDIARY_BANK_NAME1</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BANKNAME"></td>
+                            </tr>
+                            <tr ng-show="addressNHTG" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_INTERMEDIARY_BANK_ADDRESS</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BANKADDRESS"></td>
+                            </tr>
+                            <tr ng-show="nationBankNHTG" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_NATION_INTERMEDIARY_BANK</span></td>
+                                <td class='td-right' ng-bind="infoTrans.BANKCOUNTRIESNAME"></td>
+                            </tr>
+
+                            <!--<tr class='trow-default'>-->
+                                <!--<td class='td-left'><span>INTERNATIONAL_PROMOCODE1</span></td>-->
+                                <!--<td class='td-right' ng-bind="infoTrans.PROMOCODE"></td>-->
+                            <!--</tr>-->
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_CURRENCY</span></td>
+                                <td class='td-right' ng-bind="infoTrans.MONEYTYPE"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_TOTAL_CURRENCY</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.TRANSFERAMOUNT | currency : '' : dosCurrency) + ' ' + infoTrans.MONEYTYPE"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ACCOUNT_CHANGE_NGOAITE</span></td>
+                                <td class='td-right' ng-bind="infoTrans.FOREIGNACCOUNT"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_DEBIT_ACCOUNT_CURRENCY1</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.FOREGNAMOUNT | currency : '' : dosCurrency) + ' ' + infoTrans.MONEYTYPE"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ACCOUNT_CHANGE_VND</span></td>
+                                <td class='td-right' ng-bind="infoTrans.IDSRCACCOUNT"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_RATE_VND</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.RATE | currency : '' : 0) + ' VND'"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_DEBIT_ACCOUNT_VND1</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.DEBITAMOUNT | currency : '' : 0) + ' VND'"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_FEE_METHOD</span></td>
+                                <td class='td-right'><span ng-bind="infoTrans.MethodCharge"></span></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_FEE_EXCHANGE_AMOUNT</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.CHARGE | currency : '' : dos) + ' ' + currencyType"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ELECTRIC_FEE</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.ELECTRICCHARGE | currency : '' : dos) + ' ' + currencyType"></td>
+                            </tr>
+                            <tr class='trow-default' ng-show="(infoTrans.CHARGEMETHOD == 'OUR') ? true : false">
+                                <td class='td-left'><span>INTERNATIONAL_FEE_OUR</span></td>
+                                <td class='td-right' ng-bind="(infoTrans.CHARGEOUT | currency : '' : dos) + ' ' + currencyType"></td>
+                            </tr>
+                            <tr ng-show="(infoTrans.CHARGEMETHOD == 'BEN') ? false : true" class='trow-default'>
+                                <td class='td-left'><span>INTERNATIONAL_ACCOUNT_CHARGES</span></td>
+                                <td class='td-right' ng-bind="infoTrans.CHARGEACCOUNT"></td>
+                            </tr>
+                            <tr class='trow-default'>
+                                <td class='td-left'><span>COM_SEND_MSG_APPROVER</span></td>
+                                <td class='td-right'></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>INTERNATIONAL_PROFILES</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="table-account " width="100%" align="center">
+                            <tbody>
+                            <tr class="trow-title">
+                                <th width="6%"><span>COM_NO</span></th>
+                                <th width="50%"><span>INTERNATIONAL_PROFILE_NAME</span></th>
+                                <th width="20%"><span>INTERNATIONAL_DATE_UPLOAD</span></th>
+                                <th><span>INTERNATIONAL_PROFILE_SIZE</span></th>
+                                <th ng-show="inMoblie"></th>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr ng-repeat="item in detailCheckList track by $index">
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="$index + 1"></div>
+                                    <strong></strong>
+                                </td>
+                                <td width="50%">
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="item.FILE_NAME"></div>
+                                </td>
+                                <td width="20%">
+                                    <div class="mobile-mode"><span>INTERNATIONAL_DATE_UPLOAD</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="item.DATMAKE"></div>
+                                </td>
+                                <td>
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_SIZE</span></div>
+                                    <div class="content-detail" style="word-break: break-all;" ng-bind="(item.CAPACITY/1024/1024|number:2) + ' MB'"> </div>
+                                </td>
+                                <td ng-show="inMoblie">
+                                    <div class="mobile-mode"><span></span></div>
+                                    <div class="content-detail" style="word-break: break-all;">
+                                           <span type="button" style="color: red; cursor: pointer" ng-click="onViewPDF(item.IDFILE, item.FILE_NAME)">
+                                               <strong><span>INTERNATIONAL_VIEW_PROFILE</span></strong>
+                                           </span>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" align="center">
+                            <tr>
+                                <td colspan="2">
+                                    <h5 id="auth.title" class="Header"><span>AUTHEN_TXT_INPUT_KEY_TITLE</span></h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <h5 id="auth.note" style="margin-left:10px;margin-bottom: 15px;"><span>AUTHEN_TXT_NOTE_CONTENT</span></h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center" valign="middle" class="td-text">
+                                    <div class="input-group">
+                                        <span id="authen.tokentype" class="input-group-addon" style="width:40%;">TOKEN KEY</span>
+                                        <input id="authen.tokenkey" type="tel" class="form-control form-control-righttext" placeholder="COM_TXT_INPUT_PLACEHOLDER" value="" maxlength="6" />
+                                        <span class="input-group-addon input-group-symbol"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan='2'>
+                                    <div id='authen.progressbar' class="progress-wrapper html5-progress-bar" style="display: block">
+                                        <div id="authen.progressbarotp" class="authen-progressbarotp">
+                                            <!--<progress value="0" max="100" min='0'></progress>-->
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="trow-space"></tr>
+
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="button-group button-group-3">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="Hủy" ng-click="onCancelClick()" ><span>COM_CANCEL</span></button>
+                                </td>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="Quay lại" ng-click="onBackClick()" ><span>COM_BACK</span></button>
+                                </td>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="Tiếp tục" ng-click="onContinuteClick()" ><span>COM_CONTINUE</span></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+<div id="selection-dialog" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" onClick="closeDialog(this)"></div>
+    <div id="divListGroup" class="list-group dialog-list"></div>
+</div>
+<div id="selection-dialog-input" class="dialog-blacktrans" align="center" style="display:none">
+    <div class="dialog-backgroundtrans" align="center" onClick="closeDialogInput(this)">
+    </div>
+    <div id="divListGroupInput" class="list-group dialog-list"> </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="contentView" class="modal-content"></div>
+
+</div>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+
+        margin: auto;
+        padding: 0px;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>

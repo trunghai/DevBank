@@ -1,0 +1,306 @@
+<link rel="stylesheet" href="./assets/uploadjs/jquery.fileupload.css" type="text/css"/>
+
+<div id="mainViewContent" class="main-layout-subview" ng-controller="international_trans_checklist">
+    <div class="">
+        <div class="panelContent" nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter, pdfFilter">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">MENU_INTERNATIONAL_MONEY_TRANS</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table class="sequence-form-302" width="357" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:auto">
+                                <tbody>
+                                <tr>
+                                    <td  width="33%">
+                                        <span>SEQ_INPUT_TITLE</span>
+                                    </td>
+                                    <td class="selected" width="33%">
+                                        <span>SEQ_AUTHEN_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span ng-bind="title"></span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="table-account" width="100%" align="center">
+                            <tbody>
+                            <tr class="trow-title">
+                                <th width="6%"><span>COM_NO</span></th>
+                                <th width="50%"><span>INTERNATIONAL_PROFILE_NAME</span></th>
+                                <th><span>INTERNATIONAL_REQUEST</span></th>
+
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail" ><strong>I</strong></div>
+
+                                </td>
+                                <td>
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail" ><strong><span>INTERNATIONAL_DOCUMENT_REQ</span></strong></div>
+                                </td>
+                                <td >
+                                    <div class="mobile-mode"><span>INTERNATIONAL_REQUEST</span></div>
+                                    <div class="content-detail" ></div>
+                                </td>
+                            </tr>
+                            <tr ng-repeat="item in docReq">
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail"  ng-bind="$index + 1"></div>
+                                </td>
+                                <td style="text-align: left !important;">
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail"  ng-bind="item.DESCREPTION"></div>
+                                </td>
+                                <td >
+                                    <div class="mobile-mode"><span>INTERNATIONAL_REQUEST</span></div>
+                                    <div class="content-detail"  ng-bind="item.EXPECT"></div>
+                                </td>
+
+                            </tr>
+                            <tr ng-show="docAdiLeg">
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail" ><strong>II</strong></div>
+
+                                </td>
+                                <td>
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail" ><strong><span>INTERNATIONAL_DOCUMENT_ADI</span></strong></div>
+                                </td>
+                                <td >
+                                    <div class="mobile-mode"><span>INTERNATIONAL_REQUEST</span></div>
+                                    <div class="content-detail" ></div>
+                                </td>
+                            </tr>
+                            <tr ng-repeat="item in docAdi">
+                                <td width="6%">
+                                    <div class="mobile-mode"><span>COM_NO</span></div>
+                                    <div class="content-detail"  ng-bind="$index + 1"></div>
+                                </td>
+                                <td style="text-align: left !important;">
+                                    <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                    <div class="content-detail"  ng-bind="item.DESCREPTION"></div>
+                                </td>
+                                <td >
+                                    <div class="mobile-mode"><span>INTERNATIONAL_REQUEST</span></div>
+                                    <div class="content-detail"  ng-bind="item.EXPECT"></div>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h5 class="Header">
+                            <span>INTERNATIONAL_CHECKLIST_PROFILE</span>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+
+                        <div class="input-group">
+                            <span class="input-group-addon" style="width:40%"></span>
+                           <span class="fileinput-button form-control form-control-righttext">
+                               <span>GUA_CHOOSE_FILE</span>
+                               <input type="file" name="file" nv-file-select="" uploader="uploader" multiple id="fileupload"/>
+                           </span>
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">INTERNATIONAL_PURPOSE</span>
+                            <input id="id.international.transtype" class="form-control form-control-righttext" type="button" value="COM_TXT_SELECTION_PLACEHOLDER" onclick="signPDF();">
+                            <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                            <input id="id.international.transtype.value" type="hidden" value="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center">
+                        <div class="input-group">
+                            <div style="text-align: right;">
+                                <span style="cursor:pointer;">COMMON_NOTE_FILE_FORMAT</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <tr class="trow-space"></tr>
+                <tr>
+                    <td>
+                        <!-- BEGIN MAIN CONTENT -->
+                        <div>
+                            <table class="table-account" width="100%" align="center">
+                                <tbody>
+                                <tr class="trow-title">
+                                    <th width="6%"><span>COM_NO</span></th>
+                                    <th width="33%"><span>INTERNATIONAL_PROFILE_NAME</span></th>
+                                    <th width="15%" ng-show="uploader.isHTML5"><span>INTERNATIONAL_PROFILE_SIZE</span></th>
+                                    <!--<th width="20%"><span>INTERNATIONAL_FILE_LABEL_AUTHENTIC</span></th>-->
+                                    <!--<th width="20%"><span>INTERNATIONAL_FILE_LABEL_RESON</span></th>-->
+                                    <th width="6%"></th>
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                <tr ng-repeat="item in uploader.queue">
+                                    <td width="6%">
+                                        <div class="mobile-mode"><span>COM_NO</span></div>
+                                        <div class="content-detail" style="word-break: break-all;" ng-bind="$index + 1"></div>
+                                        <strong></strong>
+                                    </td>
+                                    <td style="text-align: left !important;">
+                                        <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_NAME</span></div>
+                                        <div class="content-detail" style="word-break: break-all;" ng-bind="item.file.name"></div>
+                                    </td>
+                                    <td ng-show="uploader.isHTML5" nowrap>
+                                        <div class="mobile-mode"><span>INTERNATIONAL_PROFILE_SIZE</span></div>
+                                        <div class="content-detail" style="word-break: break-all;">{{ item.file.size/1024/1024|number:2 }} MB</div>
+                                    </td>
+                                    <!--<td>-->
+                                        <!--<div class="mobile-mode"><span>INTERNATIONAL_FILE_LABEL_AUTHENTIC</span></div>-->
+                                        <!--<div class="content-detail" style="color:red" ng-bind="item.file.authentic"></div>-->
+                                    <!--</td>-->
+                                    <!--<td>-->
+                                        <!--<div class="mobile-mode"><span>INTERNATIONAL_FILE_LABEL_RESON</span></div>-->
+                                        <!--<div class="content-detail" style="color:red" ng-bind="item.file.reson"></div>-->
+                                    <!--</td>-->
+                                    <td nowrap>
+                                        <div class="mobile-mode"><span></span></div>
+                                        <div class="content-detail" style="word-break: break-all;">
+                                           <span type="button" ng-click="removeFile(item, $index)" style="color: red; cursor: pointer">
+                                               <strong><span>INTERNATIONAL_REMOVE_PROFILE</span></strong>
+                                           </span>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- END MAIN CONTENT -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" align="center" colspan="2">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap">GUA_PROFILE_NOTE</span>
+                            <input id="id.international.note.profile" class="form-control form-control-righttext" type="text" value="" placeholder="INTERNATIONAL_PLACEHOLDER_INPUT" onkeyup="controlInputText(this, 250)" MAXLENGTH="250">
+                            <input id="id.international.note.profile.value" type="hidden" value="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-text" valign="middle" colspan="2">
+                        <div class="input-group" >
+                            <span class="input-group-addon" style="width: 40%; white-space:pre-wrap; text-align: right"><input style="margin-right: 20px;" id="checkbox" class="trans.checkbox" type="checkbox" ng-click="checkbox()" name="checkbox"></span>
+                            <span style="color: #674185; font-weight:bold">INTERNATIONAL_COMMITMENT</span><br>
+                            <span ng-show="docAdiLeg" style="color: #674185">INTERNATIONAL_COMMITMENT_DAY</span>
+                            <span ng-hide="docAdiLeg" style="color: #674185">INTERNATIONAL_COMMITMENT_DAY_ADI</span>
+                            <input ng-show="docAdiLeg" id="datecommitment" style="text-align: center; width: 21.3%; height: 30px; border: 1px solid #674185; color: #674185" type="text" value="" placeholder="INTERNATIONAL_PLACEHOLDER_INPUT" disabled><br>
+                            <span ng-show="showContentDocument" style="color: #674185">INTERNATIOANL_NOTE_DOCUMENT_OUR</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="trow-space"></tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="button-group button-group-3">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" value="COM_BACK" ng-click="onBackClick()" ><span>COM_BACK</span></button>
+                                </td>
+                                <td>
+                                    <button class="btnshadow btn-primary" type="button" style="display: none" value="Quay lại" ng-click="onBackClick()" ><span>COM_BACK</span></button>
+                                </td>
+                                <td>
+                                    <button id="sendData" class="btnshadow btn-primary" type="button" value="CM_BTN_SEND_REQ tục" ng-click="uploadFile()" ><span>COM_CONTINUE</span></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div id="contentView" class="modal-content">
+
+    </div>
+
+</div>
+
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+
+        margin: auto;
+        padding: 0px;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>

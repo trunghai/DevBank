@@ -1,0 +1,106 @@
+<div id="mainViewContent" class="main-layout-subview" ng-controller="auth-guarantee-view">
+    <div class="">
+        <div class="panelContent">
+            <table id="dynamic-billing-table" width="100%">
+                <tr>
+                    <td>
+                        <h5 class="screen-title"><span style="white-space:pre-wrap;">MENU_PAY_BILL</span></h5>
+                        <div class="line-separate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="seqFormLocal">
+                            <table class="sequence-form-301" width="357" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:auto">
+                                <tbody>
+                                <tr>
+                                    <td class="selected" width="33%">
+                                        <span>SEQ_CONFIRM_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_AUTHEN_TITLE</span>
+                                    </td>
+                                    <td width="33%">
+                                        <span>SEQ_COMPLETE_TITLE</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <table class="table-account table-checkbox" width="100%" align="center" xmlns="http://www.w3.org/1999/xhtml">
+                                <thead>
+                                <tr class="trow-title">
+                                    <th width="6%"><span>COM_NO</span></th>
+                                    <th width="20%"><span>COM_CREATED_DATE</span></th>
+                                    <th width="15%"><span>COM_AMOUNT</span></th>
+                                    <th width="10%"><span>COM_CHEKER</span></th>
+                                    <th width="10%"><span>COM_TRANS_CODE</span></th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="trans in currentTrans track by $index" onclick="selectRow(event, this, false);">
+                                    <td class="tdselct td-head-color" width="6%">
+                                        <div class="mobile-mode"><span>COM_NO</span></div>
+                                        <div class="content-detail" style="word-break: break-all;">{{$index + 1}}</div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="mobile-mode"><span>COM_CREATED_DATE</span></div>
+                                        <div class="content-detail" style="white-space: pre-wrap;" ng-bind="trans.NGAY_LAP"></div>
+                                    </td>
+                                    <td width="15%">
+                                        <div class="mobile-mode"><span>COM_AMOUNT</span></div>
+                                        <div class="content-detail" style="word-break: break-all" ng-bind="trans.SO_LUONG | currency : '' : 0"></div>
+                                    </td>
+                                    <td width="10%">
+                                        <div class="mobile-mode"><span>COM_CHEKER</span></div>
+                                        <div class="content-detail" style="word-break: break-all" ng-bind="trans.NGUOI_DUYET"></div>
+                                    </td>
+                                    <td width="10%" >
+                                        <div class="mobile-mode"><span>COM_TRANS_CODE</span></div>
+                                        <div class="content-detail">
+                                            <a style="cursor:pointer;">
+                                                <span class="no-check" ng-bind="trans.MA_GD"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <td ng-style="{'display': !authen ? 'block' : 'none'}">
+                        <table class="background-blacktrans" width="100%" align="center">
+                            <tbody>
+                            <tr class="trow-default">
+                                <td style="font-weight: normal"><span>Lý do từ chối: {{reason}}</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="button-group button-group-2" >
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <span class="btnshadow btn-primary" type="button" ng-click="onContinuteClick()">AUTH_TYPE_BTN_SEND</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
