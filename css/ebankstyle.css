@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	line-height:1.1;
 	/*color:#fff;*/
 	/*color:#252525;*/
-	color:#5f2f85;
+	color:#1d2129;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1.small, h2.small, h3.small, h4.small, h5.small, h6.small, .h1.small, .h2.small, .h3.small, .h4.small, .h5.small, .h6.small {
 	font-weight:normal;
@@ -658,7 +658,7 @@ table td[class *= "col-"], table th[class *= "col-"]{
 	width:50%;
 	text-align:left;
 	/*color:#FFF;*/
-	color: #5f2f85;
+	color: #1d2129;
 }
 .trow-default>td.td-picker-left, .table-white>tr.trow-default>td.td-picker-left {
 	width:40%;
@@ -672,7 +672,7 @@ table td[class *= "col-"], table th[class *= "col-"]{
 	width:50%;
 	text-align:right;
 	/*color:#FFF;*/
-	color:#5f2f85;
+	color:#1d2129;
 	word-break:break-word;
 }
 .trow-default>td.td-picker-right, .table-white>tr.trow-default>td.td-picker-right {
@@ -689,14 +689,14 @@ table td[class *= "col-"], table th[class *= "col-"]{
 	text-align:left;
 	font-size:80%;
 	/*color:#CCC;*/
-	color:#5f2f85;
+	color:#1d2129;
 }
 
 .trow-default>td.td-left-single, .table-white>tr.trow-default>td.td-left-single {
 	width:90%;
 	text-align:left;
 	/*color:#FFF;*/
-	color:#5f2f85;
+	color:#1d2129;
 	height:35px;
 }
 

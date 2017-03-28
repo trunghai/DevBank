@@ -321,16 +321,16 @@ function loginSuccess(loginUser, loginPass) {
                 var mobilefooter = document.getElementById("mainlayoutfooter");
                 mobilefooter.style.display = "none";
             } else {
-                if (gCustomerNo.length == 8) {
-                    navController.initWithRootView('accountxsl/account-change-password-scr', true,
-                        'xsl');
-                } else if (gCustomerNo.length == 10) {
-                    navController.initWithRootView(
-                        'corp/setup/system/changePassword/set_change_password', true, 'xsl');
-                }
+                // if (gCustomerNo.length == 8) {
+                //     navController.initWithRootView('accountxsl/account-change-password-scr', true,
+                //         'xsl');
+                // } else if (gCustomerNo.length == 10) {
+                //     navController.initWithRootView(
+                //         'corp/setup/system/changePassword/set_change_password', true, 'xsl');
+                // }
                 //20151126 DuyNH Fix Change Language then redirect to HomePage START
                 //navController.setDefaultPage('accountxsl/account-scr', 'xsl');
-                navController.setDefaultPage('homepagexsl/homepage-corp-scr', 'xsl');
+                navController.initWithRootView('homepagexsl/homepage-corp-scr', true,'xsl');
                 //20151126 DuyNH Fix Change Language then redirect to HomePage END
             }
 

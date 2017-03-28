@@ -13,7 +13,7 @@
                   <div class="line-separate" />
                 </td>
               </tr>
-              <tr>
+              <tr style="display: none">
                 <td>
                   <div class="tab" style="margin-top: 0px;">
                     <div class="item selected">

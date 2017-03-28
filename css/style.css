@@ -361,7 +361,7 @@ body {
 	font-size: 12px;
     text-decoration: none;
 	/*border-bottom: solid 1px #70389e;*/
-	border-bottom: dashed 1px #70389e;
+	border-bottom: dotted 1px #888;
     background: transparent;
     /*-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .1), 0px 1px 0px 0px rgba(0, 0, 0, .1);
     -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .1), 0px 1px 0px 0px rgba(0, 0, 0, .1);
@@ -458,7 +458,7 @@ body {
 
 .menu-layout-contents-sub li div:first-child {
 	/*border-bottom: 1px solid #ebebeb;*/
-	border-bottom: 1px dashed #aaa;
+	border-bottom: 1px dotted #aaa;
 }
 
 .menu-layout-contents-sub li .menu-func-two-line {

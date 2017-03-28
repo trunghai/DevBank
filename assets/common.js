@@ -6291,7 +6291,7 @@ function updateViewForDesktop() {
 	var tmpNodePage = document.getElementById('fullPage');
 	tmpNodePage.setAttribute('align', 'left'); //left
 	
-	tmpNodeMain.style.borderLeftStyle = 'dashed';
+	tmpNodeMain.style.borderLeftStyle = 'dotted';
 	tmpNodeMain.style.borderRightStyle = 'dashed';
 	var tmpNodeHeader = tmpNodeMain.getElementsByClassName('header')[0];
 	tmpNodeHeader.style.display = 'block';

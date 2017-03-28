@@ -43,7 +43,9 @@ function viewDidLoadSuccess() {
 			updateView();
 
 			//Get init data when load screen
-			loadInitData();
+			// loadInitData();
+			gTrans.sendMethod = 1;
+			fillSendMethod();
 		}
 
 		gTrans.isBack = false;
@@ -170,14 +172,14 @@ function loadInitData() {
 
 //Action click to change source account
 function showAccountSelection() {
-	var list = gTrans.listSourceAccounts;
+	var list = [{account: "88889998001", balance: "1000000000", ghiNo: "N"}];
 	var cbxAccount = [];
 	var cbxBalance = [];
 	for (var i in list) {
 		var account = list[i];
 		if (account.ghiNo == 'N') {
 			cbxAccount.push(account.account);
-			cbxBalance.push(account.balance + ' VND');
+			cbxBalance.push(formatNumberToCurrency(account.balance) + ' VND');
 		}
 	}
 	if (cbxAccount.length != 0) {
@@ -330,30 +332,33 @@ function loadInfoFromIdAccount() {
 		userId = document.getElementById("trans.targetaccount").value;
 	}
 
-	var jsonData = new Object();
-	jsonData.sequence_id = "3";
-	jsonData.idtxn = gTrans.transType;
-	jsonData.accountId = userId;
-	var	args = new Array();
-	args.push(null);
-	args.push(jsonData);
-	var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_IIT_FUNDS_LOCAL_TRANSFER"), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
-	var data = getDataFromGprsCmd(gprsCmd);
-	requestMBServiceCorp(data, true, 0, 
-		function(data) {
-			var resp = JSON.parse(data);
-			if (resp.respCode == 0 && resp.respJsonObj.length > 0 && resp.respJsonObj[0].GHI_CO == "N") {
-				document.getElementById("trans.targetaccountname").innerHTML = resp.respJsonObj[0].TEN_TK;
-				if (gTrans.transType == "T11") {
-					gTrans.accName = resp.respJsonObj[0].TEN_TK;
-				}
-			} else
-				document.getElementById("trans.targetaccountname").innerHTML = "";
-		}, 
-		function() {
-			document.getElementById("trans.targetaccountname").innerHTML = "";
-		}
-	);
+	gTrans.accName = "FULLNAME_88889998";
+	document.getElementById("trans.targetaccountname").innerHTML = gTrans.accName;
+
+	// var jsonData = new Object();
+	// jsonData.sequence_id = "3";
+	// jsonData.idtxn = gTrans.transType;
+	// jsonData.accountId = userId;
+	// var	args = new Array();
+	// args.push(null);
+	// args.push(jsonData);
+	// var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_IIT_FUNDS_LOCAL_TRANSFER"), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
+	// var data = getDataFromGprsCmd(gprsCmd);
+	// requestMBServiceCorp(data, true, 0, 
+	// 	function(data) {
+	// 		var resp = JSON.parse(data);
+	// 		if (resp.respCode == 0 && resp.respJsonObj.length > 0 && resp.respJsonObj[0].GHI_CO == "N") {
+	// 			document.getElementById("trans.targetaccountname").innerHTML = resp.respJsonObj[0].TEN_TK;
+	// 			if (gTrans.transType == "T11") {
+	// 				gTrans.accName = resp.respJsonObj[0].TEN_TK;
+	// 			}
+	// 		} else
+	// 			document.getElementById("trans.targetaccountname").innerHTML = "";
+	// 	}, 
+	// 	function() {
+	// 		document.getElementById("trans.targetaccountname").innerHTML = "";
+	// 	}
+	// );
 }
 
 //Get list destination account in business
@@ -511,17 +516,17 @@ function validate() {
 		}
 	}
 
-	if (gTrans.transType == "T12") {
-		//validate han muc
-		if (parseInt(gTrans.transInfo.amountTrans) > parseInt(gTrans.limit.limitTime)) {
-			showAlertText(formatString(CONST_STR.get('CORP_MSG_COM_LIMIT_EXCEEDED_TIME'), [formatNumberToCurrency(gTrans.limit.limitTime)]));
-			return false;
-		}
-		if ((parseInt(gTrans.limit.totalDay) + parseInt(gTrans.transInfo.amountTrans)) > parseInt(gTrans.limit.limitDay)) {
-			showAlertText(formatString(CONST_STR.get('CORP_MSG_COM_LIMIT_EXCEEDED_DAY'), [formatNumberToCurrency(gTrans.limit.limitDay)]));
-			return false;
-		}
-	}
+	// if (gTrans.transType == "T12") {
+	// 	//validate han muc
+	// 	if (parseInt(gTrans.transInfo.amountTrans) > parseInt(gTrans.limit.limitTime)) {
+	// 		showAlertText(formatString(CONST_STR.get('CORP_MSG_COM_LIMIT_EXCEEDED_TIME'), [formatNumberToCurrency(gTrans.limit.limitTime)]));
+	// 		return false;
+	// 	}
+	// 	if ((parseInt(gTrans.limit.totalDay) + parseInt(gTrans.transInfo.amountTrans)) > parseInt(gTrans.limit.limitDay)) {
+	// 		showAlertText(formatString(CONST_STR.get('CORP_MSG_COM_LIMIT_EXCEEDED_DAY'), [formatNumberToCurrency(gTrans.limit.limitDay)]));
+	// 		return false;
+	// 	}
+	// }
 
 	return true;
 }
@@ -555,16 +560,20 @@ function sendJSONRequest() {
 	args.push(jsonData);
 	var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_IIT_FUNDS_LOCAL_TRANSFER"), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
 	var data = getDataFromGprsCmd(gprsCmd);
-	requestMBServiceCorp(data, true, 0, requestMBServiceSuccess, 
-		function(){
-			showAlertText(CONST_STR.get('CORP_MSG_INTERNAL_TRANS_ERROR_INIT_TRANS'));
-		}
-	);
+	var dataJson = {"responseType":"0","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":[{"MA_GD":"1708710000031191","FEE":"0","issavepayee":"N","sampleName":""}]};
+	requestMBServiceSuccess(dataJson);
+
+	// requestMBServiceCorp(data, true, 0, requestMBServiceSuccess, 
+	// 	function(){
+	// 		showAlertText(CONST_STR.get('CORP_MSG_INTERNAL_TRANS_ERROR_INIT_TRANS'));
+	// 	}
+	// );
 }
 
 //Action when request init trans success
 function requestMBServiceSuccess(data) {
-	var resp = JSON.parse(data);
+	// var resp = JSON.parse(data);
+	var resp = data;
 	if (resp.respCode == 0 && resp.respJsonObj.length > 0) {
 		var xmlDoc = genReviewScreen();
 
