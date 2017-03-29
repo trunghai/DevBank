@@ -425,7 +425,7 @@ var CONST_DESKTOP_MODE = true;  //using auto-update view when resize windows
 
 //NOTE FOR iOS remove code at comment: DISABLE_FOR_APP_iOS
 
-var CONST_WEB_URL_LINK = "http://10.1.20.96:8081/"; //using for mobile app
+var CONST_WEB_URL_LINK = "http://localhost:8081/"; //using for mobile app
 var CONST_WEB_CORP_URL_LINK = "https://ebank.tpb.vn/ibank/entry"; //using for mobile app
 
 //var CONST_WEB_SERVICE_LINK = CONST_DEBUG_MODE? "https://demo.tpb.vn/EBCorpCore/ebservice" : "https://demo.tpb.vn/EBCorpCore/ebservice";

@@ -5,19 +5,21 @@
 		<div>
 			<div>
 				<table align="center" class="login-tb-container" border="0"	cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="login-screen-title">
+							<span class="mg-login-box">LOGIN_BOX</span>
+						</td>
+					</tr>
 					<tr style="padding-left: 0px;" valign="top">
 						<!--<td valign="top" class="desktopmode" style="width: 10px; background-image: url('./assets/images/Login_Left.jpg'); background-repeat: no-repeat;"></td>-->
 						<td class="login-td-input-container">
 							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
-								<tr><td class="login-screen-title">
-									<span class="mg-login-box">LOGIN_BOX</span>
-								</td></tr>
-								<tr>
-								</tr>
+
+
 								<tr id="login.accountnumberrow">
 									<td align="center">
-										<span id="login.ico.username" class="icon-user2 celliconinline"></span> 
-										<input id="login.txt.username" type="tel" class="form-control login-td-input" placeholder="WELCOME_IN_USERNAME" maxlength="10" value="" />
+										<span id="login.ico.username" class="icon-user2 celliconinline"></span>
+										<input id="login.txt.username" type="tel" style="height: 35px" class="form-control login-td-input" placeholder="WELCOME_IN_USERNAME" maxlength="10" value="" />
 									</td>
 								</tr>
 								<tr id="login.accountnamerow">
@@ -25,13 +27,13 @@
 								</tr>
 								<tr>
 									<td align="center">
-										<span class="icon-padlock celliconinline"></span> 
-										<input type="password" class="form-control login-td-input" id="login.txt.password" placeholder="WELCOME_IN_PASSWORD" autocomplete="off" value="" />
+										<span class="icon-padlock celliconinline"></span>
+										<input type="password" style="height: 35px" class="form-control login-td-input" id="login.txt.password" placeholder="WELCOME_IN_PASSWORD" autocomplete="off" value="" />
 									</td>
 								</tr>
 								<tr >
 									<td align="center" id="trow_capcha" style="display: none">
-										<img src="./assets/images/re-captcha.png" id="captcha_gen" class="celliconinline" onclick="return getCaptcha();" style="cursor: pointer" /> 
+										<img src="./assets/images/re-captcha.png" id="captcha_gen" class="celliconinline" onclick="return getCaptcha();" style="cursor: pointer" />
 										<input id="login.txt.captcha" type="text" class="form-control login-td-input login-capchar-text" placeholder="LOGIN_PLACE_HOLDER" maxlength="2" />
 									</td>
 									<td></td>
@@ -50,7 +52,7 @@
 											<tr>
 												<td align="center" width='50%'>
 													<div class="btnshadow btn-second login-input-btn" onclick="requestLogin()">
-														<span>WELCOME_BTN_LOGIN</span> 
+														<span>WELCOME_BTN_LOGIN</span>
 														<span class="icon-enter"></span>
 													</div>
 												</td>
@@ -60,16 +62,16 @@
 											</tr>
 											<tr class="desktopmode">
 												<td colspan="2" align="right">
-													<a style="color: #fff; text-decoration: none; font-weight: bold; font-size: 11px;" href="javascript:void(0);" onclick="goSignup();"> 
+													<a style="color: #1d2129; text-decoration: none; font-weight: bold; font-size: 11px;" href="javascript:void(0);" onclick="goSignup();">
 													<span>LOGIN_SIGN_UP</span>
-													</a> <span style="color: #FFFFFF">|</span> 
-													<a style="color: #fff; text-decoration: none; font-weight: bold; font-size: 11px;" href="javascript:void(0);" onclick="goForgotPassword();"><span>LOGIN_FORGOT_PW</span></a>
+													</a> <span style="color: #1d2129">|</span>
+													<a style="color: #1d2129; text-decoration: none; font-weight: bold; font-size: 11px;" href="javascript:void(0);" onclick="goForgotPassword();"><span>LOGIN_FORGOT_PW</span></a>
 												</td>
 											</tr>
 											<tr class="mobilemode trow-space" />
 											<tr class="mobilemode">
 												<td colspan="2" align="right">
-													<a style="color: #fff; text-decoration: none; font-weight: bold; font-size: 11px;" href="javascript:void(0);" onclick="goSignup();"> <span>LOGIN_SIGN_UP</span></a> | 
+													<a style="color: #fff; text-decoration: none; font-weight: bold; font-size: 11px;" href="javascript:void(0);" onclick="goSignup();"> <span>LOGIN_SIGN_UP</span></a> |
 													<a style="color: #fff; text-decoration: none; font-weight: bold; font-size: 11px; padding-right: 6px;" href="javascript:void(0);" onclick="goForgotPassword();"><span>LOGIN_FORGOT_PW</span></a>
 												</td>
 											</tr>
@@ -230,6 +232,9 @@
 						<!--<td class="desktopmode" valign="top" style="width: 10px; background-image: url('./assets/images/Login_Right.jpg'); background-repeat: no-repeat; padding-left: 0px; padding-top: 55px; height: 135px"></td>-->
 					</tr>
 				</table>
+
+
+
 			</div>
 		</div>
 		<!--<div class="desktopmode">-->

@@ -70,6 +70,9 @@ function viewDidLoadSuccess() {
   var data = getDataFromGprsCmd(gprsCmd);
 
    angular.module("EbankApp").controller('transfer-periodic',  function ($scope, requestMBServiceCorp) {
+       gTrans.sendMethod = 1;
+       document.getElementById("id.notifyTo").value = CONST_STR.get("COM_NOTIFY_" + gTrans.sendMethod);
+
         this.onSuccessInitData = function(data) {
             var resp = data;
             console.log("resp.respJsonObj ", resp.respJsonObj.getSendMethod);
@@ -96,7 +99,7 @@ function viewDidLoadSuccess() {
         gotoHomePage();
       }
 
-      requestMBServiceCorp.post(data, this.onSuccessInitData, this.onFailInitData);           
+      // requestMBServiceCorp.post(data, this.onSuccessInitData, this.onFailInitData);
 
 
       //Action when click continue

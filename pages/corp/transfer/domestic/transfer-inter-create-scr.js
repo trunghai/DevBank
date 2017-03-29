@@ -291,8 +291,8 @@ function genSequenceFormInterBank() {
 }
 
  function onSuccessInitData(data) {
-    var response = JSON.parse(data);
-    var respJSON = response.respJsonObj.initData;
+    // var response = JSON.parse(data);
+    // var respJSON = response.respJsonObj.initData;
     // lay danh sach account kha dung
     gTrans.listSrcAccount = {
         accountno: [],
@@ -313,21 +313,24 @@ function genSequenceFormInterBank() {
     // lay phuong thuc gui thong bao cho nguoi duyet
     var sendMethod = document.getElementById("id.approver");
     var viewListAuth = document.getElementById("link.view.listAuth");
-    if(respJSON.length > 0)
-    {
-        viewListAuth.style.visibility = "visible";
-        if (respJSON[0].SENDMETHOD == 0) {
-            sendMethod.value = CONST_STR.get("COM_NOTIFY_0");
-            viewListAuth.style.visibility = "hidden";
-        } else if (respJSON[0].SENDMETHOD == 1) {
-            sendMethod.value = CONST_STR.get("COM_NOTIFY_1");
-        } else if (respJSON[0].SENDMETHOD == 2) {
-            sendMethod.value = CONST_STR.get("COM_NOTIFY_2");
-        } else if (respJSON[0].SENDMETHOD == 3) {
-            sendMethod.value = CONST_STR.get("COM_NOTIFY_3");
-        }
-        gTrans.dti.sendMethod = sendMethod.value;
-    }
+     sendMethod.value = CONST_STR.get("COM_NOTIFY_1");
+
+     gTrans.dti.sendMethod = sendMethod.value;
+    // if(respJSON.length > 0)
+    // {
+    //     viewListAuth.style.visibility = "visible";
+    //     if (respJSON[0].SENDMETHOD == 0) {
+    //         sendMethod.value = CONST_STR.get("COM_NOTIFY_0");
+    //         viewListAuth.style.visibility = "hidden";
+    //     } else if (respJSON[0].SENDMETHOD == 1) {
+    //         sendMethod.value = CONST_STR.get("COM_NOTIFY_1");
+    //     } else if (respJSON[0].SENDMETHOD == 2) {
+    //         sendMethod.value = CONST_STR.get("COM_NOTIFY_2");
+    //     } else if (respJSON[0].SENDMETHOD == 3) {
+    //         sendMethod.value = CONST_STR.get("COM_NOTIFY_3");
+    //     }
+    //     gTrans.dti.sendMethod = sendMethod.value;
+    // }
 
 
     var feeType = document.getElementById('trans.fee');
@@ -366,7 +369,8 @@ function loadInitData() {
     arrayArgs.push(request);
     var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_DTI_INTERNAL_TRANSFER"), "", "", gUserInfo.lang, gUserInfo.sessionID, arrayArgs);
     data = getDataFromGprsCmd(gprsCmd);
-    requestMBServiceCorp(data, true, 0, onSuccessInitData);
+    onSuccessInitData();
+    // requestMBServiceCorp(data, true, 0, onSuccessInitData);
 
     // angular.module("EbankApp").controller('transfer-domestic',  function ($scope, requestMBServiceCorp) {
     //    

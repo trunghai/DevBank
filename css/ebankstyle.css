@@ -828,7 +828,7 @@ table td[class *= "col-"], table th[class *= "col-"]{
 	z-index: 1;
 	font-size: 25px;
 	height: 28px;
-	margin-top: 3px;
+	margin-top: 5px;
 }
 
 .celliconinline-search {
@@ -2429,35 +2429,41 @@ p.pcopyrighttext {
 
 .login-screen-title {
 	/*font-family:'TPB-DaxlinePro-Regular';*/
+	background-color: #4e69a2;
 	font-size: 16px; 
 	color: #FFFFFF; 
 	padding-bottom: 5px; 
 	padding-top: 10px;
 	font-weight: bold;
 	text-align:center;
+	height: 50px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	/*-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);*/
+
 }
 
 .login-tb-container {
-	width:500px;
-	height: 320px;
+	width:350px;
+	height: 410px;
 	padding-bottom: 20px; /* fix iScroll small screen*/
 }
 .login-td-input-container {
-	width:400px;
+	width:350px;
 	/*background-image: url('../assets/images/Login_Center.jpg');*/
-	background-color: #4e69a2;
-    background-repeat: repeat-x; 
+	background-color: #FFFFFF;
+    /*background-repeat: repeat-x; */
 	padding-left: 0px;
-	padding-top: 20px; 
+	padding-top: 50px;
 	height: 300px;
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .login-td-input {
 	background-color: #FFFFFF; 
 	width: 300px;
 }
 .login-accountname {
-	color: #FFFFFF; 
-	padding-left: 100px;
+	color: #1d2129;
+	padding-left: 25px;
 	text-align:left;
 }
 .login-btn-container {
@@ -2483,7 +2489,7 @@ p.pcopyrighttext {
 }
 .login-change-user {
 	display:table-cell;
-	color:#FFFFFF;
+	color:#1d2129;
 	padding-left:10px !important;
 }
 
@@ -4684,7 +4690,5 @@ span.window8-8 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-dela
 .table-exchange-notice tr td {
 	white-space: pre-wrap;
 }
-
-
 
 

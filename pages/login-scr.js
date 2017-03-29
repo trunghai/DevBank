@@ -43,15 +43,15 @@ function viewDidLoadSuccess() {
         }
     };
 
-    if (gUserInfo.lang == 'EN') {
-        document.getElementById('login.BannerBottom').innerHTML = '<a href="' + bannersTPBank.bottomBanner[
-                0].bannerLinkEN + '"><img src="' + bannersTPBank.bottomBanner[0].bannerImageEN +
-            '"></a>';
-    } else {
-        document.getElementById('login.BannerBottom').innerHTML = '<a href="' + bannersTPBank.bottomBanner[
-                0].bannerLinkVN + '"><img src="' + bannersTPBank.bottomBanner[0].bannerImageVN +
-            '"></a>';
-    }
+    // if (gUserInfo.lang == 'EN') {
+    //     document.getElementById('login.BannerBottom').innerHTML = '<a href="' + bannersTPBank.bottomBanner[
+    //             0].bannerLinkEN + '"><img src="' + bannersTPBank.bottomBanner[0].bannerImageEN +
+    //         '"></a>';
+    // } else {
+    //     document.getElementById('login.BannerBottom').innerHTML = '<a href="' + bannersTPBank.bottomBanner[
+    //             0].bannerLinkVN + '"><img src="' + bannersTPBank.bottomBanner[0].bannerImageVN +
+    //         '"></a>';
+    // }
 
     if (Environment.isMobile()){
         document.getElementById('versionapp').style.display = 'none';
