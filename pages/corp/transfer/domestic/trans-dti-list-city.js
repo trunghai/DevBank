@@ -6,6 +6,15 @@
 var objJSON;
 var cityArray;
 var cityResultArray;
+var  dataOb = {
+    "responseType": "1605",
+    "respCode": "0",
+    "respContent": "Giao dịch không thành công. Quý khách vui lòng kiểm tra và thử lại. Liên hệ 1900585885 để được hỗ trợ!",
+    "respRaw": "",
+    "arguments": [],
+    "respJson": "{\"rows\":[{\"PROVINCE_CODE\":\"89\",\"PROVINCE_NAME_VN\":\"An Giang\",\"PROVINCE_NAME_EN\":\"An Giang\"},{\"PROVINCE_CODE\":\"95\",\"PROVINCE_NAME_VN\":\"Bạc Liêu\",\"PROVINCE_NAME_EN\":\"Bac Lieu\"},{\"PROVINCE_CODE\":\"74\",\"PROVINCE_NAME_VN\":\"Bình Dương\",\"PROVINCE_NAME_EN\":\"Binh Duong\"},{\"PROVINCE_CODE\":\"60\",\"PROVINCE_NAME_VN\":\"Bình Thuận\",\"PROVINCE_NAME_EN\":\"Binh Thuan\"},{\"PROVINCE_CODE\":\"96\",\"PROVINCE_NAME_VN\":\"Cà Mau\",\"PROVINCE_NAME_EN\":\"Ca Mau\"},{\"PROVINCE_CODE\":\"92\",\"PROVINCE_NAME_VN\":\"Cần Thơ\",\"PROVINCE_NAME_EN\":\"Can Tho\"},{\"PROVINCE_CODE\":\"48\",\"PROVINCE_NAME_VN\":\"Đà Nẵng\",\"PROVINCE_NAME_EN\":\"Da Nang\"},{\"PROVINCE_CODE\":\"66\",\"PROVINCE_NAME_VN\":\"Đắc Lắc\",\"PROVINCE_NAME_EN\":\"Dac Lac\"},{\"PROVINCE_CODE\":\"75\",\"PROVINCE_NAME_VN\":\"Đồng Nai\",\"PROVINCE_NAME_EN\":\"Dong Nai\"},{\"PROVINCE_CODE\":\"01\",\"PROVINCE_NAME_VN\":\"Hà Nội\",\"PROVINCE_NAME_EN\":\"Ha Noi\"},{\"PROVINCE_CODE\":\"31\",\"PROVINCE_NAME_VN\":\"Hải Phòng\",\"PROVINCE_NAME_EN\":\"Hai Phong\"},{\"PROVINCE_CODE\":\"10\",\"PROVINCE_NAME_VN\":\"Lào Cai\",\"PROVINCE_NAME_EN\":\"Lao Cai\"},{\"PROVINCE_CODE\":\"22\",\"PROVINCE_NAME_VN\":\"Quảng Ninh\",\"PROVINCE_NAME_EN\":\"Quang Ninh\"},{\"PROVINCE_CODE\":\"94\",\"PROVINCE_NAME_VN\":\"Sóc Trăng\",\"PROVINCE_NAME_EN\":\"Soc Trang\"},{\"PROVINCE_CODE\":\"79\",\"PROVINCE_NAME_VN\":\"TP Hồ Chí Minh\",\"PROVINCE_NAME_EN\":\"TP Ho Chi Minh\"},{\"PROVINCE_CODE\":\"46\",\"PROVINCE_NAME_VN\":\"Thừa Thiên Huế\",\"PROVINCE_NAME_EN\":\"Thua Thien Hue\"},{\"PROVINCE_CODE\":\"82\",\"PROVINCE_NAME_VN\":\"Tiền Giang\",\"PROVINCE_NAME_EN\":\"Tien Giang\"}]}",
+    "respJsonObj": {}
+};
 
 getCityList();
 
@@ -56,12 +65,13 @@ function getCityList() {
     var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_DTI_TRANSFER_BANK_PROCESS"), "", "", gUserInfo.lang, gUserInfo.sessionID, l_arrayArgs);
     data = getDataFromGprsCmd(gprsCmd);
 
-    requestMBServiceCorp(data, true, 0, requestMBServiceHistorySuccess, requestMBServiceHistoryFail);
+    // requestMBServiceCorp(data, true, 0, requestMBServiceHistorySuccess, requestMBServiceHistoryFail);
+    requestMBServiceHistorySuccess(dataOb);
 }
 
 //event listener: http request success
 function requestMBServiceHistorySuccess(e) {
-    gprsResp = parserJSON(e);
+    gprsResp = e;
     //gRespObj = gprsResp; 
     setRespObjStore(gprsResp);
     objJSON = JSON.parse(gprsResp.respJson);

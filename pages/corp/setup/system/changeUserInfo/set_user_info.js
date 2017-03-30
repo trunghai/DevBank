@@ -42,7 +42,9 @@ function sendRequestGetUserInfo() {
 
   data = getDataFromGprsCmd(gprsCmd);
 
-  requestMBServiceCorp(data, false, 0, requestServiceSuccess, requestServiceFail);
+  // requestMBServiceCorp(data, false, 0, requestServiceSuccess, requestServiceFail);
+    var json = {"responseType":"1","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":[{"IDUSER":"9888888801","FULLNAME":"DUONG TRUNG HAI","SHORTNAME":"TRUNG HAI","IDENTITYCARDNUMBER":null,"ALLOCATEDATE":null,"ALLOCATEADDRESS":null,"POSITION":null,"EMAIL":"ibtest@test.com.vn","PHONENUMBER":"ibtest@test.com.vn"}]};
+    requestServiceSuccess(json);
 }
 
 function sendRequestUpdate() {
@@ -84,6 +86,8 @@ function sendRequestUpdate() {
   objectValueClient.newEmail = userInfo.newEmail;
   objectValueClient.newPhoneNumber = userInfo.newPhoneNumber;
 
+  gTrans.idtxn = "S11";
+
   gCorp.rootView = currentPage;
   gCorp.cmdType = CONSTANTS.get("CMD_CO_SETUP_CHANGE_PERSON_INFO"); //port
   gCorp.requests = [objectValueClient, null];
@@ -97,7 +101,7 @@ function sendRequestUpdate() {
 }
 
 function requestServiceSuccess(e) {
-  gprsResp = JSON.parse(e);
+  gprsResp = e;
   var obj = gprsResp.respJsonObj;
   tmpData = obj;
   if (gprsResp.respCode == '0') {

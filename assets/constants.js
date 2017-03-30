@@ -959,8 +959,8 @@ var CONST_AUTH_ACC_OPEN_TYPE_STATUS_EN = ["Pending", "Authorised partly"];
 var CONST_AUTH_ACC_OPEN_TYPE_STATUS_VAL = ["INT", "APT"];
 
 //thiet lap he thong, thay doi mat khau
-var CONST_SETUP_PAGE_MENU_DROPLIST_VN = ["Ngôn ngữ", "Thông tin cá nhân", "Thay đổi mật khẩu"];
-var CONST_SETUP_PAGE_MENU_DROPLIST_EN = ["Language", "Personal information", "Change password"];
+var CONST_SETUP_PAGE_MENU_DROPLIST_VN = ["Ngôn ngữ", "Thông tin cá nhân"];//"Thay đổi mật khẩu"
+var CONST_SETUP_PAGE_MENU_DROPLIST_EN = ["Language", "Personal information"];//"Change password"
 
 //thanh toan thue
 var CONST_TAX_INFO_QUERY_DOMESTIC_VALUE_VN = ["Lưu mã số thuế", "Không lưu"];

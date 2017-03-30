@@ -2,7 +2,7 @@ function viewDidLoadSuccess() {
   console.log("totalAmout", gTrans.limit);
   	
   initData();
-  checkCutOfTime();
+  // checkCutOfTime();
 }
 
 function formatCurrentWithSysbol(n, currency) {
@@ -37,7 +37,7 @@ function initData() {
   args.push(requestData);
 
   var _success = function(e) {
-    var resp = JSON.parse(e);
+    var resp = e;
     // Lay rate chuyen doi 
     var rateExchange = resp.respJsonObj.listRate;
     gPay.rateExchange = resp.respJsonObj.listRate;
@@ -71,7 +71,9 @@ function initData() {
 
   var gprsCmd = new GprsCmdObj(CONSTANTS.get('CMD_CO_INT_PAYMENT_EXCHANGE_CREATE'), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
   var data = getDataFromGprsCmd(gprsCmd);
-  requestMBServiceCorp(data, false, 0, _success, "");
+  var  dataJson = {"responseType":"1901","respCode":"0","respContent":"","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transday":{"TransaDay":[]},"listAccountUSD":{"listAccountUSD":[{"IDACCOUNT":"98888888002","NUMAVAILABLE":"4271.54","CODACCTCURR":"USD"},{"IDACCOUNT":"98888888003","NUMAVAILABLE":"0","CODACCTCURR":"JPY"},{"IDACCOUNT":"98888888005","NUMAVAILABLE":"25881.43","CODACCTCURR":"USD"},{"IDACCOUNT":"98888888006","NUMAVAILABLE":"0","CODACCTCURR":"JPY"}]},"sendMethod":1,"limit":{"currency":"VND","limitDay":"1000000","totalDay":"0","limitTime":"1000000"},"listAccountVND":{"listAccountVND":[{"IDACCOUNT":"98888888001","NUMAVAILABLE":"100019620370","CODACCTCURR":"VND"},{"IDACCOUNT":"98888888004","NUMAVAILABLE":"2901143806","CODACCTCURR":"VND"}]},"listRate":{"listRate":[{"RATE_DATE":"2016-06-13 00:00:00.0","CCY":"USD","CASH_BUY_RATE":"22250","CASH_SALE_RATE":"22340","TRANSFER_BUY_RATE":"22270","TRANSFER_SALE_RATE":"22333"},{"RATE_DATE":"2016-06-13 00:00:00.0","CCY":"JPY","CASH_BUY_RATE":"208.67","CASH_SALE_RATE":"211.33","TRANSFER_BUY_RATE":"209.38","TRANSFER_SALE_RATE":"211.33"},{"RATE_DATE":"2016-06-13 00:00:00.0","CCY":"EUR","CASH_BUY_RATE":"24924","CASH_SALE_RATE":"25231","TRANSFER_BUY_RATE":"25009","TRANSFER_SALE_RATE":"25231"}]}}};
+  // requestMBServiceCorp(data, false, 0, _success, "");
+    _success(dataJson);
 }
 
 
@@ -321,13 +323,14 @@ function sendJsonRequest() {
   requestData.totalAmout = removeSpecialChar(totalAmout);
   requestData.description = description;
   requestData.exchangeUnit = gPay.accountForeign.slice(-3);
+  gTrans.idtxn = 'B13';
 
   var args = [];
   args.push("1");
   args.push(requestData);
 
   var _success = function(e) {
-    var resp = JSON.parse(e);
+    var resp = e;
     if (resp.respCode == '0') {
       var xmlDoc = genXMLReviewSrc();
       setReviewXmlStore(xmlDoc);
@@ -352,7 +355,9 @@ function sendJsonRequest() {
 
   var gprsCmd = new GprsCmdObj(CONSTANTS.get('CMD_CO_INT_PAYMENT_EXCHANGE_CREATE'), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
   var data = getDataFromGprsCmd(gprsCmd);
-  requestMBServiceCorp(data, false, 0, _success, "");
+  // requestMBServiceCorp(data, false, 0, _success, "");
+    var json = {"responseType":"1901","respCode":"0","respContent":"Success","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"idFcatref":"1708910000031201","idUserRef":"CO17089100086594"}};
+    _success(json);
 }
 
 /*

@@ -120,25 +120,30 @@ function sendInitRequest() {
     var gprsCmd = new GprsCmdObj(CONSTANTS.get("COM_AUTHENTICATE_TOKEN"), "", "", gUserInfo.lang, gUserInfo.sessionID, args);
     var data = getDataFromGprsCmd(gprsCmd);
 
-    requestMBServiceCorp(data, true, 0, function(responseText) {
-        var nodeInputToken = document.getElementById("authen.tokenkey");
-        
-        mainContentScroll.scrollToElement(nodeInputToken, 50);
-        nodeInputToken.select();
-        nodeInputToken.focus();
-        
-        startProgressBar("authen.progressbarotp", gCorp.timerOTP);
-        gCorp.OTPTimeout = setTimeout(function doAfterProgress() {
-            handleOTPTimeout();
-        }, gCorp.timerOTP * 1000);
-        var response = JSON.parse(responseText);
-        gCorp.authenType = response.respJsonObj.tokenType;
-        if (gCorp.authenType == "MTX") {
-            var mtxPos = response.respJsonObj.MTXPOS;
-            var nodeTokenType = document.getElementById("authen.tokentype");
-            nodeTokenType.innerHTML = formatString(CONST_STR.get("COM_TOKEN_MTX_INPUT_LABEL"), [mtxPos]);
-        }
-    });
+    // requestMBServiceCorp(data, true, 0, reqestOTP);
+    var otp = {"responseType":"0","respCode":"1012","respContent":"FAIL","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"tokenType":"OTP"}};
+    reqestOTP(otp);
+
+}
+
+function reqestOTP(responseText) {
+    var nodeInputToken = document.getElementById("authen.tokenkey");
+
+    mainContentScroll.scrollToElement(nodeInputToken, 50);
+    nodeInputToken.select();
+    nodeInputToken.focus();
+
+    startProgressBar("authen.progressbarotp", gCorp.timerOTP);
+    gCorp.OTPTimeout = setTimeout(function doAfterProgress() {
+        handleOTPTimeout();
+    }, gCorp.timerOTP * 1000);
+    var response = responseText;
+    gCorp.authenType = response.respJsonObj.tokenType;
+    if (gCorp.authenType == "MTX") {
+        var mtxPos = response.respJsonObj.MTXPOS;
+        var nodeTokenType = document.getElementById("authen.tokentype");
+        nodeTokenType.innerHTML = formatString(CONST_STR.get("COM_TOKEN_MTX_INPUT_LABEL"), [mtxPos]);
+    }
 }
 
 // Gui JSON len service
@@ -167,7 +172,17 @@ function sendJSONRequest() {
 
 function requestMBServiceSuccess() {
     // var response = JSON.parse(responseText);
-    var response = {"responseType":"0","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708710000031191","type":"3","time":"28/03/2017 04:18:26"}};
+    var response;
+    if(gTrans.idtxn == 'T11' || gTrans.idtxn == 'T12'){
+        response = {"responseType":"0","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708710000031191","type":"3","time":"28/03/2017 04:18:26"}};
+    }else if(gTrans.idtxn == 'T13'){
+        response = {"responseType":"1604","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708910000031199","type":3,"time":"30/03/2017 10:06:43"}};
+    }else if(gTrans.idtxn == 'B13'){
+        response = {"responseType":"1901","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708910000031201","type":3,"time":"30/03/2017 10:17:18"}};
+    }if(gTrans.idtxn == 'S11'){
+        response = {"responseType":"1","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với TPBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708910000031202","type":"1","time":"30/03/2017 10:19:13"}};
+    }
+
     if (response.respCode == "0") {
         stopProgressBar("authen.progressbarotp");
     } else {

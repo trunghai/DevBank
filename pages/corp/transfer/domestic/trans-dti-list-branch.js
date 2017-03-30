@@ -7,6 +7,15 @@
 var objJSON;
 var branchArray;
 var branchResultArray;
+var dataOb = {
+    "responseType": "1605",
+    "respCode": "0",
+    "respContent": "Giao dịch không thành công. Quý khách vui lòng kiểm tra và thử lại. Liên hệ 1900585885 để được hỗ trợ!",
+    "respRaw": "",
+    "arguments": [],
+    "respJson": "{\"rows\":[{\"CITAD_CODE\":\"89308001\",\"BRACH_NAME_VN\":\"Ngân hàng Sài Gòn Công Thương CN An Giang\"}]}",
+    "respJsonObj": {}
+};
 
 getBranchList();
 
@@ -58,12 +67,13 @@ function getBranchList() {
     var gprsCmd = new GprsCmdObj(CONSTANTS.get("CMD_CO_DTI_TRANSFER_BANK_PROCESS"), "", "", gUserInfo.lang, gUserInfo.sessionID, l_arrayArgs);
     data = getDataFromGprsCmd(gprsCmd);
 
-    requestMBServiceCorp(data, true, 0, requestMBServiceHistorySuccess, requestMBServiceHistoryFail);
+    // requestMBServiceCorp(data, true, 0, requestMBServiceHistorySuccess, requestMBServiceHistoryFail);
+    requestMBServiceHistorySuccess(dataOb);
 }
 
 //event listener: http request success
 function requestMBServiceHistorySuccess(e) {
-    gprsResp = parserJSON(e);
+    gprsResp = e;
     //gRespObj = gprsResp; 
     setRespObjStore(gprsResp);
     objJSON = JSON.parse(gprsResp.respJson);

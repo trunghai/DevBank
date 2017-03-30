@@ -53,11 +53,11 @@ function viewDidLoadSuccess() {
     //         '"></a>';
     // }
 
-    if (Environment.isMobile()){
-        document.getElementById('versionapp').style.display = 'none';
-    }else {
-        document.getElementById('versionapp').style.display = 'block';
-    }
+    // if (Environment.isMobile()){
+    //     document.getElementById('versionapp').style.display = 'none';
+    // }else {
+    //     document.getElementById('versionapp').style.display = 'block';
+    // }
 }
 
 //METHOD GET CAPCHAR FROM CORE
@@ -288,6 +288,7 @@ function loginSuccess(loginUser, loginPass) {
         // Do something with the request.result!
         if(request.result && request.result.pass == loginPass.value) {
             gprsResp = jsonData;
+            gIsLogin = true;
             // alert("Name: " + request.result.name + ", Age: " + request.result.age + ", Email: " + request.result.email);
             var loginUser = document.getElementById("login.txt.username");
             gCustomerNo = loginUser.value;
@@ -301,7 +302,7 @@ function loginSuccess(loginUser, loginPass) {
             } catch (e) {}
             setUserInfoToLocal(loginUser.value, gUserInfo.accountName);
             gUserInfo.lang = getLanguageConfig();
-            gIsLogin = true;
+            // gIsLogin = true;
 
             //config view
             setViewOnDesktopWhenLogin();
@@ -329,8 +330,9 @@ function loginSuccess(loginUser, loginPass) {
                 //         'corp/setup/system/changePassword/set_change_password', true, 'xsl');
                 // }
                 //20151126 DuyNH Fix Change Language then redirect to HomePage START
-                //navController.setDefaultPage('accountxsl/account-scr', 'xsl');
+
                 navController.initWithRootView('homepagexsl/homepage-corp-scr', true,'xsl');
+                navController.setDefaultPage('homepagexsl/homepage-corp-scr', 'xsl');
                 //20151126 DuyNH Fix Change Language then redirect to HomePage END
             }
 

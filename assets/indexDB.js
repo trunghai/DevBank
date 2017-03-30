@@ -130,8 +130,9 @@ var jsonData = {
     "MENU_PAY_BILL#ID33#ID3#icon-arrowright##navController.initWithRootView('corp/payment_service/bill/pay_bill_create', true, 'html');##Y",
     "MENU_GUARANTEE_QUERY#ID49#ID4#icon-arrowright##navController.initWithRootView('corp/credit/guarantee/cre_guarantee_info', true, 'xsl');##Y",
     "MENU_SETUP_SYSTEM#ID18#ID5#icon-arrowright##navController.initWithRootView('corp/setup/system/set_system', true, 'xsl');##Y",
-    "MENU_SETUP_TRANFER#ID19#ID5#icon-arrowright##navController.initWithRootView('corp/setup/tranfer/set_tranfer', true, 'xsl');##Y",
+    // "MENU_SETUP_TRANFER#ID19#ID5#icon-arrowright##navController.initWithRootView('corp/setup/tranfer/set_tranfer', true, 'xsl');##Y",
     "MENU_FOREGIN_CURRENCY_CONVERT#ID35#ID34#icon-arrowright##navController.initWithRootView('corp/international_payments/foreign_exchange/foreign_exchange', true, 'xsl');##Y",
+    "MENU_ACCOUNT_INFO#ID13#ID1#icon-arrowright##navController.initWithRootView('corp/acc_demo/acc_demo', true, 'html');##Y",
     "MENU_END",
     null,
     "MENU_USER_END"
