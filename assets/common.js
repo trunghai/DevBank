@@ -6312,7 +6312,7 @@ function updateViewForMobile() {
 	if(content != undefined) content.close(); 
 	if(contentPromotion != undefined) contentPromotion.close();
 	
-	document.body.style.backgroundColor = '#5F2F85';
+	document.body.style.backgroundColor = 'rgba(78, 105, 162, 0.1)';
 	var tmpNodePage = document.getElementById('fullPage');
 	tmpNodePage.setAttribute('align', 'left'); //left
 	var tmpNodeMain = document.getElementById('mainview');
@@ -8950,4 +8950,8 @@ function datenow() {
 function onclickMenu(page) {
     navCachedPages[page] = null;
     navController.initWithRootView(page, true, 'html');
+}
+
+function setTitleNavgationBar(title) {
+    document.getElementById('titleNavigation').innerHTML = title;
 }

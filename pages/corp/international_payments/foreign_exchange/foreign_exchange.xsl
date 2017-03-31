@@ -40,8 +40,8 @@
             <table align="center" class="table-exchange-rate" style="table-layout: fixed;">
               <tr>
                 <!-- <th width="20%"><span style="white-space:pre-wrap; font-weight: bold; color: #5F2F85;">FOREGIN_EXCHANGE_RATE</span></th> -->
-                <th width="20%"><span style="white-space:pre-wrap; color: #F60;">FOREGIN_MONEY</span></th>
-                <th width="40%"><span style="white-space:pre-wrap; color: #F60;">FOREGIN_BUY_BY_TPB</span></th>
+                <th width="20%"><span style="white-space:pre-wrap; color: #4e69a2;">FOREGIN_MONEY</span></th>
+                <th width="40%"><span style="white-space:pre-wrap; color: #4e69a2;">FOREGIN_BUY_BY_TPB</span></th>
               </tr>
               <tr>
                 <td><span style="white-space:pre-wrap; font-weight: bold;">USD</span></td>

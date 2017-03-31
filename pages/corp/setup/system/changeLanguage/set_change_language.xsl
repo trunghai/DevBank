@@ -8,7 +8,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <div class="panelContent">
                 <div><h5 class="screen-title"><span>SET_SYSTEM_TITLE</span></h5></div>
                 
-              <table width="90%">
+              <table width="100%">
                     <tr>
                         <td class="td-text">
                              <div class="input-group" onClick="setShowPopupChangeLang()">

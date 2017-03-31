@@ -547,6 +547,7 @@ function sendJSONRequest() {
 	gTrans.transInfo.contentTrans = document.getElementById("trans.content").value.replace(/[!"#$@%&*'\+:;<=>?\\`^~{|}]/g, '');
 	gTrans.transInfo.issavepayee = gTrans.saveSampleStatus;
 	gTrans.transInfo.sampleName = document.getElementById("id.sample.name").value;
+    gTrans.idtxn = 'T11';
 
 	//Validate
 	if (!validate()) return;

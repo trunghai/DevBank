@@ -24,6 +24,7 @@ function viewDidLoadSuccess() {
 	document.getElementById("company_name").innerHTML = gUserInfo.accountInfo.companyName;
 	document.getElementById("last_login").innerHTML = gUserInfo.accountInfo.lastLogin;
 	document.getElementById("staff_position").innerHTML = gUserInfo.accountInfo.position + ": ";
+    setTitleNavgationBar('eBank');
 			
 	getCustomerInfo();
 	
