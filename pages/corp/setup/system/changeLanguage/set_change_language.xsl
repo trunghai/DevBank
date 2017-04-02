@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                              <div class="input-group" onClick="setShowPopupChangeLang()">
 	                             <span class="input-group-addon" style="white-space:pre-wrap;">SET_LANG_TITLE</span>
 	                             <input id="id.lang" type="button" class="form-control form-control-rightbutton" value="COM_TXT_SELECTION_PLACEHOLDER" />
-	                             <span class="icon-movenext input-group-addon input-group-symbol"></span>
+	                             <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
 	                         </div>
                         </td>
                     </tr>

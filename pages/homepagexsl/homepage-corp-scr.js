@@ -28,8 +28,8 @@ function viewDidLoadSuccess() {
 			
 	getCustomerInfo();
 	
-	document.getElementById("footerDesktop").innerHTML = "© TPBank 2009-2016. All rights reserved.";
-	document.getElementById("footerMobile").innerHTML = "© TPBank 2009-2016. All rights reserved.";
+	document.getElementById("footerDesktop").innerHTML = "© All rights reserved.";
+	document.getElementById("footerMobile").innerHTML = "© All rights reserved.";
 	
 	for (var i=0; i<gMenuUserOrder.length; i++) {
 		for (var j=0; j<gMenuList.length; j++) {

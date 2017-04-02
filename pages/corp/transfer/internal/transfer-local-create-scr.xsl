@@ -31,7 +31,7 @@
                     <div class="input-group" onClick="showTransTypeSelection()">
                       <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_BATCH_TYPE_LABEL</span>
                       <input id="id-trans-local" type="button" class="form-control form-control-righttext" style="white-space: pre-wrap;" align="left" value="TRANS_INTERNAL_TYPE_T12" />
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>
@@ -44,7 +44,7 @@
                     <div class="input-group" onClick="showAccountSelection()">
                       <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_LOCAL_ACC_TITLE</span>
                       <input id="id.accountno" type="button" class="form-control form-control-rightbutton" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>
@@ -62,8 +62,8 @@
                   <td colspan="2" align="center" valign="middle" class="td-text">
                     <div class="input-group"> <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_LOCAL_ACC_DESTINATION</span>
                       <input id="trans.targetaccount" type="tel" placeholder="COM_TXT_INPUT_PLACEHOLDER" class="form-control form-control-righttext-datepicker" onchange="loadInfoFromIdAccount(this);" maxlength="30"/>
-                      <span onclick="showPayeePage();" id="span.trans.target" class="tooltip icon-book input-group-addon-datepicker input-group-symbol-datepicker" style="cursor:pointer;"> 
-                        <span style="text-align:center; font-size:14px;">       
+                      <span onclick="showPayeePage();" id="span.trans.target" class="tooltip icon-book input-group-addon-datepicker input-group-symbol-datepicker" style="cursor:pointer; display: none">
+                        <span style="text-align:center; font-size:14px;">
                         <em id="ds_id"></em><br />
                         <em id="mau_id"></em>
                         </span>
@@ -76,7 +76,7 @@
                     <div class="input-group" onClick="showDesAccountSelection()">
                       <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_LOCAL_ACC_DESTINATION</span>
                       <input id="trans.desaccountno" type="button" class="form-control form-control-rightbutton" value="COM_TXT_SELECTION_PLACEHOLDER" maxlength="30"/>
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>
@@ -132,7 +132,7 @@
                     <div class="input-group">
                       <span class="input-group-addon" style="font-family:Tahoma, Helvetica, sans-serif;white-space:pre-wrap; width:40%">COM_SAVE_BENE</span>
                       <input style="white-space:pre-wrap" onclick="showInputMNG()" id="id.payee" type="button" class="form-control form-control-righttext" placeholder="BENEFIC_LIST_NORMAL" value="TRANS_INTERNAL_SAVE_TEMPLATE_N" />
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>

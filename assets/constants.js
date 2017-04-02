@@ -448,8 +448,8 @@ var CONST_WEB_CORP_SERVICE_LINK = CONST_DEBUG_MODE? "http://10.1.14.95:8080/EBCo
  // var CONST_WEB_CORP_SERVICE_LINK = CONST_DEBUG_MODE ? "http://10.1.28.55:8080/EBankGateway/ebservice" : "http://10.1.28.55:8080/EBankGateway/ebservice";
 
 //Hạn mức
-var CONST_LIMIT_TRANS_TPBANK_MAX = 300000000;
-var CONST_LIMIT_TRANS_TPBANK_MIN = 0;
+var CONST_LIMIT_TRANS_eBank_MAX = 300000000;
+var CONST_LIMIT_TRANS_eBank_MIN = 0;
 
 //status load page fail
 var CONST_LOAD_PAGE_FAIL_STATUS = [404, 403, 500, 503];
@@ -518,17 +518,17 @@ var CONST_VAL_PROVIDER_ADSL = ['FTEL_ADSL', 'VTLADSL', 'SSTADSBILL'];
 var CONST_VAL_FPTS_ACCOUNT = ['66666666002'];
 var CONST_KEY_FPTS_ACCOUNT = ['Tài khoản FPTS tại Hà Nội'];
 
-/*** DEFINE TRANSACTION LOCAL TPBANK ***/
-var CONST_KEY_LOCAL_TPBANK_VN = ['Chuyển tới tài khoản của tôi', 'Chuyển tới tài khoản TPBank khác'];
-var CONST_KEY_LOCAL_TPBANK_EN = ['Transfer to my account', 'Transfer to another TPBank account'];
+/*** DEFINE TRANSACTION LOCAL eBank ***/
+var CONST_KEY_LOCAL_eBank_VN = ['Chuyển tới tài khoản của tôi', 'Chuyển tới tài khoản eBank khác'];
+var CONST_KEY_LOCAL_eBank_EN = ['Transfer to my account', 'Transfer to another eBank account'];
 
 /*** DEFINE PERIODIC ACCOUNT TYPE ***/
 var CONST_PRD_TRANS_TYPE_KEY = ['LOCAL', 'FASTACC', 'FASTCARD', 'INTERBANK'];
-var CONST_PRD_TRANS_TYPE_VN = ['Chuyển tiền trong TPBank', 'Chuyển nhanh tới số tài khoản', 'Chuyển nhanh tới số thẻ', 'Chuyển tiền liên ngân hàng'];
-var CONST_PRD_TRANS_TYPE_EN = ['Transfer to TPBank\'s account', 'Transfer to account number', 'Transfer to card number', 'Normal transfer to another bank\'s account'];
+var CONST_PRD_TRANS_TYPE_VN = ['Chuyển tiền trong eBank', 'Chuyển nhanh tới số tài khoản', 'Chuyển nhanh tới số thẻ', 'Chuyển tiền liên ngân hàng'];
+var CONST_PRD_TRANS_TYPE_EN = ['Transfer to eBank\'s account', 'Transfer to account number', 'Transfer to card number', 'Normal transfer to another bank\'s account'];
 var CONST_VAL_PERIODIC_LOCAL = ['LOCAL', 'INTERNAL', 'FASTACC', 'FASTCARD', 'INTERBANK'];
-var CONST_KEY_PERIODIC_LOCAL_VN = ['Tài khoản khác của khách hàng', 'Tài khoản TPBank khác'];
-var CONST_KEY_PERIODIC_LOCAL_EN = ['My account', 'Another account in TPBank'];
+var CONST_KEY_PERIODIC_LOCAL_VN = ['Tài khoản khác của khách hàng', 'Tài khoản eBank khác'];
+var CONST_KEY_PERIODIC_LOCAL_EN = ['My account', 'Another account in eBank'];
 var CONST_VAL_PERIODIC_FREQUENCY = ['date', 'week', 'month', 'year'];
 var CONST_KEY_PERIODIC_FREQUENCY_VN = ['Hàng ngày', 'Hàng tuần', 'Hàng tháng', 'Hàng năm'];
 var CONST_KEY_PERIODIC_FREQUENCY_EN = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
@@ -571,10 +571,10 @@ var CONST_KEY_GIFT_XCHNG_HIS_STATUS_VAL = ['All', 'Y', 'N', 'P'];
 
 /*** DEFINE PERIODIC ACCOUNT TYPE ***/
 var CONST_MNG_VAL_PERIODIC_LOCAL = ['All','LOCAL', 'INTERNAL'];
-var CONST_MNG_KEY_PERIODIC_LOCAL_VN = ['Tất cả','Tài khoản khác của khách hàng', 'Tài khoản TPBank khác'];
+var CONST_MNG_KEY_PERIODIC_LOCAL_VN = ['Tất cả','Tài khoản khác của khách hàng', 'Tài khoản eBank khác'];
 
 var CONST_BANK_SCHEDULE_MNG_VN = ['Rút tiền mặt tại quầy', 'Hẹn gặp tư vấn viên'];
-var CONST_BANK_SCHEDULE_MNG_EN = ['Cash withdrawal at TPBank branch', 'Make an appointment with TPBank officers'];
+var CONST_BANK_SCHEDULE_MNG_EN = ['Cash withdrawal at eBank branch', 'Make an appointment with eBank officers'];
 
 var CONST_MNG_KEY_PERIODIC_LOCAL_EN = ['All','My account', 'Another account in TPB'];
 var CONST_MNG_VAL_PERIODIC_FREQUENCY = ['','date', 'week', 'month', 'year'];
@@ -640,8 +640,8 @@ var CONST_VAL_FAST_TRANS_OPT = ['1','2']
 /*** VIEW FUNDSTRANSFER ***/
 
 //TUANNM5 ADDED NEW TYPE TRANSFER
-var CONST_KEY_TRANS_MODE_VN = ['Chuyển tiền liên ngân hàng', 'Chuyển tiền trong TPBank', 'Chuyển nhanh qua thẻ', 'Chuyển nhanh qua tài khoản', 'Chuyển tiền định kỳ', 'Chuyển tiền chứng khoán FPTS', 'Chuyển tiền theo danh sách'];
-var CONST_KEY_TRANS_MODE_EN = ['Normal transfer to another bank\'s account', 'Transfer to TPBank\'s account', 'Realtime transfer to card', 'Realtime transfer to account', 'Schedule transfer', 'Transfer to a securities account', 'Bulk transfer'];
+var CONST_KEY_TRANS_MODE_VN = ['Chuyển tiền liên ngân hàng', 'Chuyển tiền trong eBank', 'Chuyển nhanh qua thẻ', 'Chuyển nhanh qua tài khoản', 'Chuyển tiền định kỳ', 'Chuyển tiền chứng khoán FPTS', 'Chuyển tiền theo danh sách'];
+var CONST_KEY_TRANS_MODE_EN = ['Normal transfer to another bank\'s account', 'Transfer to eBank\'s account', 'Realtime transfer to card', 'Realtime transfer to account', 'Schedule transfer', 'Transfer to a securities account', 'Bulk transfer'];
 var CONST_VAL_TRANS_MODE = ['1','2','3','4','5','6','7']
 //END TUANNM5 UPDATE
 
@@ -650,7 +650,7 @@ var CONST_KEY_TRANS_STATUS_EN = ['All', 'Accepted', 'Pending', 'Transaction fail
 var CONST_VAL_TRANS_STATUS = ['1','2','3','4']*/
 /*** BANK INFO MAP ***/
 
-var CONST_TPB_ATM = "TPBANK";
+var CONST_TPB_ATM = "eBank";
 var CONST_KEY_CITY_EN = ['Ha Noi', 'Ho Chi Minh', 'Can Tho', 'Da Nang', 'Dong Nai', 'An Giang', 'Binh Duong', 'Hai Phong'];
 var CONST_KEY_CITY_VN = ['Hà Nội', 'Hồ Chí Minh', 'Cần Thơ', 'Đà Nẵng', 'Đồng Nai', 'An Giang', 'Bình Dương', 'Hải Phòng'];
 var CONST_VAL_CITY =['1','2','3','4','5','6','7','8'];
@@ -734,11 +734,11 @@ var CONST_KEY_CHANGE_CONFIRM_ID = ['1' , '2'];
 var CONST_HIS_MONEYFLOW_TYPE_VN = ['Tất cả', 'Ghi nợ', 'Ghi có'];
 var CONST_HIS_MONEYFLOW_TYPE_EN = ['All', 'Debit', 'Credit'];
 var CONST_HIS_MONEYFLOW_TYPE_ID = ['ALL', 'D', 'C'];
-var CONST_HIS_TRANS_TYPE_VN = ['Tất cả', 'Chuyển tiền tới ngân hàng khác', 'Chuyển tiền nội bộ TPBank', 'Giao dịch khác'];
-var CONST_HIS_TRANS_TYPE_EN = ['All', 'Transfer to other\'s bank', 'Transfer to TPBank\'s account', 'Others'];
+var CONST_HIS_TRANS_TYPE_VN = ['Tất cả', 'Chuyển tiền tới ngân hàng khác', 'Chuyển tiền nội bộ eBank', 'Giao dịch khác'];
+var CONST_HIS_TRANS_TYPE_EN = ['All', 'Transfer to other\'s bank', 'Transfer to eBank\'s account', 'Others'];
 var CONST_HIS_TRANS_TYPE_ID = ['ALL', 'LIEN_NGAN_HANG', 'NOI_BO', 'GIAO_DICH_KHAC'];
 
-var CONST_HIS_TRANS_TYPE_TEMP_VN = ['Tất cả', 'Chuyển tiền nội bộ TPBank', 'Chuyển tiền tới ngân hàng khác'];
+var CONST_HIS_TRANS_TYPE_TEMP_VN = ['Tất cả', 'Chuyển tiền nội bộ eBank', 'Chuyển tiền tới ngân hàng khác'];
 var CONST_HIS_TRANS_TYPE_TEMP_EN = ['All', 'Internal', 'To another Vietnamese bank\'s account'];
 /*** DEFINE ACCOUNT HISTORY ***/
 
@@ -792,13 +792,13 @@ var CONST_CORP_ACOUNT_EOD_VN = ['Hàng ngày', 'Hàng tháng', 'Hàng quý', 'H�
 var CONST_CORP_ACOUNT_STATUS_VN = ['Đã duyệt', 'Chờ duyệt', 'Chờ xóa'];
 var CONST_CORP_COMMAND_VN = ['Khai báo chi tiết loại tài khoản', 'Khai báo loại giao dịch', 'Khai báo công ty mẹ con', 'Khai báo tài khoản', 'Phê duyệt khai báo công ty mẹ con', 'Phê duyệt khai báo tài khoản'];
 
-var CONST_KEY_PERIODIC_LOCAL_BN_EN = ['Business account', 'Transfer to another TPBank account'];
-var CONST_KEY_PERIODIC_LOCAL_BN_VN = ['Chuyển tới tài khoản của doanh nghiệp', 'Chuyển tới tài khoản TPBank khác'];
-var CONST_VAL_PERIODIC_LOCAL_BN_SEARCH_VN = ['Tất cả','Chuyển giữa các tài khoản của doanh nghiệp', 'Chuyển tới tài khoản TPBank khác'];
+var CONST_KEY_PERIODIC_LOCAL_BN_EN = ['Business account', 'Transfer to another eBank account'];
+var CONST_KEY_PERIODIC_LOCAL_BN_VN = ['Chuyển tới tài khoản của doanh nghiệp', 'Chuyển tới tài khoản eBank khác'];
+var CONST_VAL_PERIODIC_LOCAL_BN_SEARCH_VN = ['Tất cả','Chuyển giữa các tài khoản của doanh nghiệp', 'Chuyển tới tài khoản eBank khác'];
 var CONST_KEY_PERIODIC_LOCAL_BN_SEARCH_VN = ['','T15','T14'];
 
-var CONST_KEY_PERIODIC_CREATE_EN = ['Transfer within customer\'s accounts', 'Transfer to other account in TPBank  '];
-var CONST_KEY_PERIODIC_CREATE_VN = ['Chuyển giữa các tài khoản của doanh nghiệp', 'Chuyển tới tài khoản TPBank khác'];
+var CONST_KEY_PERIODIC_CREATE_EN = ['Transfer within customer\'s accounts', 'Transfer to other account in eBank  '];
+var CONST_KEY_PERIODIC_CREATE_VN = ['Chuyển giữa các tài khoản của doanh nghiệp', 'Chuyển tới tài khoản eBank khác'];
 var CONST_KEY_PERIODIC_CREATE_KEY = ['T15', 'T14'];
 
 var CONST_VALUE_TRANS_BY_LIST_BN = ['Chuyển theo danh sách chuyển khoản liên ngân hàng', 'Chuyển theo danh sách tiền lương'];
@@ -822,7 +822,7 @@ var CONST_MNG_KEY_ACC_LIST_VN = ['Tất cả'];
 var CONST_MNG_KEY_ACC_LIST = [''];
 
 /* Truy van giao dich */
-var CONST_TRANS_TYPE_CONDITION_VN = ['Tất cả', 'Chuyển khoản trong TPBank', 'Chuyển khoản liên ngân hàng','Chuyển tiền nhanh tới số thẻ','Chuyển tiền nhanh qua số tài khoản','Chuyển tiền qua số CMTND/hộ chiếu', 'Chuyển tiền quốc tế'];
+var CONST_TRANS_TYPE_CONDITION_VN = ['Tất cả', 'Chuyển khoản trong eBank', 'Chuyển khoản liên ngân hàng','Chuyển tiền nhanh tới số thẻ','Chuyển tiền nhanh qua số tài khoản','Chuyển tiền qua số CMTND/hộ chiếu', 'Chuyển tiền quốc tế'];
 var CONST_TRANS_TYPE_CONDITION_EN = ['All', 'Internal banking transfer', 'Interbank transaction','Transfer to a cardnumber','Transfer to an account','Transfer to an identification\'s owner', 'International payment'];
 var CONST_TRANS_TYPE_CONDITION_ID = ['ALL', 'T12', 'T13','T19','T21','T20', 'B15'];
 
@@ -837,8 +837,8 @@ var CONST_ACCOUNT_TENOR_POST_VN = ['01 tháng', '02 tháng', '03 tháng', '06 th
 var CONST_ACCOUNT_TENOR_POST_EN = ['01 months', '02 months', '03 months', '06 months', '09 months', '12 months', '18 months', '24 months', '36 months'];
 
 /* Chuyen khoan theo lo/tra luong */
-var CONST_TRANS_BATCH_TYPE_VN = ["Trả lương theo lô trong TPBank", "Chuyển khoản theo lô liên ngân hàng"];
-var CONST_TRANS_BATCH_TYPE_EN = ["Transfer within TPBank accounts", "Transfer interbank"];
+var CONST_TRANS_BATCH_TYPE_VN = ["Trả lương theo lô trong eBank", "Chuyển khoản theo lô liên ngân hàng"];
+var CONST_TRANS_BATCH_TYPE_EN = ["Transfer within eBank accounts", "Transfer interbank"];
 var CONST_TRANS_BATCH_TYPE = ["T16", "T17"];
 var CONST_TRANS_BATCH_TRANS_TYPE_KEY = ["", "T16", "T17"];
 
@@ -851,8 +851,8 @@ var CONST_TRANS_DTI_PAYEE_EN = ['Do not save','Save to list of beneficiaries', '
 var CONST_TRANS_PERIODIC_STATUS_VALUE_VN =  ['Tất cả', 'Đã duyệt', 'Duyệt một phần', 'Chờ duyệt', 'Chờ duyệt hủy', 'Đã hủy', 'Duyệt không thành công'];
 var CONST_TRANS_PERIODIC_STATUS_KEY_VN =    ['ALL', 'ABH', 'APT', 'INT', 'REJ', 'CAC', 'RBH'];
 
-var CONST_TRANS_BATCH_TRANS_TYPE_VN = ['Tất cả', 'Trả lương theo lô trong TPBank', 'Chuyển khoản theo lô liên ngân hàng'];
-var CONST_TRANS_BATCH_TRANS_TYPE_EN = ['All', 'Transfer within TPBank accounts', 'Transfer interbank'];
+var CONST_TRANS_BATCH_TRANS_TYPE_VN = ['Tất cả', 'Trả lương theo lô trong eBank', 'Chuyển khoản theo lô liên ngân hàng'];
+var CONST_TRANS_BATCH_TRANS_TYPE_EN = ['All', 'Transfer within eBank accounts', 'Transfer interbank'];
 var CONST_TRANS_BATCH_TRANS_TYPE = ['ALL', 'T16', 'T17'];
 var CONST_TRANS_BATCH_LIST_STATUS_VN = ["Tất cả", "Đã duyệt", "Chờ duyệt", "Từ chối", "Duyệt một phần", "Duyệt không thành công"];
 var CONST_TRANS_BATCH_LIST_STATUS_EN = ["All", "Authorised", "Pending", "Reject", "Authorised partly", "Unsuccessful authorisation"];
@@ -875,9 +875,9 @@ var CONST_TRANS_PAY_TAX_TYPE_VALUE_EN = ['Domestic tax','Thuế xuất nhập kh
 var CONST_TRANS_PAY_TAX_TYPE_VALUE_VN = ['Thuế nội địa','Thuế xuất nhập khẩu','Phí, lệ phí thuế xuất nhập khẩu','Phí, lệ phí của các bộ, ngành'];
 var CONST_TRANS_PAY_TAX_TYPE_KEY = ['01','02','05','06']; 
 
-var CONST_MESSAGE_TAX_PAYMENT_EN = 'Meet the requirements of the General Department of Customs, TPBank was pleased to announce a successful upgrade electronic import and export payment to version 3.0 from 08/15/2016, TPBank will be one of the first banks officially launch this version. However, due to the wait for other Banks’ synchronization, at the request of the General Department of Customs, Import – Export tax payment service through eBank will <b>have to suspend till 15/11/2016 (domestic tax service is still available).</b> <br> <p>During this time you need to make Import – Export tax transaction over the TPBank’s counter. (view the List <a href="https://tpb.vn/contact-us/find-a-branch" target="_blank"><b>here</b></a>). TPBank are looking forward to customers sympathy for the inconvenience.</p>';
+var CONST_MESSAGE_TAX_PAYMENT_EN = 'Meet the requirements of the General Department of Customs, eBank was pleased to announce a successful upgrade electronic import and export payment to version 3.0 from 08/15/2016, eBank will be one of the first banks officially launch this version. However, due to the wait for other Banks’ synchronization, at the request of the General Department of Customs, Import – Export tax payment service through eBank will <b>have to suspend till 15/11/2016 (domestic tax service is still available).</b> <br> <p>During this time you need to make Import – Export tax transaction over the eBank’s counter. (view the List <a href="https://tpb.vn/contact-us/find-a-branch" target="_blank"><b>here</b></a>). eBank are looking forward to customers sympathy for the inconvenience.</p>';
 
-var CONST_MESSAGE_TAX_PAYMENT_VN ='Đáp ứng yêu cầu của Tổng cục Hải Quan (TCHQ), TPBank vui mừng thông báo đã nâng cấp thành công hệ thống thanh toán thuế xuất nhập khẩu điện tử lên phiên bản 3.0 với nhiều tính năng mới từ ngày 15/8/2016, TPBank sẽ là một trong những ngân hàng đầu tiên chính thức đưa ra phiên bản mới này. Tuy vậy, do việc chờ các tổ chức khác cùng nâng cấp đồng bộ, theo yêu cầu của TCHQ, dịch vụ <b>nộp thuế Xuất nhập khẩu</b> qua TPBank eBank sẽ phải <b>tạm ngưng dự kiến đến 15/11/2016 (dịch vụ nộp thuế nội địa vẫn triển khai bình thường)</b>. <br> <p>Trong thời gian này, Quý khách có nhu cầu nộp thuế Xuất nhập khẩu vui lòng thực hiện tại các Chi nhánh của TPBank (xem danh sách <a href="https://tpb.vn/contact-us/find-a-branch" target="_blank"><b>tại đây</b></a>.). TPBank rất mong Quý khách hàng thông cảm vì sự bất tiện này.</p>';
+var CONST_MESSAGE_TAX_PAYMENT_VN ='Đáp ứng yêu cầu của Tổng cục Hải Quan (TCHQ), eBank vui mừng thông báo đã nâng cấp thành công hệ thống thanh toán thuế xuất nhập khẩu điện tử lên phiên bản 3.0 với nhiều tính năng mới từ ngày 15/8/2016, eBank sẽ là một trong những ngân hàng đầu tiên chính thức đưa ra phiên bản mới này. Tuy vậy, do việc chờ các tổ chức khác cùng nâng cấp đồng bộ, theo yêu cầu của TCHQ, dịch vụ <b>nộp thuế Xuất nhập khẩu</b> qua eBank eBank sẽ phải <b>tạm ngưng dự kiến đến 15/11/2016 (dịch vụ nộp thuế nội địa vẫn triển khai bình thường)</b>. <br> <p>Trong thời gian này, Quý khách có nhu cầu nộp thuế Xuất nhập khẩu vui lòng thực hiện tại các Chi nhánh của eBank (xem danh sách <a href="https://tpb.vn/contact-us/find-a-branch" target="_blank"><b>tại đây</b></a>.). eBank rất mong Quý khách hàng thông cảm vì sự bất tiện này.</p>';
 
 var CONST_TYPE_DEBT_VN = ['Vay thông thường', 'Vay thấu chi'];
 var CONST_TYPE_DEBT_EN = ['Standard loan', 'Overdraft'];
@@ -909,8 +909,8 @@ var CONST_ACCOUNT_APPROVED_TYPE_STATUS_EN = ["All", "Pending", "Authorised partl
 var CONST_ACCOUNT_APPROVED_TYPE_STATUS_VALUE = ["ALL", "INT", "APT"];
 
 //Duyet chuyen khoan trong TPB
-var INTERNAL_TRANS_AUTH_LIST_TRANS_TYPE_VN = ["Tất cả", "Chuyển tới tài khoản TPBank khác", "Chuyển giữa các tài khoản của doanh nghiệp"];
-var INTERNAL_TRANS_AUTH_LIST_TRANS_TYPE_EN = ["All", "Transfer to other account in TPBank  ", "Transfer within customer\'s accounts"];
+var INTERNAL_TRANS_AUTH_LIST_TRANS_TYPE_VN = ["Tất cả", "Chuyển tới tài khoản eBank khác", "Chuyển giữa các tài khoản của doanh nghiệp"];
+var INTERNAL_TRANS_AUTH_LIST_TRANS_TYPE_EN = ["All", "Transfer to other account in eBank  ", "Transfer within customer\'s accounts"];
 var INTERNAL_TRANS_AUTH_LIST_TRANS_TYPE_KEY = ["", "T12", "T11"];
 
 var INTERNAL_TRANS_AUTH_LIST_TRANS_STATUS_VN = ["Tất cả", "Chờ duyệt", "Duyệt một phần"];
@@ -919,8 +919,8 @@ var INTERNAL_TRANS_AUTH_LIST_TRANS_STATUS_KEY = ["", "INT", "APT"];
 //END--Duyet chuyen khoan trong TPB
 
 //Quan ly giao dich theo lo
-var BATCH_SALARY_MNG_TRANS_TYPE_VN = ["Tất cả", "Trả lương theo lô trong TPBank", "Chuyển khoản theo lô liên ngân hàng"];
-var BATCH_SALARY_MNG_TRANS_TYPE_EN = ["All", "Payroll transfer within TPBank", "Interbank batch transfer"];
+var BATCH_SALARY_MNG_TRANS_TYPE_VN = ["Tất cả", "Trả lương theo lô trong eBank", "Chuyển khoản theo lô liên ngân hàng"];
+var BATCH_SALARY_MNG_TRANS_TYPE_EN = ["All", "Payroll transfer within eBank", "Interbank batch transfer"];
 var BATCH_SALARY_MNG_TRANS_TYPE_KEY = ["", "T16", "T17"];
 
 var BATCH_SALARY_MNG_LIST_STATUS_VN = ["Tất cả", "Đã duyệt", "Chờ duyệt", "Từ chối", "Duyệt một phần", "Duyệt không thành công"];
@@ -931,10 +931,10 @@ var BATCH_SALARY_MNG_LIST_STATUS_KEY = ["", "ABH", "INT", "REJ", "APT", "RBH"];
 //trangj thai chuyen tien quoc te
 var TRANS_MONEY_INTERNATIONAL_STATUSES_VN = ["Tất cả","Chờ duyệt","Đã duyệt một phần", "Đang xử lý", "Hồ sơ đã được Tiếp nhận", "Duyệt không thành công","Hủy giao dịch",
 											"Từ chối", "Hoàn thành giao dịch", "Hoàn chứng từ" , "Chờ duyệt BS CTừ", "Duyệt một phần BS CTừ",
-											"Từ chối BS CTừ", "Duyệt BS CTừ  không thành công", "Đang xử lý BS CTừ",  "TPBank từ chối BS CTừ","TPBank từ chối"];
+											"Từ chối BS CTừ", "Duyệt BS CTừ  không thành công", "Đang xử lý BS CTừ",  "eBank từ chối BS CTừ","eBank từ chối"];
 var TRANS_MONEY_INTERNATIONAL_STATUSES_EN = ["All", "Pending", "Authorised partly", "Đang xử lý", "Hồ sơ đã được Tiếp nhận", "Duyệt không thành công",
 											"Reject", "Hủy giao dịch", "Hoàn thành giao dịch", "Hoàn chứng từ" , "Chờ duyệt BS CTừ", "Duyệt một phần BS CTừ",
-											"Từ chối BS CTừ", "Duyệt BS CTừ  không thành công", "Đang xử lý BS CTừ",  "TPBank từ chối BS CTừ","TPBank từ chối"];
+											"Từ chối BS CTừ", "Duyệt BS CTừ  không thành công", "Đang xử lý BS CTừ",  "eBank từ chối BS CTừ","eBank từ chối"];
 var TRANS_MONEY_INTERNATIONAL_STATUSES_KEY = ["", "INT", "APT", "STH", "HBH", "RBH", "CAN","REJ" ,"ABH","REH","IBS","APS","RES","RBS","SBS","RJS","RSA"];
 //END--trangj thai chuyen tien quoc te
 
@@ -972,8 +972,8 @@ var CONST_TAX_INFO_QUERY_IE_VALUE_EN = ["Save declaration number", "Save tax cod
 var CONST_TAX_INFO_QUERY_IE_KEY = [2, 1, 0];
 
 /* Duyệt chuyển khoản định kì */
-var CONST_TRANS_PERIODIC_TYPE_VN = ['Chuyển khoản định kỳ trong TPBank'];
-var CONST_TRANS_PERIODIC_TYPE_EN = ['Periodic transfer in TPBank'];
+var CONST_TRANS_PERIODIC_TYPE_VN = ['Chuyển khoản định kỳ trong eBank'];
+var CONST_TRANS_PERIODIC_TYPE_EN = ['Periodic transfer in eBank'];
 var CONST_TRANS_PERIODIC_TYPE_ID = ['T15'];
 var CONST_AUTH_STATUS_TRANSPDI_VN = ['Tất cả', 'Chờ duyệt', 'Duyệt một phần', 'Chờ duyệt hủy', 'Chờ duyệt hủy một phần'];
 var CONST_AUTH_STATUS_TRANSPDI_EN = ['All', 'Pending', 'Authorised partly', 'Wait for approval of canceling', 'Wait for approval of canceling partly'];
@@ -1035,8 +1035,8 @@ var CONST_SETUP_AUTHORIZE_LIST_TRANS_TYPE_EN = ["Transaction limit"];
 var CONST_SETUP_AUTHORIZE_LIST_TRANS_TYPE_KEY = ["S15"];
 
 //Chuyen tien trong TPB
-var CONST_INTERNAL_TRANS_TYPE_VN = ["Chuyển tới tài khoản TPBank khác", "Chuyển giữa các tài khoản của doanh nghiệp"];
-var CONST_INTERNAL_TRANS_TYPE_EN = ["Transfer to other account in TPBank  ", "Transfer within customer\'s accounts"];
+var CONST_INTERNAL_TRANS_TYPE_VN = ["Chuyển tới tài khoản eBank khác", "Chuyển giữa các tài khoản của doanh nghiệp"];
+var CONST_INTERNAL_TRANS_TYPE_EN = ["Transfer to other account in eBank  ", "Transfer within customer\'s accounts"];
 var CONST_INTERNAL_TRANS_TYPE_KEY = ["T12", "T11"];
 var CONST_INTERNAL_TRANS_SAVE_SAMPLE_STATUS_VN = ["Không lưu", "Lưu danh sách thụ hưởng", "Lưu mẫu chuyển tiền"];
 var CONST_INTERNAL_TRANS_SAVE_SAMPLE_STATUS_EN = ["Do not save", "Save to list of beneficiaries", "Save to payment templates"];
@@ -1073,8 +1073,8 @@ var CONST_MNG_GUARANTEE_TYPE_VALUE_VN = ["Tất cả", "Đề nghị phát hành
 var CONST_MNG_GUARANTEE_TYPE_VALUE_EN = ["All", "Bill payment"];
 var CONST_MNG_GUARANTEE_TYPE_VALUE_KEY = ['', "B14"];
 
-var CONST_RELEASE_FORMS_OF_GUARANTEE_VN = ['Phát hành thư bảo lãnh theo mẫu của TPBank', 'Phát hành thư bảo lãnh không theo mẫu của TPBank'];
-var CONST_RELEASE_FORMS_OF_GUARANTEE_EN = ['Issuing Guarantee by TPBank form', 'Issuing Guarantee not by TPBank form'];
+var CONST_RELEASE_FORMS_OF_GUARANTEE_VN = ['Phát hành thư bảo lãnh theo mẫu của eBank', 'Phát hành thư bảo lãnh không theo mẫu của eBank'];
+var CONST_RELEASE_FORMS_OF_GUARANTEE_EN = ['Issuing Guarantee by eBank form', 'Issuing Guarantee not by eBank form'];
 var CONST_RELEASE_FORMS_OF_GUARANTEE_KEY = ['YG', 'NG'];
 
 //Chuyển tiền quốc tế
@@ -1100,7 +1100,7 @@ var CONST_INTERNATIONAL_PURPOSE_IMT02_VN = ['Chuyển tiền thanh toán Phí h�
                                             'Thanh toán tiền nhận chuyển giao công nghệ/nhượng quyền thương mại ở nước ngoài',
 											'Chuyển tiền cho chi phí thành lập và hoạt động của Văn phòng đại diện tại nước ngoài',
 											'Thanh toán đăng ký bản quyền, phí duy trì thương hiệu',
-											'Chuyển tiền thanh toán chuyển khẩu (theo quy định của TPBank từng thời kỳ)',
+											'Chuyển tiền thanh toán chuyển khẩu (theo quy định của eBank từng thời kỳ)',
 											'Thanh toán dịch vụ với nước ngoài ( phí tư vấn, dịch vụ công nghệ…)',
 											'Thanh toán dịch vụ trực tuyến',
 											'Chuyển vốn đầu tư trực tiếp cùng lợi nhuận,  ra khỏi Việt nam trong trường hợp giải thể, chấm dứt hoạt động của DN tại Việt nam',
@@ -1117,7 +1117,7 @@ var CONST_INTERNATIONAL_PURPOSE_IMT02_EN = ['Chuyển tiền thanh toán Phí h�
                                             'Thanh toán tiền nhận chuyển giao công nghệ/nhượng quyền thương mại ở nước ngoài',
 											'Chuyển tiền cho chi phí thành lập và hoạt động của Văn phòng đại diện tại nước ngoài',
 											'Thanh toán đăng ký bản quyền, phí duy trì thương hiệu',
-											'Chuyển tiền thanh toán chuyển khẩu (theo quy định của TPBank từng thời kỳ)',
+											'Chuyển tiền thanh toán chuyển khẩu (theo quy định của eBank từng thời kỳ)',
 											'Thanh toán dịch vụ với nước ngoài ( phí tư vấn, dịch vụ công nghệ…)',
 											'Thanh toán dịch vụ trực tuyến',
 											'Chuyển vốn đầu tư trực tiếp cùng lợi nhuận,  ra khỏi Việt nam trong trường hợp giải thể, chấm dứt hoạt động của DN tại Việt nam',
@@ -1138,8 +1138,8 @@ var CONST_INTERNATIONAL_INTERMEDIARY_BANK_VN = ['Không chuyển qua ngân hàng
 var CONST_INTERNATIONAL_INTERMEDIARY_BANK_EN = ['Không chuyển qua ngân hàng trung gian', 'Chuyển qua ngân hàng trung gian'];
 var CONST_INTERNATIONAL_INTERMEDIARY_BANK_KEY = ['IBN', 'IBY'];
 
-var CONST_INTERNATIONAL_METHOD_FEE_VN = ['BEN-Người hưởng chịu tất cả các loại phí', 'SHA-Người ra lệnh chỉ chịu phí TPBank (CT, điện phí)', 'OUR-Người ra lệnh chịu tất cả các loại phí'];
-var CONST_INTERNATIONAL_METHOD_FEE_EN = ['BEN-Người hưởng chịu tất cả các loại phí', 'SHA-Người ra lệnh chỉ chịu phí TPBank (CT, điện phí)', 'OUR-Người ra lệnh chịu tất cả các loại phí'];
+var CONST_INTERNATIONAL_METHOD_FEE_VN = ['BEN-Người hưởng chịu tất cả các loại phí', 'SHA-Người ra lệnh chỉ chịu phí eBank (CT, điện phí)', 'OUR-Người ra lệnh chịu tất cả các loại phí'];
+var CONST_INTERNATIONAL_METHOD_FEE_EN = ['BEN-Người hưởng chịu tất cả các loại phí', 'SHA-Người ra lệnh chỉ chịu phí eBank (CT, điện phí)', 'OUR-Người ra lệnh chịu tất cả các loại phí'];
 var CONST_INTERNATIONAL_METHOD_FEE_KEY = ['BEN', 'SHA', 'OUR'];
 
 var CONST_INTERNATIONAL_TRANS_SAVE_SAMPLE_STATUS_VN = ["Không lưu", "Lưu mẫu chuyển tiền"];

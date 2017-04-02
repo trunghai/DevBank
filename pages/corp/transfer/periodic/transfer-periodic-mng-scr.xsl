@@ -42,7 +42,7 @@
                   <div class="input-group" onclick="showInputAccountTypeMNG()">
                     <span class="input-group-addon" style="width:40%;white-space:pre-wrap">COM_TYPE_TRANSACTION</span>
                     <input style="white-space:pre-wrap" id="id.acctype" type="button" class="form-control form-control-righttext" value="TRANS_PERIODIC_BTN_SELECT_FUNC" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                   </div>
                 </td>
               </tr>
@@ -52,7 +52,7 @@
                   <div class="input-group" onclick="showSTT()">
                     <span class="input-group-addon" style="width:40%">TRANS_PERIODIC_MNG_STT</span>
                     <input id="id.stt" type="button" onclick="" class="form-control form-control-righttext" value="TRANS_PERIODIC_BTN_SELECT_FUNC" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                   </div>
                 </td>
               </tr>
@@ -62,7 +62,7 @@
                   <div class="input-group" onclick="showInputFrequencyMNG();">
                     <span class="input-group-addon" style="width:40%">TRANS_PERIODIC_FREQUENCY</span>
                     <input id="id.freq" type="button" class="form-control form-control-righttext" value="TRANS_PERIODIC_BTN_SELECT_FUNC" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                   </div>
                 </td>
               </tr>
@@ -72,7 +72,7 @@
                   <div class="input-group" onclick="getUserWhoCreatedTransaction()">
                     <span class="input-group-addon" style="width:40%; white-space:pre-wrap">ACC_PERSON_ESTABLISH_TRANSACTION</span>
                     <input id="id.accountno" type="button" class="form-control form-control-righttext" value="TRANS_PERIODIC_BTN_SELECT_FUNC" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                   </div>
                 </td>
               </tr>

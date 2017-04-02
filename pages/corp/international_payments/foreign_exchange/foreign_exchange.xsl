@@ -40,24 +40,24 @@
             <table align="center" class="table-exchange-rate" style="table-layout: fixed;">
               <tr>
                 <!-- <th width="20%"><span style="white-space:pre-wrap; font-weight: bold; color: #5F2F85;">FOREGIN_EXCHANGE_RATE</span></th> -->
-                <th width="20%"><span style="white-space:pre-wrap; color: #4e69a2;">FOREGIN_MONEY</span></th>
-                <th width="40%"><span style="white-space:pre-wrap; color: #4e69a2;">FOREGIN_BUY_BY_TPB</span></th>
+                <th width="10%"><span style="white-space:pre-wrap; color: #4e69a2;">FOREGIN_MONEY</span></th>
+                <th width="30%"><span style="white-space:pre-wrap; color: #4e69a2;">FOREGIN_BUY_BY_TPB</span></th>
               </tr>
               <tr>
-                <td><span style="white-space:pre-wrap; font-weight: bold;">USD</span></td>
-                <td>
+                <td style="border-bottom:0.5px solid #bdc7d8;"><span style="white-space:pre-wrap; font-weight: bold;">USD</span></td>
+                <td style="border-bottom:0.5px solid #bdc7d8;">
                   <input style="white-space:pre-wrap" disabled="true" id="rateUSD" class="form-control form-control-rightbutton table-exchange-organe" />
                 </td>
               </tr>
               <tr>
-                <td><span style="white-space:pre-wrap; font-weight: bold;">JPY</span></td>
-                <td>
+                <td style="border-bottom:0.5px solid #bdc7d8; "><span style="white-space:pre-wrap; font-weight: bold;">JPY</span></td>
+                <td style="border-bottom:0.5px solid #bdc7d8;">
                   <input style="white-space:pre-wrap" disabled="true" id="rateJPY" class="form-control form-control-rightbutton table-exchange-organe" />
                 </td>
               </tr>
               <tr>
-                <td><span style="white-space:pre-wrap; font-weight: bold;">EUR</span></td>
-                <td>
+                <td style="border-bottom:0.5px solid #bdc7d8;"><span style="white-space:pre-wrap; font-weight: bold;">EUR</span></td>
+                <td style="border-bottom:0.5px solid #bdc7d8;">
                   <input style="white-space:pre-wrap" disabled="true" id="rateEUR" class="form-control form-control-rightbutton table-exchange-organe" />
                 </td>
               </tr>
@@ -78,7 +78,7 @@
                   <div class="input-group" onClick="showListAccountForeign()">
                     <span class="input-group-addon" style="width:40%;white-space:pre-wrap">FOREGIN_ACCOUNT</span>
                     <input style="white-space:pre-wrap" id="foreginAccount" type="button" class="form-control form-control-rightbutton" value="COM_TXT_INPUT_PLACEHOLDER" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                   </div>
                 </td>
               </tr>
@@ -98,7 +98,7 @@
                   <div class="input-group" onClick="showListAccountVND()">
                     <span class="input-group-addon" style="width:40%;white-space:pre-wrap">FOREGIN_ACCOUNT_PAYMENT</span>
                     <input style="white-space:pre-wrap" id="foreginAccountVND" type="button" class="form-control form-control-rightbutton" value="COM_TXT_INPUT_PLACEHOLDER" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                   </div>
                 </td>
               </tr>

@@ -43,7 +43,7 @@
                     <div class="input-group" onClick="showInputSelection(1)">
                       <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_LOCAL_ACC_TITLE</span>
                       <input id="id.accountno" type="button" class="form-control form-control-rightbutton" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>
@@ -88,7 +88,7 @@
                     <div class="input-group" onClick="showBankSelection()">
                       <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_BANK_TITLE</span>
                       <input id="trans.branchName" type="button" class="form-control form-control-right2linetext" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                      <span class="icon-movenext input-group-addon input-group-symbol" style="margin-top:7px;"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol" style="margin-top:7px;"></span>
                     </div>
                   </td>
                 </tr>
@@ -122,7 +122,7 @@
                     <div class="input-group" onClick='showInputSelection(2)'>
                       <span class="input-group-addon" style="white-space:pre-wrap; width:40%">TRANS_FEE_TITLE</span>
                       <input id="trans.fee" type="button" class="form-control form-control-righttext" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>
@@ -141,7 +141,7 @@
                     <div class="input-group">
                       <span class="input-group-addon" style="font-family:Tahoma, Helvetica, sans-serif;white-space:pre-wrap; width:40%">COM_SAVE_BENE</span>
                       <input style="white-space:pre-wrap" onclick="showInputSelection(3)" id="manage.bene" type="button" class="form-control form-control-righttext" placeholder="BENEFIC_LIST_NORMAL" value="TRANSFER_REMITTANCE_NON_SAVE" />
-                      <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                      <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     </div>
                   </td>
                 </tr>

@@ -123,7 +123,7 @@ function updateViewWithUserInfo(inStatus) {
 
         var tmpNodeChangeUser = document.getElementById('login.changeaccounttitle');
         tmpNodeChangeUser.innerHTML =
-            "<span class='icon-checkbox-unchecked' style='display:table-cell;font-size:14px'></span>" +
+            "<span class='lnr-checkmark-circle' style='display:table-cell;font-size:18px'></span>" +
             "<h5 class='login-change-user'>" + "   " + CONST_STR.get("WELCOME_CHANGE_USER") +
             "</h5>";
     } else {
@@ -135,7 +135,7 @@ function updateViewWithUserInfo(inStatus) {
 
         var tmpNodeChangeUser = document.getElementById('login.changeaccounttitle');
         tmpNodeChangeUser.innerHTML =
-            "<span class='icon-checked' style='display:table-cell;font-size:14px'></span>" +
+            "<span class='lnr-cross-circle' style='display:table-cell;font-size:18px'></span>" +
             "<h5 class='login-change-user'>" + "   " + CONST_STR.get("WELCOME_CHANGE_USER_OLD") +
             "</h5>";
 

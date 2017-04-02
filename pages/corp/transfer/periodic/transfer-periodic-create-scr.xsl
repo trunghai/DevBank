@@ -45,7 +45,7 @@
                 <td colspan="2" align="center" valign="middle" class="td-text">
                   <div class="input-group" onclick="showInputTransferTypeAccount();"> <span class="input-group-addon" style="width:40%; white-space:pre-wrap">TRANS_BATCH_TYPE_LABEL</span>
                     <input style="white-space:pre-wrap" id="trans.type.trans" type="button" class="form-control form-control-righttext" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     <input type="hidden" id='id.value.trans.type.trans' />
                   </div>
                 </td>
@@ -59,7 +59,7 @@
                 <td colspan="2" align="center" valign="middle" class="td-text">
                   <div class="input-group" onClick="showAccountSelection()"> <span class="input-group-addon" style="width:40%;white-space:pre-wrap">TRANS_PERIODIC_SOURCE_ACC_NO</span>
                     <input style="white-space:pre-wrap" id="id.accountno" type="button" class="form-control form-control-rightbutton" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span> </div>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span> </div>
                 </td>
               </tr>
               <!-- Số dư khả dụng -->
@@ -77,7 +77,7 @@
                 <td colspan="2" align="center" valign="middle" class="td-text">
                   <div class="input-group" onclick="showAccOfCustomer()"> <span class="input-group-addon" style="width:40%; white-space:pre-wrap">TRANS_PERIODIC_ACC_NO</span>
                     <input id="trans.desaccount" type="button" class="form-control form-control-righttext" placeholder="COM_TXT_INPUT_PLACEHOLDER" value="COM_TXT_SELECTION_PLACEHOLDER" onchange="loadInfoFromIdAccount(this)" maxlength="30"/>
-                    <span id="id.next.icon" class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span id="id.next.icon" class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     <span onclick="showPayeePage();" id="span.trans.target" class="tooltip icon-book input-group-addon-datepicker input-group-symbol-datepicker" style="cursor:pointer;display:none;"> <span style="text-align:center; font-size:14px;">TRANSFER_REMITTANCE_SAVE_BENEFIC1</span></span>
                   </div>
                 </td>
@@ -142,7 +142,7 @@
                 <td colspan="2" align="center" valign="middle" class="td-text">
                   <div class="input-group" onclick="showInputFrequency()"> <span class="input-group-addon" style="width:40%; white-space:pre-wrap">TRANS_PERIODIC_FREQUENCY</span>
                     <input id="trans.frequency" type="button" class="form-control form-control-righttext" placeholder="COM_TXT_INPUT_PLACEHOLDER" value="COM_TXT_SELECTION_PLACEHOLDER" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span>
                     <input type="hidden" id='id.value.trans.frequency' />
                   </div>
                 </td>
@@ -172,7 +172,7 @@
                 <td colspan="2" class="td-text" align="center" valign="middle">
                   <div class="input-group"> <span class="input-group-addon" style="width:40%; white-space:pre-wrap">COM_SAVE_BENE</span>
                     <input style="white-space:pre-wrap" id="mng.payee" type="button" onclick="showInputMNG()" class="form-control form-control-righttext" placeholder="BENEFIC_LIST_NORMAL" value="BENEFIC_LIST_NORMAL" />
-                    <span class="icon-movenext input-group-addon input-group-symbol"></span> </div>
+                    <span class="lnr-chevron-right input-group-addon input-group-symbol"></span> </div>
                 </td>
               </tr>
               <!-- Gửi thông báo cho người duyệt -->

@@ -1615,6 +1615,7 @@ function createDefaultScrollbar (direction, interactive, type) {
 	if ( !interactive ) {
 		scrollbar.style.pointerEvents = 'none';
 	}
+	scrollbar.style.display = 'none';
 	
 	scrollbar.appendChild(indicator);
 	scrollbar.appendChild(scrollbarLine);

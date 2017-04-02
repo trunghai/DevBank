@@ -6270,12 +6270,12 @@ function updateViewForDesktop() {
 	if(content != undefined) content.close(); 
 	if(contentPromotion != undefined) contentPromotion.close();
 	
-	document.body.style.backgroundColor = '#F1F1F1';
+	document.body.style.backgroundColor = '#FAFAFA';
 	var tmpNodeMain = document.getElementById('mainview');
 	var tmpNodePage = document.getElementById('fullPage');
 	var tmpPageBorder = document.getElementById('pageBorder');
 	var tmpNodeHeader = tmpNodeMain.getElementsByClassName('header')[0];
-	document.getElementById('pageFooter').style.display = 'block';
+	// document.getElementById('pageFooter').style.display = 'block';
 	if(!gIsLogin) {
 		tmpNodePage.setAttribute('align', 'center'); //left
 		tmpNodeMain.style.cssFloat = 'none';
@@ -6324,7 +6324,7 @@ function updateViewForMobile() {
 	var tmpPageBorder = document.getElementById('pageBorder');
 	if(tmpPageBorder != undefined) tmpPageBorder.style.width = '100%';
 	document.getElementById('pageHeader').style.display = 'none';
-	document.getElementById('pageFooter').style.display = 'none';
+	// document.getElementById('pageFooter').style.display = 'none';
 	if(gIsLogin) document.getElementById('nav.btn.showslidemenu').style.display = 'block';
 	document.getElementById('menu-section').style.display = 'none';
 	document.getElementById('headermb').style.display = 'block';
