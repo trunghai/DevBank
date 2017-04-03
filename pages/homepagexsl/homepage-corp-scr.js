@@ -30,6 +30,8 @@ function viewDidLoadSuccess() {
 	
 	document.getElementById("footerDesktop").innerHTML = "© All rights reserved.";
 	document.getElementById("footerMobile").innerHTML = "© All rights reserved.";
+	document.getElementById('footerDesktop').style.color = '#FAFAFA';
+
 	
 	for (var i=0; i<gMenuUserOrder.length; i++) {
 		for (var j=0; j<gMenuList.length; j++) {

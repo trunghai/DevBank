@@ -6275,7 +6275,8 @@ function updateViewForDesktop() {
 	var tmpNodePage = document.getElementById('fullPage');
 	var tmpPageBorder = document.getElementById('pageBorder');
 	var tmpNodeHeader = tmpNodeMain.getElementsByClassName('header')[0];
-	// document.getElementById('pageFooter').style.display = 'block';
+	document.getElementById('pageFooter').style.display = 'block';
+
 	if(!gIsLogin) {
 		tmpNodePage.setAttribute('align', 'center'); //left
 		tmpNodeMain.style.cssFloat = 'none';
@@ -6287,6 +6288,7 @@ function updateViewForDesktop() {
 		tmpNodePage.setAttribute('align', 'left'); //left
 		tmpNodeMain.style.cssFloat = 'left';
 		tmpNodeHeader.style.display = 'none';
+        document.getElementById('pageFooter').style.backgroundColor = '#17C4BB';
 	}
 	var tmpNodePage = document.getElementById('fullPage');
 	tmpNodePage.setAttribute('align', 'left'); //left
@@ -6324,7 +6326,7 @@ function updateViewForMobile() {
 	var tmpPageBorder = document.getElementById('pageBorder');
 	if(tmpPageBorder != undefined) tmpPageBorder.style.width = '100%';
 	document.getElementById('pageHeader').style.display = 'none';
-	// document.getElementById('pageFooter').style.display = 'none';
+	document.getElementById('pageFooter').style.display = 'none';
 	if(gIsLogin) document.getElementById('nav.btn.showslidemenu').style.display = 'block';
 	document.getElementById('menu-section').style.display = 'none';
 	document.getElementById('headermb').style.display = 'block';

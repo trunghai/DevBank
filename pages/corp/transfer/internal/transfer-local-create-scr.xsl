@@ -153,13 +153,13 @@
                     </div>
                   </td>
                 </tr>
-                <tr id="tr.list-receiver">
-                  <td colspan="2" align="center" valign="middle">
-                  <div style="text-align: right;">
-                    <u><a onclick="showReceiverList()"><span style="cursor:pointer;">COM_VIEW_LIST_APPROVER</span></a></u>
-                  </div>
-                  </td>
-                </tr>
+                <!--<tr id="tr.list-receiver">-->
+                  <!--<td colspan="2" align="center" valign="middle">-->
+                  <!--<div style="text-align: right;">-->
+                    <!--<u><a onclick="showReceiverList()"><span style="cursor:pointer;">COM_VIEW_LIST_APPROVER</span></a></u>-->
+                  <!--</div>-->
+                  <!--</td>-->
+                <!--</tr>-->
                 <tr>
                   <td>
                     <input type="button" class="btnshadow btn-second" onclick="sendJSONRequest()" value="TRANS_LOCAL_BTN_SENDREQUEST" />

@@ -369,6 +369,7 @@ function requestMBServiceSuccess(e) {
         gIsLogin = true;
 
         //config view
+
         setViewOnDesktopWhenLogin();
         document.getElementById('tabHost').innerHTML = "";
 
