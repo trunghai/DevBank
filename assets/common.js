@@ -5612,7 +5612,8 @@ function changeLanguageInView() {
 
     changeLanguageInNodeWithTag('span');
 	if(gIsLogin) {
-		document.getElementById('menu-profile-name').innerHTML = createShortName(gUserInfo.accountName);
+		// document.getElementById('menu-profile-name').innerHTML = createShortName(gUserInfo.accountName);
+        document.getElementById('menu-profile-name').innerHTML = "KÍNH CHÀO QUÝ KHÁCH";
 	}
 }
 

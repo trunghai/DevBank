@@ -2895,13 +2895,13 @@ p.pcopyrighttext {
 .table-account th {
 	display:table-cell;
 	/*background: #F39812; */
-	background: #3598dc;
+	background: #17C4BB;
 	color: #ffffff;
 	font-weight: bold;
 	text-align:center;
 }
 .table-account tr td, .table-account th td, .table-account th {
-	border: 1px solid #3598dc;
+	border: 1px solid #17C4BB;
 	padding:6px;
 }
 .table-account tr {

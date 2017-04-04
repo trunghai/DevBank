@@ -594,7 +594,7 @@ body {
 
 .promotion-layout .promotion-header .reload-button, .main-layout .header .reload-button {
     position: absolute;
-    width: 60px;
+    width: 40px;
     height: 26px;
     top: 2px;
     right: 10px;
@@ -621,11 +621,12 @@ body {
 .promotion-layout .promotion-header .reload-button em, .main-layout .header .reload-button em {
 	
     position: absolute;
-    top: 5px;
+    top: 3px;
     right: 5px;
     /*font-family: 'EBankPro';*/
     font-style: normal;
 	color:#FFF;
+    font-size: 20px;
 }
 
 /* -------------- HEADER CONFIG END --------------*/
