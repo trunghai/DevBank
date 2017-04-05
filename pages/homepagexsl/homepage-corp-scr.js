@@ -111,11 +111,11 @@ function gotoMenuList(inID) {
 			if(gMenuList[i].parentMenuID == inID) {
 				gDynamicMenu += "<div id='home_" + gMenuList[i].path + "' class='sub-menu' onClick=\"" + gMenuList[i].onClick + "\">" +
               "<h5 class='Header'><a style='text-decoration:none; color:#FFF; cursor:pointer' onClick=\"" + gMenuList[i].onClick + "\"><span>" + CONST_STR.get(gMenuList[i].keyLang) + "</span></a></h5>" +
-              "</div>";
+              "</div>" + "<div class='line-separate-sub-menu'></div>";
 			}
 		}
 	}
-	gDynamicMenu += "<div class='line-separate-sub-menu' style='background-color:#000'/>";
+	// gDynamicMenu += "<div class='line-separate-sub-menu' style='background-color:#000'/>";
 	
 	navController.initWithRootView('homepagexsl/dynamic-menu-scr', true, 'xsl');
 }

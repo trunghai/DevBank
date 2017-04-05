@@ -231,14 +231,14 @@ body {
 .menu-layout .menu-header {
     width: 250px;
 	height: 44px;
-	background: #4e69a2;
+	background: #17C4BB;
 	color: #FDFDFD;
 	/* font-family: 'TPB-DaxlinePro-Medium'; */
 	font-family: Tahoma, Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	padding-top: 3px;
-	padding-left: 31px;
+	padding-left: 5px;
 }
 
 .menu-layout .menu-header span {
@@ -249,11 +249,11 @@ body {
 .menu-layout .menu-header .exit-button {
 	/*width:66px;padding:1px;padding-top:4px;font-weight:bold;font-size:15px;text-align:center;*/
     position: absolute;
-    width: 55px;
+    width: 40px;
     height: 30px;
-    top: 5px;
+    top: 6px;
     /*left: 150px;*/
-	right: 15px;
+	right: 8px;
 	padding:1px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -264,7 +264,7 @@ body {
     -moz-border-radius: 4px;
     background: rgba(255, 255, 255, 0.4);
     font-weight:bold;
-	font-size:15px;
+	font-size: 20px;
 	text-align:center;
 }
 
@@ -277,8 +277,8 @@ body {
 .menu-layout .menu-header .exit-button em {
 	
     position: absolute;
-    top: 7.2px;
-    right: 8px;
+    top: 5px;
+    right: 5px;
     /*font-family: 'EBankPro';*/
     font-style: normal;
 }
@@ -300,13 +300,13 @@ body {
 }
 
 .menu-profile-name {
-	width: 60%;
+	width: 70%;
 	text-align: left;
 	padding-top: 5px;
 	cursor: pointer;
 	word-break: break-all;
-	word-wrap: word-break;
-	padding: 3px 10px 10px 15px !important;
+	/*word-wrap: word-break;*/
+	/*padding: 3px 10px 10px 15px !important;*/
 }
 
 .menu-profile-icon {
@@ -324,7 +324,7 @@ body {
     bottom: 0px;
     left: 0;
     width: 100%;
-    background: #4e69a2;
+    background: #17C4BB;
     overflow: hidden;
     -ms-touch-action: auto;
 }
@@ -372,7 +372,7 @@ body {
     top: 6px;
     left: 0;
     margin-left: 10px;
-    color: #4e69a2;
+    color: #17C4BB;
     /*font-family: 'EBankPro';*/
     font-size: 23px;
     font-style: normal;
@@ -483,7 +483,7 @@ body {
     top: 13px;
     left: 0;
     margin-left: 18px;
-    color: #4e69a2;
+    color: #17C4BB;
     /*font-family: 'TPB-DaxlinePro-Light';*/
     font-size: 12px;
 }
@@ -518,13 +518,13 @@ body {
 }
 
 .langNoStyle:hover {
-	color:#F60;
+	color:#17C4BB;
 	text-decoration: none;
 	border:0px;
 }
 
 .langNoStyleSelected {
-	color:#F60 !important;
+	color:#17C4BB !important;
 	text-decoration: none;
 	border:0px;
 }
@@ -764,7 +764,7 @@ body {
     width: 100%;
 	left:0px;
     height: 44px;
-    background-color: #4e69a2;
+    background-color: #17C4BB;
     /*box-shadow: 0px 0px 3px #000000;*/
     /*-moz-box-shadow: 0px 0px 3px #000000;*/
     /*-webkit-box-shadow: 0px 0px 3px #000000;*/
