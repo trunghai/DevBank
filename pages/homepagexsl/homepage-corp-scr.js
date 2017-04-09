@@ -28,10 +28,8 @@ function viewDidLoadSuccess() {
 			
 	getCustomerInfo();
 	
-	document.getElementById("footerDesktop").innerHTML = "© All rights reserved.";
-	document.getElementById("footerMobile").innerHTML = "© All rights reserved.";
-	document.getElementById('footerDesktop').style.color = '#FAFAFA';
-
+	// document.getElementById("footerDesktop").innerHTML = "© All rights reserved.";
+	// document.getElementById("footerMobile").innerHTML = "© All rights reserved.";
 	
 	for (var i=0; i<gMenuUserOrder.length; i++) {
 		for (var j=0; j<gMenuList.length; j++) {
@@ -84,8 +82,8 @@ function viewDidLoadSuccess() {
 function viewWillUnload() {
 	logInfo('homepage-vn will unload');
 	
-	document.getElementById("footerDesktop").innerHTML = gUserInfo.accountInfo.companyName;
-	document.getElementById("footerMobile").innerHTML = gUserInfo.accountInfo.companyName;
+	// document.getElementById("footerDesktop").innerHTML = gUserInfo.accountInfo.companyName;
+	// document.getElementById("footerMobile").innerHTML = gUserInfo.accountInfo.companyName;
 }
 
 /*** VIEW WILL UNLOAD END ***/
@@ -111,11 +109,11 @@ function gotoMenuList(inID) {
 			if(gMenuList[i].parentMenuID == inID) {
 				gDynamicMenu += "<div id='home_" + gMenuList[i].path + "' class='sub-menu' onClick=\"" + gMenuList[i].onClick + "\">" +
               "<h5 class='Header'><a style='text-decoration:none; color:#FFF; cursor:pointer' onClick=\"" + gMenuList[i].onClick + "\"><span>" + CONST_STR.get(gMenuList[i].keyLang) + "</span></a></h5>" +
-              "</div>" + "<div class='line-separate-sub-menu'></div>";
+              "</div>";
 			}
 		}
 	}
-	// gDynamicMenu += "<div class='line-separate-sub-menu' style='background-color:#000'/>";
+	gDynamicMenu += "<div class='line-separate-sub-menu' style='background-color:#000'/>";
 	
 	navController.initWithRootView('homepagexsl/dynamic-menu-scr', true, 'xsl');
 }

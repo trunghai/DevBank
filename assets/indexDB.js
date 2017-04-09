@@ -12,7 +12,7 @@ if (!window.indexedDB) {
 }
 
 const userData = [
-    { id: "8888999801", pass: "123456", name: "gopal", age: 35, email: "gopal@tutorialspoint.com" },
+    { id: "abc1234567", pass: "123456", name: "gopal", age: 35, email: "gopal@tutorialspoint.com" },
     { id: "8888999802", pass: "123456", name: "prasad", age: 32, email: "prasad@tutorialspoint.com" }
 ];
 var db;
@@ -52,7 +52,7 @@ function read() {
         }
 
         else {
-            alert("Kenny couldn't be found in your database!");
+            alert("User Quý khách nhập không đúng");
         }
     };
 }
@@ -105,7 +105,7 @@ var jsonData = {
   "respRaw": "",
   "arguments": [
     "c24fda9bd03c68b61744f45814ab6f07",
-    "{customerName : \"DUONG TRUNG HAI\", companyName : \"FULL_NAME_98888888\", position : \"\", lastLogin : \"27/03/2017 03:51:28\"}",
+    "{customerName : \"KÍNH CHÀO QUÝ KHÁCH\", companyName : \"FULL_NAME_98888888\", position : \"\", lastLogin : \"27/03/2017 03:51:28\"}",
     "OTP",
     null,
     null,

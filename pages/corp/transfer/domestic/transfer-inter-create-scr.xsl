@@ -20,16 +20,16 @@
                 </tr>
                 <tr>
                   <td colspan="2">
-                    <div id="seqFormInterBank"></div>
+                    <div id="seqFormInterBank" style="display: none"></div>
                   </td>
                 </tr>
-                <!--<tr>-->
-                  <!--<td colspan="2">-->
-                    <!--<div style="text-align:center">                      -->
-                        <!--<span>COM_INFOR_TAX</span><a style="cursor: pointer;" onclick="clickLinkTax()"><span>COM_INFOR_TAX_1</span></a>              -->
-                    <!--</div>-->
-                  <!--</td>-->
-                <!--</tr>              -->
+                <tr>
+                  <td colspan="2">
+                    <div style="text-align:center">                      
+                        <span>COM_INFOR_TAX</span><a style="cursor: pointer;" onclick="clickLinkTax()"><span>COM_INFOR_TAX_1</span></a>              
+                    </div>
+                  </td>
+                </tr>              
 
                 <tr>
                   <td colspan="2">
@@ -162,13 +162,13 @@
                     </div>
                   </td>
                 </tr>
-                <!--<tr>-->
-                  <!--<td colspan="2">-->
-                      <!--<a onclick="showReceiverList()" style="cursor: pointer; float: right" id="link.view.listAuth">-->
-                        <!--<span>COM_VIEW_LIST_APPROVER</span>-->
-                      <!--</a>-->
-                  <!--</td>-->
-                <!--</tr>-->
+                <tr>
+                  <td colspan="2">
+                      <a onclick="showReceiverList()" style="cursor: pointer; float: right" id="link.view.listAuth">
+                        <span>COM_VIEW_LIST_APPROVER</span>
+                      </a>
+                  </td>
+                </tr>
                 <tr>
                   <td colspan="2">
                     <input type="button" class="btnshadow btn-second" onclick="sendJSONRequest()" value="TRANS_LOCAL_BTN_SENDREQUEST" />

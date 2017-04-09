@@ -8,7 +8,8 @@
 
 setInputOnlyASCII('login.txt.password', CONST_STR.get("ERR_INPUT_ONLY_ASCII_CHAR"));
 setInputOnlyASCII('login.txt.captcha', CONST_STR.get("ERR_INPUT_ONLY_ASCII_CHAR"));
-setInputOnlyNumber('login.txt.username', CONST_STR.get("ERR_INPUT_ONLY_NUMBER"));
+// setInputOnlyNumber('login.txt.username', CONST_STR.get("ERR_INPUT_ONLY_NUMBER"));
+setInputOnlyASCII('login.txt.username', CONST_STR.get("ERR_INPUT_ONLY_NUMBER"));
 
 var statusAccMode = false;
 var buttonFlag = true;
@@ -17,6 +18,7 @@ var intLoginResposne = 0;
 initLoginScr();
 
 function initLoginScr() {
+
     statusAccMode = getUserInfoToLocal(); //get local data
     if (!statusAccMode) {
         var tmpNodeChangeUser = document.getElementById('login.changeaccounttitle');
@@ -306,6 +308,7 @@ function loginSuccess(loginUser, loginPass) {
 
             //config view
             setViewOnDesktopWhenLogin();
+            stylecssfullpage1();
             document.getElementById('tabHost').innerHTML = "";
 
             //using to redirect online payment
@@ -369,7 +372,6 @@ function requestMBServiceSuccess(e) {
         gIsLogin = true;
 
         //config view
-
         setViewOnDesktopWhenLogin();
         document.getElementById('tabHost').innerHTML = "";
 
@@ -495,7 +497,7 @@ function parserLoginInfo() {
     gUserInfo.accountName = gprsResp.arguments[indx++];
 
     //set user name
-    document.getElementById('menu-profile-name').innerHTML = gUserInfo.accountName;
+    document.getElementById('menu-profile-name').innerHTML = "KÍNH CHÀO QUÝ KHÁCH";//gUserInfo.accountName;
 
     gUserInfo.valicationType = gprsResp.arguments[indx++];
     if (gprsResp.arguments[indx++] == "GOLD_TERM_COMFIRMED") {
@@ -846,7 +848,7 @@ function parserLoginInfoCorp() {
     gUserInfo.accountName = gUserInfo.accountInfo.customerName;
 
     //set user name
-    document.getElementById('menu-profile-name').innerHTML = gUserInfo.accountName;
+    document.getElementById('menu-profile-name').innerHTML = "KÍNH CHÀO QUÝ KHÁCH";//gUserInfo.accountName;
 
     gUserInfo.valicationType = gprsResp.arguments[indx++];
     if (gprsResp.arguments[indx++] == "GOLD_TERM_COMFIRMED") {

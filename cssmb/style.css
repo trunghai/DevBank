@@ -173,7 +173,7 @@ body {
 
 	/*!* W3C Markup, IE10 Release Preview *!*/
 	/*background-image: radial-gradient(circle closest-side at center, #63376A 0%, #4D225A 100%);*/
-    background-color: rgba(78, 105, 162, 0.1);
+    /*background-color: rgba(78, 105, 162, 0.1);*/
 }
 
 .gradient-background-layer-1 {
@@ -231,14 +231,14 @@ body {
 .menu-layout .menu-header {
     width: 250px;
 	height: 44px;
-	background: #17C4BB;
+	background: #5c97bd;
 	color: #FDFDFD;
 	/* font-family: 'TPB-DaxlinePro-Medium'; */
 	font-family: Tahoma, Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
 	padding-top: 3px;
-	padding-left: 5px;
+	padding-left: 3px;
 }
 
 .menu-layout .menu-header span {
@@ -249,11 +249,11 @@ body {
 .menu-layout .menu-header .exit-button {
 	/*width:66px;padding:1px;padding-top:4px;font-weight:bold;font-size:15px;text-align:center;*/
     position: absolute;
-    width: 40px;
+    width: 55px;
     height: 30px;
-    top: 6px;
+    top: 5px;
     /*left: 150px;*/
-	right: 8px;
+	right: 15px;
 	padding:1px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -264,7 +264,7 @@ body {
     -moz-border-radius: 4px;
     background: rgba(255, 255, 255, 0.4);
     font-weight:bold;
-	font-size: 20px;
+	font-size:15px;
 	text-align:center;
 }
 
@@ -277,8 +277,8 @@ body {
 .menu-layout .menu-header .exit-button em {
 	
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 7.2px;
+    right: 8px;
     /*font-family: 'EBankPro';*/
     font-style: normal;
 }
@@ -304,9 +304,7 @@ body {
 	text-align: left;
 	padding-top: 5px;
 	cursor: pointer;
-	word-break: break-all;
-	/*word-wrap: word-break;*/
-	/*padding: 3px 10px 10px 15px !important;*/
+	padding: 3px 10px 10px 15px !important;
 }
 
 .menu-profile-icon {
@@ -324,7 +322,7 @@ body {
     bottom: 0px;
     left: 0;
     width: 100%;
-    background: #17C4BB;
+    background: #4e69a2;
     overflow: hidden;
     -ms-touch-action: auto;
 }
@@ -372,7 +370,7 @@ body {
     top: 6px;
     left: 0;
     margin-left: 10px;
-    color: #17C4BB;
+    color: #5c97bd;
     /*font-family: 'EBankPro';*/
     font-size: 23px;
     font-style: normal;
@@ -483,7 +481,7 @@ body {
     top: 13px;
     left: 0;
     margin-left: 18px;
-    color: #17C4BB;
+    color: #5c97bd;
     /*font-family: 'TPB-DaxlinePro-Light';*/
     font-size: 12px;
 }
@@ -518,13 +516,13 @@ body {
 }
 
 .langNoStyle:hover {
-	color:#17C4BB;
+	color:#5c97bd;
 	text-decoration: none;
 	border:0px;
 }
 
 .langNoStyleSelected {
-	color:#17C4BB !important;
+	color:#5c97bd !important;
 	text-decoration: none;
 	border:0px;
 }
@@ -764,7 +762,8 @@ body {
     width: 100%;
 	left:0px;
     height: 44px;
-    background-color: #17C4BB;
+    background-color: transparent;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
     /*box-shadow: 0px 0px 3px #000000;*/
     /*-moz-box-shadow: 0px 0px 3px #000000;*/
     /*-webkit-box-shadow: 0px 0px 3px #000000;*/
@@ -888,7 +887,7 @@ body {
 .main-layout>.footer>.changelanguage {
 	float: left;
 	/*margin-left: 90px;*/
-	margin-left: 50px;
+	margin-left: 3px;
 	padding-top: 5px;
 	font-size:100%;
 }

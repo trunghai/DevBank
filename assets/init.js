@@ -7,7 +7,7 @@
  
  function loaded() {
 	//alert(JSON.stringify(bowser, null, '    ')); //check browser
-	
+    stylecssfullpage();
 	//add listener PhoneGap
 	if(!CONST_BROWSER_MODE) {
 		loadPhoneGapJS();
@@ -47,7 +47,7 @@
 	}, false);
 	applyDynamicCommonStyleSheet();
 	if (hasPageJS) applyDynamicPageStyleSheet(false);
-	
+
 	//navController.setDefaultPage('login-scr');
 	navController.initWithRootView('login-scr', true);
 	

@@ -19,7 +19,7 @@
                 </tr>
                 <tr>
                   <td colspan="2">
-                    <div id="seqFormLocal"></div>
+                    <div id="seqFormLocal" style="display: none"></div>
                   </td>
                 </tr>
                 <tr>
@@ -160,6 +160,7 @@
                   <!--</div>-->
                   <!--</td>-->
                 <!--</tr>-->
+                <tr class="trow-space"></tr>
                 <tr>
                   <td>
                     <input type="button" class="btnshadow btn-second" onclick="sendJSONRequest()" value="TRANS_LOCAL_BTN_SENDREQUEST" />

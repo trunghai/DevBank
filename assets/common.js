@@ -3790,7 +3790,7 @@ function loadPage(page, haveJs, successCallback, failCallback) {
 					fadeInMainContentScreen();
 					tabHostPageNode.style.display = '';
 					tabHostPageNode.innerHTML = xhr.responseText;
-					
+
 					//Add change language
 					changeLanguageInView();
 					//save js status
@@ -5612,8 +5612,7 @@ function changeLanguageInView() {
 
     changeLanguageInNodeWithTag('span');
 	if(gIsLogin) {
-		// document.getElementById('menu-profile-name').innerHTML = createShortName(gUserInfo.accountName);
-        document.getElementById('menu-profile-name').innerHTML = "KÍNH CHÀO QUÝ KHÁCH";
+		document.getElementById('menu-profile-name').innerHTML = "KÍNH CHÀO QUÝ KHÁCH"; //createShortName(gUserInfo.accountName);
 	}
 }
 
@@ -6271,12 +6270,12 @@ function updateViewForDesktop() {
 	if(content != undefined) content.close(); 
 	if(contentPromotion != undefined) contentPromotion.close();
 	
-	document.body.style.backgroundColor = '#FAFAFA';
+	document.body.style.backgroundColor = 'rgb(92, 151, 189)';
 	var tmpNodeMain = document.getElementById('mainview');
 	var tmpNodePage = document.getElementById('fullPage');
 	var tmpPageBorder = document.getElementById('pageBorder');
 	var tmpNodeHeader = tmpNodeMain.getElementsByClassName('header')[0];
-	document.getElementById('pageFooter').style.display = 'block';
+	// document.getElementById('pageFooter').style.display = 'block';
 
 	if(!gIsLogin) {
 		tmpNodePage.setAttribute('align', 'center'); //left
@@ -6289,7 +6288,6 @@ function updateViewForDesktop() {
 		tmpNodePage.setAttribute('align', 'left'); //left
 		tmpNodeMain.style.cssFloat = 'left';
 		tmpNodeHeader.style.display = 'none';
-        document.getElementById('pageFooter').style.backgroundColor = '#17C4BB';
 	}
 	var tmpNodePage = document.getElementById('fullPage');
 	tmpNodePage.setAttribute('align', 'left'); //left
@@ -6327,7 +6325,7 @@ function updateViewForMobile() {
 	var tmpPageBorder = document.getElementById('pageBorder');
 	if(tmpPageBorder != undefined) tmpPageBorder.style.width = '100%';
 	document.getElementById('pageHeader').style.display = 'none';
-	document.getElementById('pageFooter').style.display = 'none';
+	// document.getElementById('pageFooter').style.display = 'none';
 	if(gIsLogin) document.getElementById('nav.btn.showslidemenu').style.display = 'block';
 	document.getElementById('menu-section').style.display = 'none';
 	document.getElementById('headermb').style.display = 'block';
@@ -6608,7 +6606,7 @@ function changeLanguageOnIB() {
 	
 	changeMenuLanguage();
 	initLanguageOnIB();
-	
+
 	if(gIsLogin) {
 		//reset cache
 		navController.resetAll();
@@ -8957,4 +8955,34 @@ function onclickMenu(page) {
 
 function setTitleNavgationBar(title) {
     document.getElementById('titleNavigation').innerHTML = title;
+}
+
+function stylecssfullpage() {
+    document.getElementById('fullPage').style.webkitBoxShadow = 'none';
+    document.getElementById('pageHeaderContent').style.display = 'none';
+    document.getElementById('pageHeader').style.borderBottom = 'none';
+    document.getElementById('bodyPage').style.backgroundColor = '#5c97bd';
+    document.getElementById('fullPage').style.backgroundColor = '#5c97bd';
+    document.getElementById('pageHeader').style.backgroundColor = '#5c97bd';
+
+    if(Environment.isMobile()){
+        document.getElementById('headermb').style.backgroundColor = 'transparent';
+        document.getElementById('headermb').style.borderBottomColor = 'solid 1px rgba(0, 0, 0, 0.1)';
+    }
+}
+
+function stylecssfullpage1() {
+    document.getElementById('fullPage').style.webkitBoxShadow = '0px 0px 1px 1px rgba(0, 0, 0, 0.3)';
+    document.getElementById('fullPage').style.mozBoxShadow = '0px 0px 1px 1px rgba(0, 0, 0, 0.3)';
+    document.getElementById('fullPage').style.boxShadow = '0px 0px 1px 1px rgba(0, 0, 0, 0.3)';
+    document.getElementById('pageHeaderContent').style.display = 'block';
+    document.getElementById('pageHeader').style.borderBottom = 'none';
+    document.getElementById('bodyPage').style.backgroundColor = '#FAFAFA';
+    document.getElementById('fullPage').style.backgroundColor = '#FAFAFA';
+    document.getElementById('pageHeader').style.backgroundColor = '#FAFAFA';
+
+    if(Environment.isMobile()){
+        document.getElementById('headermb').style.backgroundColor = '#5c97bd';
+        document.getElementById('headermb').style.borderBottomColor = 'none';
+    }
 }

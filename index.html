@@ -19,8 +19,8 @@
 <meta content="TPBank eBanking" name="description" />
 <meta content="ebanking, internet banking, internet, banking, mobile banking, mobile, online, tpbank, tienphong, tien phong" name="keywords" />
 <title>eBanking</title>
-<!-- <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
- --><!--<link rel="SHORTCUT ICON" href="./assets/images/favicon.ico" />-->
+<!--<link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />-->
+<!--<link rel="SHORTCUT ICON" href="./assets/images/favicon.ico" />-->
 <!-- eBank Desktop -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="only screen and (min-width:801px)"/>
 <link rel="stylesheet" href="css/ebankstyle.css" type="text/css" media="only screen and (min-width:801px)"/>
@@ -209,40 +209,42 @@
 <div align="center" id="bodyPage">
   <div id="fullPage" align="center"> 
     <div id="pageHeader">
-      <table width="100%" cellspacing="0" cellpadding="0" border="0">
-	  
-        <tr>
-          <td style="padding-top:0px;padding-bottom:0px;">
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="height: 105px;">
+        <div id="pageHeaderContent" style="display: none">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+
                 <tr>
-                    <td width="30"></td>
-                    <td width="190" valign="middle" style="padding-top:0px;padding-bottom:0px;"><a href="javascript;" target="_blank"> <img src="./promotion/logo1.png" alt="" /> </a></td>
-                    <td width="40"></td>
-                    <td width="300">
-                        <div id="slideShow" style="float:left; height:91px;">
-                    <!--<div id="sliderFrame">
-                      <div id="slider">
-					  <a href="https://tpb.vn" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
-					  <a href="https://tpb.vn/tin-tienphong-bank/1771-TPBank-eBank-phien-ban-moi-%E2%80%93-Mot-trai-nghiem-ma-ban-chua-tung-trai-nghiem/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
-					  <a href="https://tpb.vn/tin-tienphong-bank/1763-Gui-tiet-kiem-trung-So-tiet-kiem-100-trieu-dong-tai-TPBank/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
-					  <a href="https://tpb.vn/tin-tienphong-bank/1714-TPBank-danh-1000-ty-dong-uu-dai-cho-Doanh-nghiep-phu-tro/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
-					  <a href="https://tpb.vn/tin-tienphong-bank/1740-Cung-ban-be-trai-nghiem-dich-vu-va-nhan-qua-tai-TPBank/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
-					  </div>
-                    </div>-->
-                        </div>
+                    <td style="padding-top:0px;padding-bottom:0px;">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="height: 105px;">
+                            <tr>
+                                <td width="30"></td>
+                                <td width="190" valign="middle" style="padding-top:0px;padding-bottom:0px;"><a href="https://tpb.vn" target="_blank"> <img src="./promotion/logo1.png" alt="" /> </a></td>
+                                <td width="40"></td>
+                                <td width="300">
+                                    <div id="slideShow" style="float:left; height:91px;">
+                                        <!--<div id="sliderFrame">
+                                          <div id="slider">
+                                          <a href="https://tpb.vn" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
+                                          <a href="https://tpb.vn/tin-tienphong-bank/1771-TPBank-eBank-phien-ban-moi-%E2%80%93-Mot-trai-nghiem-ma-ban-chua-tung-trai-nghiem/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
+                                          <a href="https://tpb.vn/tin-tienphong-bank/1763-Gui-tiet-kiem-trung-So-tiet-kiem-100-trieu-dong-tai-TPBank/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
+                                          <a href="https://tpb.vn/tin-tienphong-bank/1714-TPBank-danh-1000-ty-dong-uu-dai-cho-Doanh-nghiep-phu-tro/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
+                                          <a href="https://tpb.vn/tin-tienphong-bank/1740-Cung-ban-be-trai-nghiem-dich-vu-va-nhan-qua-tai-TPBank/" target="_blank"> <img src="./promotion/banner1.png" alt="" /> </a>
+                                          </div>
+                                        </div>-->
+                                    </div>
+                                </td>
+                                <td width="200" style="float: right; margin-top: 70px">
+                                    <div class="changelanguage" id="btnChangLanguageIB" style="float: right; padding-right: 5px"> <img class="languageEnglishFlag" src='./assets/images/English_flag_round_30.png' onClick="changeLanguageOnIB()"> </div>
+                                    <div class="callsupport" style="float: right; padding-right: 5px">
+                                        <!--<div class='lnr-bubble  btnshadow btn-second btn-round-15'></div>-->
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
-                    <td width="200" style="float: right; margin-top: 70px">
-                      <div class="changelanguage" id="btnChangLanguageIB" style="float: right; padding-right: 5px"> <img class="languageEnglishFlag" src='./assets/images/English_flag_round_30.png' onClick="changeLanguageOnIB()"> </div>
-                      <div class="callsupport" style="float: right; padding-right: 5px"> 
-			                  <div class='lnr-bubble  btnshadow btn-second btn-round-15'></div>
-	                  	</div>
-                    </td>
-                 </tr>
-              </table>
-          </td>
-        </tr>
-		
-      </table>
+                </tr>
+
+            </table>
+        </div>
     </div>
 	
 	<div class="desktopmode">
@@ -270,17 +272,17 @@
     <div id="menu-section" class="menu-layout" style="display:none;">
       <div class='menu-header' >
       <!--<span id="menu-profile-name" class="menu-profile-name" onClick="navController.initWithRootView('utilitiesxsl/change-personal-info-scr', true, 'xsl');">TPBank eBank</span>-->
-        <span id="menu-profile-name" class="menu-profile-name">Kính chào Quý khách</span>
+        <span id="menu-profile-name" class="menu-profile-name">eBank</span>
       	<!--<div id="menu-profile-avatar" class="menu-profile-container" onClick="navController.initWithRootView('corp/setup/system/viewUserInfo/view_user_info', true, 'xsl');">-->
         	<!--<span class="icon-user2 menu-profile-icon"></span>-->
             <!--<img width="25" height="25" style="margin-top:1px; margin-left:4px" src="http://10.1.20.240:4567/download/113/cus_avatar/20150211_1514205286.jpg" />-->
         <!--</div>-->
-        <div class="exit-button">
+        <div class="exit-button" onClick="logout()">
         <!--<div class="exit-button" onClick="logout()">-->
 		 <!-- <span data-tooltip aria-haspopup="true" class="icon-exit" title="Thoát/Exit"></span>-->
 
-            <em class="lnr-exit"></em>
-          <!--<span class="langNoStyle" id= "id.menu_logout.caption" ></span>-->
+
+          <span class="langNoStyle" id= "id.menu_logout.caption" >MENU_LOGOUT</span>
           <!--<div class="langNoStyle">MENU_LOGOUT</div>-->
           
 		  <!--
@@ -333,7 +335,7 @@
         <div class="grid"></div>
       </div>
 	  <div id="headerib" class="header" style="height:30px;display:none;">
-		<div style="border-bottom:color:#333;font-size:12px;text-align: left;margin-top: 8px;margin-left: 10px;font-weight: bold;color:#fff;">
+		<div style="border-bottom:color:#333;font-size:12px;text-align: left;margin-top: 8px;margin-left: 10px;font-weight: bold;color:#5c97bd;">
 			<!--<span>MAIN_SCR_HEADER_TITLE</span>-->
 			<div class="langNoStyle" id="lblChangLanguage"><span id="titlePage">MAIN_SCR_HEADER_TITLE</span></div>
 		</div>
@@ -344,8 +346,7 @@
         </div>-->
         <div class="reload-button" onClick="logout()">
             <em class="lnr-exit"></em>
-            <!--<em class="icon-gift"></em>-->
-            <!--<span class="langNoStyle" id= "id.menu_logout.caption" ></em></span>-->
+            <!--<span class="langNoStyle" id= "id.menu_logout.caption" >MENU_LOGOUT</span>-->
         </div>
       </div>
       <div align="center">
@@ -366,9 +367,9 @@
       <div id="pageJS"></div>
       <div id="mask-slideview" class="slidemenu-blacktrans" onClick="closeAllSlideMenu();" style="display:none"> </div>  
 	  <div id="mainlayoutfooter" class="footer" style="display:none;">
-        <div class="callsupport"> <a class="acallphone" href="tel:1800585885">
-          <div class='icon-call  btnshadow btn-second btn-round-15'></div>
-          </a> </div>
+        <!--<div class="callsupport"> <a class="acallphone" href="tel:1800585885">-->
+          <!--<div class='icon-call  btnshadow btn-second btn-round-15'></div>-->
+          <!--</a> </div>-->
 		
 		<!--
         <div class="changebrowser"> <a class="acallphone" href="http://mbtest.tpb.vn/m/?ver=ib">
@@ -386,8 +387,8 @@
 	<!-- desktop footer -->
       <!--4e6932 3b5998 4267b2-->
 
-    <div id="pageFooter" style="background-color: #FAFAFA; float: left;height: 34px;width:100%;">
-
+    <!--<div id="pageFooter" style="background-color: #4e69a2; float: left;height: 34px;width:100%;">-->
+	
 		<!--
       <div class="callsupport"> <a class="acallphone" href="tel:1800585885">
         <div class='icon-call  btnshadow btn-second btn-round-15'></div>
@@ -396,17 +397,17 @@
       <!--<div class="changebrowser"> <a class="acallphone" href="https://ebank.tpb.vn/ibank/?standard=true">
         <div class='icon-timerprocess  btnshadow btn-second btn-round-15'></div>
         </a> </div>-->
-
-
-	  <div class="mobilemode">
-
-	  </div>
+      
 	  
-      <div class="divcopyright">
-        <p class="pcopyrighttext" id="footerDesktop">© 2017 All rights reserved.</p>
-      </div>
+	  <!--<div class="mobilemode">-->	  
+      
+	  <!--</div>-->
 	  
-    </div>
+      <!--<div class="divcopyright">-->
+        <!--<p class="pcopyrighttext" id="footerDesktop">© 2017 All rights reserved.</p>-->
+      <!--</div>-->
+	  
+    <!--</div>-->
   </div>
 </div>
 <div id="mask-blacktrans" class="alert-blacktrans" align="center" onClick="" style="display:none"> </div>

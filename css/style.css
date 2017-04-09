@@ -223,9 +223,9 @@ body {
     
 	/*height: 40px;*/
 	height: 30px;
-    
-	background: #17C4BB;/*#e66a25;*/
-    color: #FDFDFD;
+    border-top: 1px solid #5c97bd;
+	border-bottom: 1px solid #5c97bd;/*#e66a25;*/
+    color: #5c97bd;
 	
 	/*
     font-family: 'TPB-DaxlinePro-Medium';
@@ -378,7 +378,7 @@ body {
     top: 9px;
     left: 0;
     margin-left: 7px;
-    color: #17C4BB;
+    color: #5c97bd;
     /*font-family: 'EBankPro';*/
     font-size: 20px;
     font-style: normal;
@@ -386,7 +386,7 @@ body {
 
 .menu-layout-contents > li:target > div {
     outline: none;
-    color: #17C4BB;
+    color: #e66a25;
     background: transparent;
 	
 }
@@ -400,7 +400,7 @@ body {
     margin-right: 12px;
     padding: 2px 8px;
     /*font-family: 'TPB-DaxlinePro-Light';*/
-    background: #17C4BB;
+    background: #e66a25;
     -webkit-border-radius: 50%;
     -webkit-border-top-left-radius: 50%;
     -webkit-border-top-right-radius: 50%;
@@ -419,12 +419,12 @@ body {
 .menu-layout-contents > li:target > div span {
     outline: none;
     color: #fdfdfd;
-    background: #17C4BB;
+    background: #5c97bd;
 }
 
 .menu-layout-contents > li:hover > div em, .menu-layout-contents > li:target > div em {
     outline: none;
-    color: #17C4BB;
+    color: #5c97bd;
 }
 
 /*'.menu-layout-contents li > div span { top: ' + (padding - 2) + 'px;}' +
@@ -497,7 +497,7 @@ body {
     top: 13px;
     left: 0;
     margin-left: 15px;
-    color: #17C4BB;
+    color: #1d2129;
     /*font-family: 'TPB-DaxlinePro-Light';*/
     font-size: 12px;
 }
@@ -532,13 +532,13 @@ body {
 }
 
 .langNoStyle:hover {
-	color:#17C4BB;
+	color:#5c97bd;
 	text-decoration: none;
 	border:0px;
 }
 
 .langNoStyleSelected {
-	color:#17C4BB !important;
+	color:#5c97bd !important;
 	text-decoration: none;
 	border:0px;
 }
@@ -605,8 +605,9 @@ body {
     -webkit-border-bottom-left-radius: 4px;
     -webkit-border-bottom-right-radius: 4px;
     -moz-border-radius: 4px;
-    background: rgba(255, 255, 255, 0.4);
-    font-size: 15px;
+    /*background: rgba(255, 255, 255, 0.4);*/
+    background: #5c97bd;
+    font-size: 18px;
 	font-weight:bold;
 	text-align:center;
 	cursor:pointer;
@@ -622,11 +623,10 @@ body {
 	
     position: absolute;
     top: 3px;
-    right: 5px;
+    right: 6px;
     /*font-family: 'EBankPro';*/
     font-style: normal;
 	color:#FFF;
-    font-size: 20px;
 }
 
 /* -------------- HEADER CONFIG END --------------*/
@@ -806,8 +806,9 @@ body {
     width: 100%;
 	left:0px;
     height: 50px;
-    background-color: #17C4BB;
-    color: #FDFDFD;
+    border-bottom: 1px solid #5c97bd;
+    border-top: 1px solid #5c97bd;
+    color: #ffffff;
     /*box-shadow: 0px 0px 3px #000000;*/
     /*-moz-box-shadow: 0px 0px 3px #000000;*/
     /*-webkit-box-shadow: 0px 0px 3px #000000;*/
