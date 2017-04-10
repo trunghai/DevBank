@@ -1349,16 +1349,16 @@ active, .btn-default.active, .open.dropdown-toggle.btn-default{
 	border-color: #ccc
 }
 .btn-primary {
-	color: #fff;
+	color: #3598dc;
 	/*background-color: #428bca;*/
-	background-color:#F69013;
-	border-color: #357ebd
+	background-color:#fff;
+	border:1px solid #3598dc
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open.dropdown-toggle.btn-primary {
 	color: #fff;
 	/*background-color: #3276b1;*/
-	background-color:#FAA60D;
-	border-color: #285e8e
+	background-color:#3598dc;
+	border-color: #3598dc
 }
 .btn-primary:active, .btn-primary.active, .open.dropdown-toggle.btn-primary {
 	background-image:none
@@ -1389,16 +1389,16 @@ active, .btn-default.active, .open.dropdown-toggle.btn-default{
 	border-color: #4cae4c
 }
 .btn-second {
-	color: #fff;
-	/*background-color: #5cb85c;*/
-	background-color:#F69013;
-	border-color: #4cae4c
+	color: #3598dc;
+	background-color: #fff;
+	/*background-color:#F69013;*/
+	border: 1px solid #3598dc
 }
 .btn-second:hover, .btn-second:focus, .btn-second:active, .btn-second.active, .open.dropdown-toggle.btn-second {
 	color: #fff;
 	/*background-color: #47a447;*/
-	background-color:#FAA60D;
-	border-color: #398439
+	background-color:#3598dc;
+	border-color: #3598dc
 }
 .btn-second:active, .btn-second.active, .open.dropdown-toggle.btn-second {
 	background-image:none
@@ -4039,7 +4039,7 @@ span.tooltip span
 
 .icon_div {
     /* border: 1px solid blanchedalmond; */
-    background: #5c97bd;
+    background: transparent;
     border-radius: 10px;
     text-align: center;
 	opacity: 0.9;
@@ -4051,6 +4051,7 @@ span.tooltip span
     padding-top: 9%;
     float: left;
     height: 0;
+	border: 1px solid #5c97bd;
 }
 /* bo sung cho icon giao dien ben ngoai ebank */
 .icon_div_out {
@@ -4107,7 +4108,7 @@ span.tooltip span
 @media only screen and (min-width: 320px) { 
 	.icon_font {
 	font-size:2.2em;
-    color: #ffffff;
+    color: #5c97bd;
 	cursor:pointer;
     }
 }
@@ -4204,20 +4205,20 @@ span.tooltip span
 }
 .sub-menu
 {
-	background-color: rgba(78, 105, 162, 0.7);
+	background-color: rgb(92, 151, 189);
 	height: 40px;
 	padding-top: 1px;
 	cursor:pointer;
 }
 
-@media only screen and (max-width: 640px) { 
-		  .td-head-color {
-				  background-color: rgba(78, 105, 162, 0.8);
-				  font-weight:bold;
+@media only screen and (max-width: 640px) {
+	.td-head-color {
+		  	background-color:  rgb(92, 151, 189);
+			font-weight:bold;
 		  }
 }
 
-@media only screen and (min-width: 640px),
+@media only screen and (min-width: 640px)
 {
 	.active {
     /*background-color: rgba(41, 103, 182, 0.0);*/

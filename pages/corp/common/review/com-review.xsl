@@ -10,7 +10,7 @@
             <div class="panelContent">
               <table width='100%' align='center'>
                 <tr>
-                  <td>
+                  <td style="display: none">
                     <div id="step-sequence"></div>
                   </td>
                 </tr>

@@ -6567,7 +6567,7 @@ function initLanguageOnIB() {
 			nodeBtnLangIB.innerHTML = "<img class='languageEnglishFlag' src='./assets/images/IB_Vietnamese.png' onClick='changeLanguageOnIB(1)'>";
 		}
 		*/
-		nodeBtnLangIB.innerHTML = "<img class='languageEnglishFlag' src='./assets/images/Vietnam_flag_round_30.png' onClick='changeLanguageOnIB()'>";
+		nodeBtnLangIB.innerHTML = "<span>VN</span>";
 	}
 	else {
 		gUserInfo.lang = "VN";
@@ -6582,7 +6582,7 @@ function initLanguageOnIB() {
 			nodeBtnLangIB.innerHTML = "<img class='languageEnglishFlag' src='./assets/images/IB_English.png' onClick='changeLanguageOnIB(1)'>";
 		}
 		*/
-		nodeBtnLangIB.innerHTML = "<img class='languageEnglishFlag' src='./assets/images/English_flag_round_30.png' onClick='changeLanguageOnIB()'>";
+		nodeBtnLangIB.innerHTML = "<span>EN</span>";
 	}
 }
 function changeMenuLogout(){
@@ -8968,6 +8968,7 @@ function stylecssfullpage() {
     if(Environment.isMobile()){
         document.getElementById('headermb').style.backgroundColor = 'transparent';
         document.getElementById('headermb').style.borderBottomColor = 'solid 1px rgba(0, 0, 0, 0.1)';
+        document.getElementById('gradient-background-layer-0').style.backgroundColor = '#5c97bd';
     }
 }
 
@@ -8984,5 +8985,6 @@ function stylecssfullpage1() {
     if(Environment.isMobile()){
         document.getElementById('headermb').style.backgroundColor = '#5c97bd';
         document.getElementById('headermb').style.borderBottomColor = 'none';
+        document.getElementById('gradient-background-layer-0').style.backgroundColor = '#FAFAFA';
     }
 }

@@ -25,19 +25,19 @@
 												<span style="color:#1d2129">HOME_PAGE_WELLCOME_TITLE</span>
 											</td>
 										</tr>
-										<tr>
+										<tr style="display: none">
 											<td style="font-family:Tahoma, Geneva, sans-serif;font-size:12.5px;font-weight:normal;text-align:left;">
 												<span style="color:#1d2129">HOME_PAGE_COMPANY</span>
 												<span id="company_name" style="color:#1d2129"></span>
 											</td>
 										</tr>
-										<tr>
+										<tr style="display: none">
 											<td style="font-family:Tahoma, Geneva, sans-serif;font-size:12.5px;font-weight:normal;text-align:left;padding-bottom:10px;">
 												<span style="color:#1d2129" id="staff_position">HOME_PAGE_OFFICER</span>
 												<span id="account_name" style="color:#1d2129"></span>
 											</td>
 										</tr>
-										<tr>
+										<tr style="display: none">
 											<td style="font-family:Tahoma, Geneva, sans-serif;font-size:11px;font-weight:normal;text-align:left;">
 												<span style="color:#1d2129">HOME_PAGE_LAST_LOGIN</span>
 												<span id="last_login" style="color:#1d2129"></span>

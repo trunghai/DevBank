@@ -214,6 +214,7 @@ var pCorpConst_VN = {
     'COM_INFOR_TAX'                                                  : 'Với mục đích nộp thuế, kính đề nghị Quý khách sử dụng chức năng: ',
     'COM_INFOR_TAX_1'                                                : '\"Thanh toán dịch vụ | Thanh toán thuế \"',
     'COM_SELECT'                                                     : 'Chọn',
+    'LANGUAGE_APPLY'                                                 : 'EN',
     // menu
     'MENU_AUTHORIZE_TRANS'                                           : 'Duyệt giao dịch',
     'MENU_CHILD_PAY_TAX'                                             : 'Thanh toán thuế',

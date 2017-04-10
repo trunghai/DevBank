@@ -213,6 +213,7 @@ var pCorpConst_EN = {
     'COM_INFOR_TAX_1'                                                : '\"Service payment | EZ.Tax\"',
     'COM_SELECT'                                                     : 'Select',
     'COMMON_NOTE_FILE_FORMAT'                                        : 'Note: Please choose Acrobat (PDF) file',
+    'LANGUAGE_APPLY'                                                 : 'VN',
 
     // menu
     'MENU_AUTHORIZE_TRANS'                                           : 'Authorize the transaction',

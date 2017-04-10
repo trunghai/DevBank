@@ -159,34 +159,34 @@
                 </td>
               </tr>
               <!-- Xem danh sách người nhận thông báo -->
-              <tr id="trNotify">
-                <td width="100%" style="padding:3px; text-align:right;"><u>
-                  <a onclick="showReceiverList()" style="cursor:pointer;"><span>COM_VIEW_LIST_APPROVER</span></a></u>
-                </td>
-              </tr>
+              <!--<tr id="trNotify">-->
+                <!--<td width="100%" style="padding:3px; text-align:right;"><u>-->
+                  <!--<a onclick="showReceiverList()" style="cursor:pointer;"><span>COM_VIEW_LIST_APPROVER</span></a></u>-->
+                <!--</td>-->
+              <!--</tr>-->
             </table>
-            <table class="table-exchange-notice">
-              <tr>
-                <td>
-                  <span style="font-weight: bold">FOREGIN_EXCHANGE_NOTICE_1</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span>FOREGIN_EXCHANGE_NOTICE_2</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span>FOREGIN_EXCHANGE_NOTICE_3</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span>FOREGIN_EXCHANGE_NOTICE_4</span>
-                </td>
-              </tr>
-            </table>
+            <!--<table class="table-exchange-notice">-->
+              <!--<tr>-->
+                <!--<td>-->
+                  <!--<span style="font-weight: bold">FOREGIN_EXCHANGE_NOTICE_1</span>-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                <!--<td>-->
+                  <!--<span>FOREGIN_EXCHANGE_NOTICE_2</span>-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                <!--<td>-->
+                  <!--<span>FOREGIN_EXCHANGE_NOTICE_3</span>-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                <!--<td>-->
+                  <!--<span>FOREGIN_EXCHANGE_NOTICE_4</span>-->
+                <!--</td>-->
+              <!--</tr>-->
+            <!--</table>-->
             <table width="100%" style="padding-top: 10px">
               <tr>                
                 <td>

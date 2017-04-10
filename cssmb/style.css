@@ -152,6 +152,7 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
+    background-color: #FAFAFA;
     /*background: rgb(156, 82, 157);
     background: -webkit-linear-gradient(rgb(156, 82, 157), rgb(111, 51, 139));
 	background: linear-gradient(rgb(156, 82, 157), rgb(111, 51, 139));*/

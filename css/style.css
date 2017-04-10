@@ -596,21 +596,22 @@ body {
     position: absolute;
     width: 40px;
     height: 26px;
-    top: 2px;
+    top: 1px;
     right: 10px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -webkit-border-top-left-radius: 4px;
-    -webkit-border-top-right-radius: 4px;
-    -webkit-border-bottom-left-radius: 4px;
-    -webkit-border-bottom-right-radius: 4px;
-    -moz-border-radius: 4px;
+    border-radius: 0px;
+    /*-webkit-border-radius: 4px;*/
+    /*-webkit-border-top-left-radius: 4px;*/
+    /*-webkit-border-top-right-radius: 4px;*/
+    /*-webkit-border-bottom-left-radius: 4px;*/
+    /*-webkit-border-bottom-right-radius: 4px;*/
+    /*-moz-border-radius: 4px;*/
     /*background: rgba(255, 255, 255, 0.4);*/
-    background: #5c97bd;
+    background: #FAFAFA;
     font-size: 18px;
 	font-weight:bold;
 	text-align:center;
 	cursor:pointer;
+    border: 1px solid #5c97bd;
 }
 
 .promotion-layout .promotion-header .reload-button span, .main-layout .header .reload-button span {
@@ -626,7 +627,7 @@ body {
     right: 6px;
     /*font-family: 'EBankPro';*/
     font-style: normal;
-	color:#FFF;
+	color:#5c97bd;
 }
 
 /* -------------- HEADER CONFIG END --------------*/
