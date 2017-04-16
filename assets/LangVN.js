@@ -657,7 +657,7 @@ var pConstants_VN = {
 	'ESAVING_CHANGEINFO_ERR_BLOCK_ACC'				: 'Tài khoản tiết kiệm này đang phong tỏa. Quý khách vui lòng chọn tài khoản tiết kiệm khác',
 	'ESAVING_CONDITON_NOTE1'				    	: 'Tôi đã đọc, hiểu rõ và chấp nhận ',
 	'ESAVING_CONDITON_NOTE2'				    	: 'các Điều khoản, điều kiện',
-	'ESAVING_CONDITON_NOTE3'  				      	: ' gửi tiết kiệm điện tử',
+	'ESAVING_CONDITON_NOTE3'  				      	: 'Gửi tiết kiệm điện tử',
 	'ESAVING_ESTIMATED_INTEREST'                    : 'Lãi dự tính khi đáo hạn',
 	'ESAVING_INTEREST_RATE'                         : 'Lãi suất',
 	
@@ -2076,7 +2076,7 @@ var pConstants_VN = {
 	 'CARD_CONNECT_ACCOUNT_CHOOSE_ANOTHER_TRANS' 	: 'Giao dịch khác',	 	
 	 
 	 //NGOCDT3 BO SUNG CHO TINH NANG DANG KY PHAT HANH THE
-	 'MENU_CARD_ISSUANCE_IDX_NEW' 	 	 	        : 'Đăng ký phát hành thẻ Ngọc',
+	 'MENU_CARD_ISSUANCE_IDX_NEW' 	 	 	        : 'Đăng ký phát hành thẻ',
      'CARD_ISSUANCE_QUESTION' 	 	 	            : 'Các câu hỏi thường gặp',
 	 'VISA_CREDIT_VN' 	 	 	                    : 'THẺ TÍN DỤNG QUỐC TẾ',
      'VISA_DEBIT_VN' 	 	 	                    : 'THẺ GHI NỢ QUỐC TẾ',
