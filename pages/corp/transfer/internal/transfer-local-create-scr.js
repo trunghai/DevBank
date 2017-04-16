@@ -641,6 +641,7 @@ function genReviewScreen() {
 	createXMLNode("value", '0 VND', xmlDoc, rowNode);
 
 	var balanceCont = balance - amount;
+	gTrans.amountBalance = balanceCont;
 	rowNode = createXMLNode("row", "", xmlDoc, sectionNode);
 	createXMLNode("label", CONST_STR.get('TRANS_LOCAL_BALANCE_CONT'), xmlDoc, rowNode);
 	createXMLNode("value", formatNumberToCurrencyWithSymbol(balanceCont,' VND'), xmlDoc, rowNode);

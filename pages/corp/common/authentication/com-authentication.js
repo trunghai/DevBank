@@ -174,8 +174,14 @@ function requestMBServiceSuccess() {
     // var response = JSON.parse(responseText);
     var response;
     if(gTrans.idtxn == 'T11' || gTrans.idtxn == 'T12'){
+        removeAmount();
+        addAmount(gTrans.amountBalance);
+
         response = {"responseType":"0","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với eBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708710000031191","type":"3","time":"28/03/2017 04:18:26"}};
     }else if(gTrans.idtxn == 'T13'){
+
+        removeAmount();
+        addAmount(gTrans.amountBalanceEND);
         response = {"responseType":"1604","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với eBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708910000031199","type":3,"time":"30/03/2017 10:06:43"}};
     }else if(gTrans.idtxn == 'B13'){
         response = {"responseType":"1901","respCode":"0","respContent":"Giao dịch thành công. Cảm ơn Quý khách đã giao dịch với eBank!","respRaw":"","arguments":[],"respJson":"","respJsonObj":{"transId":"1708910000031201","type":3,"time":"30/03/2017 10:17:18"}};

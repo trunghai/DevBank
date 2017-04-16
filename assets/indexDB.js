@@ -15,6 +15,9 @@ const userData = [
     { id: "abc1234567", pass: "123456", name: "gopal", age: 35, email: "gopal@tutorialspoint.com" },
     { id: "8888999802", pass: "123456", name: "prasad", age: 32, email: "prasad@tutorialspoint.com" }
 ];
+
+const amountData = [{id: "98888888001", amount: "1000000000",}];
+
 var db;
 var request = window.indexedDB.open("newDatabase", 1);
 
@@ -33,6 +36,11 @@ request.onupgradeneeded = function(event) {
 
     for (var i in userData) {
         objectStore.add(userData[i]);
+    }
+
+    objectStore = db.createObjectStore("amount", {keyPath: "id"});
+    for (var i in amountData) {
+        objectStore.add(amountData[i]);
     }
 }
 
@@ -95,6 +103,54 @@ function remove() {
 
     request.onsuccess = function(event) {
         alert("Kenny's entry has been removed from your database.");
+    };
+}
+
+function readAmount(readAmount) {
+    var transaction = db.transaction(["amount"]);
+    var objectStore = transaction.objectStore("amount");
+    var request = objectStore.get("98888888001");
+
+    request.onerror = function(event) {
+        alert("Unable to retrieve daa from database!");
+    };
+
+    request.onsuccess = function(event) {
+        // Do something with the request.result!
+        if(request.result) {
+            // alert("Name: " + request.result.name + ", Age: " + request.result.age + ", Email: " + request.result.email);
+            readAmount(request);
+        }
+
+        else {
+            alert("User Quý khách nhập không đúng");
+
+        }
+    };
+}
+
+
+function addAmount(amount) {
+    var request = db.transaction(["amount"], "readwrite")
+        .objectStore("amount")
+        .add({ id: "98888888001", amount: amount});
+
+    request.onsuccess = function(event) {
+        // alert("Kenny has been added to your database.");
+    };
+
+    request.onerror = function(event) {
+        alert("Unable to add data\r\nKenny is aready exist in your database! ");
+    }
+}
+
+function removeAmount() {
+    var request = db.transaction(["amount"], "readwrite")
+        .objectStore("amount")
+        .delete("98888888001");
+
+    request.onsuccess = function(event) {
+        // /alert("Kenny's entry has been removed from your database.");
     };
 }
 
